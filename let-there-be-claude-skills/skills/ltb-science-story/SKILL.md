@@ -1,7 +1,16 @@
 ---
 name: ltb-science-story
 description: >-
-  Build the Science Story™ deliverable for Let There Be — assemble verified claims into Claim Clusters, write the creative narratives, and produce the client-facing presentation, built so narratives/headlines/claims can be consumer-tested. Use whenever the user wants to build or refine a Science Story, assemble claim clusters, write story/claim narratives, create a claim-opportunities or science-story deck, turn client feedback and seed ideas into strategic directions, or prep stimuli for consumer testing — even if they just say "make the science story for [client]," "cluster these claims," or "build the claim clusters deck." Handles Stage 1 (Claim Cluster selection) and Stage 2 (Science Story with narratives, claim bodies, source cards, and a test plan). Replaces the retired gem-sets and polished-gems skills. Output is an unbranded content-first presentation for Claude Design (which brands and exports). Do NOT use for raw research (ltb-science-intelligence) or the evidence/claim-dev deck (ltb-lit-review-deck).
+  Build the Science Story deliverable for Let There Be - assemble verified claims into Claim Clusters,
+  write the creative narratives, and produce the client-facing presentation, built so narratives,
+  headlines, and claims can be consumer-tested. Use whenever the user wants to build or refine a
+  Science Story, assemble claim clusters, write story or claim narratives, create a claim-
+  opportunities or science-story deck, or prep stimuli for consumer testing - even if they just say
+  make the science story for a client or cluster these claims. Handles Stage 1 (Claim Cluster
+  selection) and Stage 2 (Science Story with narratives, claim bodies, source cards, and a test plan).
+  Output is an unbranded content-first presentation for Claude Design. Do NOT use for raw research
+  (ltb-science-intelligence) or the evidence deck (ltb-lit-review-deck).
+
 ---
 
 # LTB Science Story™ — Claim Clusters, Narratives & Testing
