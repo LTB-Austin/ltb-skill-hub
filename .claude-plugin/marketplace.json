@@ -1,11 +1,13 @@
 {
   "name": "let-there-be",
-  "owner": { "name": "Let There Be" },
-  "metadata": {
-    "description": "Let There Be internal Claude skills.",
-    "version": "1.1.0"
+  "owner": {
+    "name": "Let There Be"
   },
   "plugins": [
-    { "name": "let-there-be-claude-skills", "source": ".", "description": "All Let There Be Science Marketing Engine skills." }
+    {
+      "name": "let-there-be-claude-skills",
+      "source": "./let-there-be-claude-skills",
+      "description": "Let There Be Science Marketing Engine skills."
+    }
   ]
 }
