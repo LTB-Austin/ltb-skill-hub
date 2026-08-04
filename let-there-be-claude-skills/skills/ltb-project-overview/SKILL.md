@@ -1,9 +1,30 @@
 ---
 name: ltb-project-overview
-description: "Build client project overview presentations for Let There Be Science Marketing. Use when creating, editing, or refining a project overview deck for any LTB client — even if someone just says 'make the overview for [client]' or 'put together the project overview.' Works inside a Claude project space: it pulls from the attached brief, brand book, science, and partner docs (or the project files), builds the full slide-by-slide deck on the current LTB brand and the three-phase engine (Proof / Persuasion / Production), then hands off to Claude Design to polish and export. Do NOT use for the Lit Review/Claim Dev deck, Science Story deck, or sales previews — those are separate skills."
+description: >-
+  Assemble the client Project Overview content brief for Let There Be — a single structured markdown
+  document holding every piece of content a project overview needs, which Claude Design then expands
+  into the branded presentation using its Project Overview template. Use whenever the user wants to
+  build, refine, or update a project overview for any LTB client — even if they just say make the
+  overview for a client or start the kickoff doc. Reads the brief, brand book, science, partner
+  details, and prior decks from the project space and organises them into labelled sections: project
+  details, deliverables, timeline, brand deep dive, audiences, the challenge, the three-phase engine,
+  and next steps. Output is markdown only — never a PPTX, HTML, or styled deck. Unknowns are marked as
+  open rather than filled in. Do NOT use for the Science Intelligence deck, the Science Story, the
+  SOW, or the internal Science 101 briefing.
+
 ---
 
-# Skill: LTB Project Overview Deck Builder
+# Skill: LTB Project Overview — Content Brief Builder
+
+## What you produce
+
+**One markdown file. Nothing else.**
+
+You are not building a presentation. You are assembling the **content** for a project overview — every fact, figure, table, and paragraph — into a clearly structured markdown document. **Claude Design** takes that markdown and expands it into the branded presentation using its Project Overview template.
+
+This split exists for a reason: when this skill produced slides, Design had to reformat the whole deck anyway. So don't produce slides, layout intent, HTML, PPTX, or styling. No colors, no fonts, no blob placement, no "eyebrow / title / divider" instructions. Just correct, complete, well-labelled content.
+
+**The contract with Claude Design:** the markdown is the single source of truth. Design expands and formats what's there — it does not invent, embellish, or fill gaps. That only works if you are explicit about what is known and what isn't, so mark every gap (see "Marking gaps" below) rather than writing around it.
 
 ## Writing voice — plain and factual
 
@@ -16,146 +37,129 @@ All copy in this deliverable follows one standard: plain, straightforward, and t
 - **Earned confidence, stated plainly.** Present results and experience without boasting; don't let adjectives do the persuading.
 - **Headlines state the point; they don't perform.** No taglines written for effect.
 
-
-You build the **client project overview** — the kickoff deck that shows a client (and any partner) the whole engagement: what we'll do, the brand and science we've absorbed, the challenge, and how the Science Marketing Engine™ solves it phase by phase.
-
-## The workflow this skill lives in
-
-1. You're running in a **Claude project space.** The brief, brand book, science, partner details, and any prior decks are attached to the message or already in the **project files** — use them. If a needed input isn't there, ask for it (don't invent it).
-2. You produce the **complete deck, slide by slide** — every slide's eyebrow, title, copy, layout intent, and which brand assets/imagery it calls for — on the current LTB brand, following the structure below.
-3. The draft then goes to **Claude Design to polish the visuals and export** the final file. So: **your job is correct, complete, on-brand content and layout direction; Claude Design does the final visual polish and file export.** Get the substance and structure exactly right; specify the visual intent clearly; don't fuss over pixel-level production here.
-
-Build the draft as clean 16:9 slides (self-contained HTML is the friendliest handoff to Design, one `<section>` per slide) unless the project space indicates another format. Do not lock the deck to PPTX in this step — export happens in Design.
+Write the copy as the client will read it. Design should be formatting finished sentences, not drafting them.
 
 ---
 
 ## PHASE 0 — Inputs
 
-Confirm you have (from the attachment or project files; ask only for what's missing):
+You're running in a **Claude project space.** The brief, brand book, science, partner details, and prior decks are attached or already in the project files — use them. Ask only for what's missing; never invent.
 
 - [ ] Brand / product name (+ active ingredient, INN/common)
-- [ ] Client + any partner (e.g., "Prepared for Glenmark · in partnership with PatientPoint")
+- [ ] Client + any partner
 - [ ] The objective / what success looks like
-- [ ] Key deliverables in scope (Science Intelligence, Science Story, Science Studio pieces — MOA video, patient/HCP video, ad-to-education, influencer kit)
+- [ ] Deliverables in scope (Science Intelligence, Science Story, Science Studio pieces)
 - [ ] Timeline start month + any pilot/launch target
-- [ ] Brand materials (brand book, palette, packaging, logo) — for the Deep Dive
+- [ ] Brand materials — brand book, palette, packaging, logo (as links/filenames, for Design to fetch)
 - [ ] The science (MOA, formulation, clinical) and any approved claims + guardrails
-- [ ] Audience(s) — patient and/or HCP
-- [ ] Reference project-overview deck (for structure/tone) if available
-
-Never invent client-side facts (personas, taglines, claims, tone). Leave blank or mark "To be defined with [Client]" if not provided.
+- [ ] Audience(s) — patient, consumer, and/or HCP
+- [ ] Competitors, if provided
 
 ---
 
-## PHASE 1 — Brand System (current 2026 rebrand)
+## PHASE 1 — Marking gaps
 
-- **Surface:** `#F0F0F0` on every slide. Never pure white for the slide background (cards may be white).
-- **Ink:** `#0C0D10` for all titles and body. **Mute:** `#6B6B6E` for eyebrows, labels, captions.
-- **Type:** **Lexend** throughout — 700 for titles, 300/400 for body, 600 for eyebrows/labels. No emojis. No corner chevrons.
-- **Eyebrow → Title → Divider:** almost every content slide leads with a small uppercase, letter-spaced **eyebrow** in mute (e.g., `DEEP DIVE · ABOUT THE BRAND`, `SCIENCE INTELLIGENCE™ · 01`), then a large bold **title**, then a **3pt black divider** running ~3/4 width below the title.
-- **Accent palette (use sparingly — never on body copy or titles):** Teal `#87CCCB` / deep teal `#5E9A93`, Mint `#9AD9CC`, Sky `#869FBC`, Purple `#9B83AA`, Coral `#F3755C`, Red `#EB6758` (genuine negatives only).
-- **The mitosis gradient (signature accent):** `linear-gradient(110deg, #94CAB4 0%, #7FB6CC 18%, #7C82A1 38%, #8C6C8F 52%, #E1483B 70%, #EE6B4D 86%, #F2966A 100%)`. Reserve it for one accent per slide — a corner blob (bleeding off the edge), a card top-cap, a step number, a thin rule. Never behind or on top of type.
-- Do **not** use the retired palette (teal `#008575` and its siblings) if you see it in an old deck.
+Never fill a hole with plausible language. Use these markers verbatim so Design and the account lead can both see the state at a glance:
 
----
+- `> **TO BE DEFINED WITH [CLIENT]**` — a client-side decision we don't have yet (tone, platform, personas).
+- `> **NEEDED FROM CLIENT:** [what]` — an input we've asked for and are waiting on.
+- `> **NOT IN SCOPE**` — deliberately excluded; keeps Design from adding it back.
 
-## PHASE 2 — Logos & Imagery (specify intent; Design places finals)
-
-Call out, per slide, which brand asset belongs there. Final files live in the Brand Archive / project files; Design positions them.
-
-- **LTB wordmark:** top-left on the cover; bottom corner on content slides (corner matches the slide's content weight).
-- **Client logo:** on the cover and section dividers (top-right). Not on every content slide unless asked.
-- **Partner:** name the partner in the cover subline and the "Our Solution" slide when there is one.
-- **Sub-brand marks — only on the slide about that thing:** Science Intelligence™, Science Story™, Science Studio™, MOA Moment™, Ad-to-Education Sequence™, Influencer Science Kit™. (There is no "Gems" mark — that language is retired; the unit is a **claim**, grouped into **claim clusters**.)
-- **Mitosis gradient blobs:** as a large corner accent, varied corner per slide, never over text. Heavier on the cover, section dividers, and closing.
+If a whole section has no content, keep its heading and put the marker under it. A visible gap is useful; an invented sentence is a liability.
 
 ---
 
-## PHASE 3 — Deck Structure (the current model)
+## PHASE 2 — Document structure
 
-The deck runs as **four numbered sections**, and Section 03 carries the **three-phase engine**. Section dividers read `SECTION 0N · OF 04`. Adapt to scope — drop a phase if it isn't sold (e.g., no Science Studio → no Production phase), and scale the Deep Dive to the material you have.
+Produce exactly this shape. Keep the headings and their order — Design's template maps to them. Drop a section only if it's genuinely out of scope, and say so with the marker rather than deleting the heading.
 
-**SECTION 01 · Review project details**
-1. **Cover** — LTB wordmark top-left; eyebrow `PROJECT OVERVIEW`; client logo + a one-line program descriptor ("A Patient & HCP Science Marketing Program"); 3pt divider; `PREPARED FOR [CLIENT] · IN PARTNERSHIP WITH [PARTNER] · [YEAR]`; ingredient line bottom-right; gradient blob top-right.
-2. **Agenda** — "What we'll cover today" — the four sections as a numbered list with one-line descriptions.
-3. **Section 01 divider.**
-4. **Project Overview** — the objective in one clear headline + a short paragraph on strategy and focus.
-5. **Key Deliverables** — a clean table: `Asset | Phase | Duration | Format | Placement`.
-6. **Timeline** — kickoff → pilot/launch, month by month; note phases flex with feedback.
+Open with a metadata block, then the sections:
 
-**SECTION 02 · Deep dive (the brand)** — "our grasp of the brand, so every team we hand off to starts from the same understanding."
-7. **Section 02 divider.**
-8. **About the Brand** — what the product is, in plain language.
-9. **Brand at a glance / Brand Materials** — logo, packaging, palette (stand-ins if finals aren't in yet).
-10. **Brand Identity** — connection, character, tone.
-11. **Brand Idea & Platform** — the organizing idea (if the client has one).
-12. **Main Competitors** — primary / secondary (Rx) / OTC alternatives.
-13. **Target Audience** — patient audience and/or HCP audience.
-14. **Useful Links** — brand book, sales aid, assets (as provided).
+```
+# [Product / Program Name] — Project Overview
+**Client:** … | **Partner:** … | **Prepared by:** Let There Be | **Date:** [Month Year]
+**Active ingredient:** … | **Audiences:** … | **Regulatory class:** …
+**Program descriptor:** [one line, e.g. A Patient & HCP Science Marketing Program]
+```
 
-**SECTION 03 · The challenge & our solution**
-15. **Section 03 divider.**
-16. **The Challenge** — a plain headline statement of the core problem.
-17. **The Four Forces** (or market dynamics) — the forces working against the brand.
-18. **Objectives** — what success looks like, split by audience (For HCPs / For Patients).
-19. **Our Solution** — "one science foundation, deployed everywhere" via the Science Marketing Engine™ (and the partner channel, if any).
-20. **Our Operating Model** — "One engine. Three phases." Three cards: `01 · THE PROOF — Science Intelligence™`, `02 · THE PERSUASION — Science Story™`, `03 · THE PRODUCTION — Science Studio™`.
-21. **Phase 01 · The Proof divider** — "What's true — and what we can say."
-22. **Science Intelligence™ — the truth** — uncovering the science + "what we deliver" (lit review, evidence).
-23. **Science Intelligence™ — the science & MOA** — the mechanism, made clear (split layout, visual right).
-24. **Science Intelligence™ — claims** — "claims that hold up and move people," shepherded through MLR.
-25. **Phase 02 · The Persuasion divider** — "Evidence, made to move."
-26. **Science Story™ — the narrative(s)** — the story per audience ("Two audiences. Two stories. One source of truth.").
-27. **Creative Direction** — the tone the story should carry ("confident and human, never clinical").
-28. **Science Story™ — consumer testing (optional)** — "de-risk the creative before it becomes video."
-29. **Phase 03 · The Production divider** — "Content that converts."
-30. **Science Studio™ — [deliverable]** — one slide per production piece (e.g., patient video, HCP video, MOA Moment™).
-31. **Why This Works** — the strategic payoff of the integrated approach.
-32. **How We Work** — milestone model / unlimited revisions within a phase (boilerplate — Phase 5).
-33. **Ownership** — copyright & working files (boilerplate — Phase 5).
-34. **Getting Started** — the Lit Review™ kickoff.
-35. **Lit Review™ Questions** — what we need to align on (evidence, guardrails, priorities).
+### 1. Project details
+- **Objective** — one plain headline sentence, then a short paragraph on strategy and focus.
+- **Deliverables** — a markdown table: `Asset | Phase | Duration | Format | Placement`. One row per deliverable actually sold.
+- **Timeline** — a markdown table or list, month by month, kickoff → pilot/launch. Note that phases flex with feedback.
 
-**SECTION 04 · Questions & discussion**
-36. **Section 04 divider.**
-37. **Next Steps** — numbered action items.
-38. **Closing** — "Thanks for trusting us with your science." + "Science leads. Creativity amplifies." Large gradient blob; LTB wordmark.
+### 2. Brand deep dive
+Everything we've absorbed, so every downstream team starts from the same understanding.
+- **About the brand** — what the product is, in plain language.
+- **Brand materials** — links/filenames for logo, packaging, palette, brand book. List them; don't describe styling.
+- **Brand identity** — connection, character, tone.
+- **Brand idea / platform** — the organizing idea, if the client has one.
+- **Competitors** — primary / secondary (Rx) / OTC alternatives.
+- **Target audiences** — a subsection per audience (patient/consumer, HCP).
+- **Useful links** — brand book, sales aid, asset libraries.
 
----
+### 3. The challenge and our solution
+- **The challenge** — a plain statement of the core problem.
+- **Market forces** — the dynamics working against the brand.
+- **Objectives** — what success looks like, split by audience.
+- **Our solution** — one science foundation, deployed everywhere, via the Science Marketing Engine™ (plus the partner channel, if any).
+- **Operating model** — one engine, three phases: `01 · The Proof — Science Intelligence™`, `02 · The Persuasion — Science Story™`, `03 · The Production — Science Studio™`.
 
-## PHASE 4 — Slide patterns
+### 4. The engine, phase by phase
+Only include phases that are sold. Under each, write the content — not slide directions.
+- **Phase 01 · The Proof — Science Intelligence™** — the science and MOA in plain language; what the lit review covers; how claims get shepherded through MLR.
+- **Phase 02 · The Persuasion — Science Story™** — the narrative per audience; creative direction and tone; consumer testing if in scope.
+- **Phase 03 · The Production — Science Studio™** — one subsection per production piece (patient video, HCP video, MOA Moment™, etc.) with its specs and placement.
 
-- **Section divider:** eyebrow `SECTION 0N · OF 04`; large section title lower-left; one-line description; client logo top-right; gradient blob one corner; no body.
-- **Phase divider (Proof/Persuasion/Production):** eyebrow `PHASE 0N · THE [PROOF/PERSUASION/PRODUCTION]`; a short, plain line ("What's true — and what we can say."); gradient accent.
-- **Content slide:** eyebrow → bold title → 3pt divider → content. Vary layout — full-width narrative with bold lead-ins, split (narrative left / visual or stat right), 2–4 card grid, or numbered list. Don't default to card grids; use them only for genuinely parallel content. Pick one card style for the deck and keep it consistent.
-- **Table slide (deliverables):** white rounded container, subtle horizontal rules, bold gray headers, no heavy gridlines.
-- **Operating-model / three-up:** three equal cards, each with a numbered eyebrow (`01 · THE PROOF`), the service name bold, one-line description.
-- **Deliverable/phase slides:** the relevant sub-brand mark, a bold subheading, a 1–2 sentence description, and either accent-bulleted points or a split with a stat/visual (big bold accent stats like "+133% ROAS").
+### 5. Why this works
+The strategic payoff of the integrated approach, in a few plain sentences.
+
+### 6. How we work
+Use the boilerplate in Phase 3 verbatim (milestone model, ownership).
+
+### 7. Getting started
+- **Next steps** — numbered action items with owners where known.
+- **Kickoff questions** — what we need to align on (evidence, guardrails, priorities).
+
+### 8. Closing
+"Thanks for trusting us with your science." + "Science leads. Creativity amplifies."
 
 ---
 
-## PHASE 5 — Boilerplate (use consistently; adapt names only)
+## PHASE 3 — Boilerplate (verbatim; adapt names only)
 
-**How We Work (milestone model):**
+**How we work (milestone model):**
 > Unlike agencies that cap revisions, Let There Be uses a milestone model to deliver the strongest possible Science Stories and videos. We invite **unlimited feedback and revisions within each phase**, according to the timeline. Once a phase is approved or its duration expires, we move on; a client can extend a phase for more revisions, knowing it may shift delivery. Backtracking between approved phases may incur additional cost and time.
 
 **Ownership (copyright):**
 > [CLIENT] holds full copyright to all final ideas, designs, language, visuals and videos, to use in perpetuity — with minor voiceover exclusions: a VO artist's voice cannot be used to train AI or be reproduced, and videos cannot run on broadcast TV without upgrading VO licenses. On request, we **organize and provide the working files** for any/all assets, free of charge, so your team and partners can build on the work.
 
-**Closing:** "Thanks for trusting us with your science." + "Science leads. Creativity amplifies."
+---
+
+## PHASE 4 — Markdown conventions
+
+- `#` for the document title, `##` for numbered sections, `###` for subsections. Keep the numbering — Design maps to it.
+- **Tables** for anything tabular (deliverables, timeline, competitors). Real markdown tables, not ASCII art.
+- **Bold lead-ins** for labelled facts (`**Objective** — …`).
+- Bullets for parallel items; short paragraphs for narrative. Don't nest more than two levels.
+- Blockquotes only for boilerplate and gap markers.
+- No HTML, no CSS, no color values, no font names, no slide numbers, no layout instructions. If you catch yourself writing "eyebrow" or "card grid," delete it.
+- Plain-text asset references (filename or URL) so Design can fetch them.
+- One file. If it's long, that's fine — long is easier to trim than thin is to fill.
 
 ---
 
-## PHASE 6 — Content rules
+## PHASE 5 — Content rules
 
 - Every fact, claim, stat, and persona comes from the provided materials — never invented. Treat brief "examples" as examples, not brand facts.
 - Approved claims always carry their required qualifiers.
-- No process instructions or internal/feedback language on a client-facing slide.
-- Unanswered brand questions (tone, platform, anti-brand) → leave blank or "To be defined with [Client]," never AI meta-commentary.
-- Scale the deck to the sold scope: only include phases and deliverables actually in the engagement.
+- No internal process or feedback language — the client reads this content.
+- Scale to the sold scope: only phases and deliverables actually in the engagement.
+- Unanswered questions get a Phase 1 marker, never AI meta-commentary and never a plausible guess.
 
 ---
 
-## PHASE 7 — Handoff to Claude Design
+## PHASE 6 — Handoff
 
-When the draft is complete: summarize the deck (section/phase structure, deliverables covered, anything left as "to be defined"), confirm every slide has its eyebrow/title/copy and a clear visual intent + named assets, and hand off to **Claude Design to polish the visuals and export**. Keep the copy final and correct — Design should be polishing look, not rewriting substance.
+When the markdown is complete, save it as a `.md` file and summarize for the user: the sections included, the deliverables covered, and a list of every gap marker still open. Then tell them it's ready for **Claude Design's Project Overview template**, which expands the markdown into the branded presentation.
+
+If the user asks you for slides, a PPTX, or an HTML deck, remind them that Design owns formatting now and that this skill's output is the markdown brief — then offer to make sure the content is complete instead.
