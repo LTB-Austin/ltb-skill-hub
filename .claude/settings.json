@@ -1,0 +1,14 @@
+{
+  "extraKnownMarketplaces": {
+    "ltb-skill-hub": {
+      "source": {
+        "source": "github",
+        "repo": "LTB-Austin/ltb-skill-hub"
+      },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": [
+    "let-there-be-claude-skills@ltb-skill-hub"
+  ]
+}
