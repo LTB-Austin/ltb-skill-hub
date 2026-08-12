@@ -31,6 +31,10 @@ All copy in this deliverable follows one standard: plain, straightforward, and t
 - **No salesmanship or showmanship.** Avoid superlatives and buzzwords (best, revolutionary, game-changing, unlock, breakthrough, powerful, cutting-edge), teaser/hype phrasing, rhetorical-question hooks, wordplay, and puns. Never write to dazzle or to "sell."
 - **Earned confidence, stated plainly.** Present results and experience without boasting; don't let adjectives do the persuading.
 - **Headlines state the point; they don't perform.** Two-clause contrast headlines are house style and are fine ("Allergies are treated like a nuisance. They behave like a chronic disease."). Taglines written for effect are not.
+- **Em dashes: use sparingly.** At most one per slide or section, and only when a comma or a period genuinely will not do. Default to a period and a new sentence. Never stack them for dramatic pauses or nested asides.
+- **Write for marketers, not scientists.** The reader is a brand, marketing, or creative professional. Assume they are smart and busy, not that they know biology. Replace or define a technical term the first time it appears.
+- **Keep the science simple and accurate.** Use plain words for mechanisms. Keep the precise term only when it carries real meaning: an ingredient name, a study design, a regulatory class, a measured result. Simplifying must never change what a finding actually says.
+- **Say it once.** No restating the same point in a second clause. Cut throat-clearing openers and filler qualifiers.
 
 The voice rule governs **the deck's own copy** — headlines, body, synthesis lines. Candidate consumer claim language quoted inside a claim card is the *content being presented* and may be punchier; it still carries its guardrail.
 

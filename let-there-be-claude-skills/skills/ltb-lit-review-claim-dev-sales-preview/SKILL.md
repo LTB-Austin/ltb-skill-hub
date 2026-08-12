@@ -1,10 +1,29 @@
 ---
 name: ltb-lit-review-claim-dev-sales-preview
 description: >-
-  Run a Lit Review™ + Claim Dev™ sales preview for Let There Be — point it at a prospect's product and category and it produces a substantive, unbranded preview deck (Claude Design brands + exports) previewing the science we'd uncover and the claims it unlocks. Use whenever a salesperson or BD person wants a pitch preview, a prospect teaser, a "what could we find / what could they claim for [brand]" deck, a pre-engagement sales asset, or a science-and-claims sample to help land a client — even if they just say "make a lit review preview for [brand]" or "build a claim preview to pitch [prospect]." Does a light Elicit pass (papers + trials, no systematic review), then does real claim development to surface spotlight studies and 4–6 ownable sample claims, and ends on a hook to engage. Output is an unbranded presentation draft for Claude Design. Do NOT use for a real signed engagement (use ltb-science-intelligence + ltb-lit-review-deck) or for Science Story clusters/narratives.
+  Run a Science Intelligence preview for Let There Be - point it at a prospect product and category and it
+  produces an unbranded preview deck that frames the whole Science Marketing Engine: a real Elicit pass, one
+  hero finding, one to three claims built on it, and an example Science Story, ending in Science Studio work
+  and a contact slide. Use whenever a salesperson or BD person wants a pitch preview, a prospect teaser, a
+  what could we find or what could they claim deck, a pre-engagement sales asset, or a conference leave
+  behind - even if they just say make a preview for a brand or build a claim preview to pitch a prospect.
+  Sources stay blurred so the research is not given away. Output is an unbranded presentation draft for
+  Claude Design. Do NOT use for a signed engagement (use ltb-science-intelligence and ltb-lit-review-deck)
+  or for real Science Story clusters and narratives.
 ---
 
-# LTB Lit Review™ + Claim Dev™ Sales Preview
+# LTB Science Intelligence Preview (sales)
+
+## What this is
+
+A **sales preview**. A salesperson points it at a prospect's product, and it produces a short deck that does two jobs at once:
+
+1. Shows a **real, specific** piece of science we found for their product, and the claims it supports.
+2. **Frames that inside the whole Science Marketing Engine**, so the prospect sees where it goes next: Science Story, consumer testing, Science Studio.
+
+It is a preview, not the paid deliverable. It should feel substantial and reputable while withholding the actual research.
+
+**The single biggest rule: depth over breadth.** Earlier versions showed too much and landed as hypothetical wallpaper. One strong finding a rep can speak to beats ten they can't. Everything after the lit review table hangs off **one hero insight**.
 
 ## Writing voice — plain and factual
 
@@ -16,44 +35,88 @@ All copy in this deliverable follows one standard: plain, straightforward, and t
 - **No salesmanship or showmanship.** Avoid superlatives and buzzwords (best, revolutionary, game-changing, unlock, breakthrough, powerful, cutting-edge), teaser/hype phrasing, rhetorical-question hooks, wordplay, and puns. Never write to dazzle or to "sell."
 - **Earned confidence, stated plainly.** Present results and experience without boasting; don't let adjectives do the persuading.
 - **Headlines state the point; they don't perform.** No taglines written for effect.
+- **Em dashes: use sparingly.** At most one per slide or section, and only when a comma or a period genuinely will not do. Default to a period and a new sentence. Never stack them for dramatic pauses or nested asides.
+- **Write for marketers, not scientists.** The reader is a brand, marketing, or creative professional. Assume they are smart and busy, not that they know biology. Replace or define a technical term the first time it appears.
+- **Keep the science simple and accurate.** Use plain words for mechanisms. Keep the precise term only when it carries real meaning: an ingredient name, a study design, a regulatory class, a measured result. Simplifying must never change what a finding actually says.
+- **Say it once.** No restating the same point in a second clause. Cut throat-clearing openers and filler qualifiers.
 
+> **Output: an unbranded, content-first presentation.** Produce slide-by-slide copy plus layout intent. No LTB branding, no styling, no file export. **Claude Design** applies the brand system and exports. These decks are delivered as **PDF**, so Design can use gradient borders and richer treatments. Any brand or visual notes here are intent for Design only.
 
-You are building a **sales preview** that shows a prospect two things: the strong science we'd uncover for their brand, and the **new, ownable claims** that science supports. It's a preview, not the paid deliverable: light on research depth, honest about caveats, but genuinely sharp on claims. The claims are the centerpiece; present them as real, specific opportunities grounded in the science.
+## Inputs — take what the rep gives and run
 
-**Output: an unbranded, content-first presentation draft** — aim ~9–12 slides of copy + layout intent.
+The rep usually gives a product and category, plus **two or three sentences of angle**. That angle is the most valuable input: it tells you which insight to chase.
 
-> **Output: an unbranded, content-first presentation.** Produce the full deck as slide-by-slide copy + clear layout intent — **no LTB branding, no styling, no file export.** We take this into **Claude Design**, which applies all branding and exports the final file. Don't spend compute making it look nice; spend it on correct, complete content and structure. Any brand/visual references below are **intent notes for Claude Design**, not things to render here.
+> Example: "New entrant in a cluttered category. The incumbent is Flonase. See if the preview can find something that helps them differentiate."
 
-## Inputs — take what the rep gives and run with it
+Do not interrogate the rep. Infer the rest and state assumptions in one line:
 
-A salesperson runs this, usually mid-conversation. They'll give you a little — often just a **product/brand and a category** ("Tylenol, pain" · "a new magnesium sleep gummy" · "Flonase, allergy"). Do **not** interrogate them. Take what they give and extrapolate the rest:
+- **Active ingredient(s):** identify them if unstated. If several are plausible, pick the most likely and note it.
+- **Regulatory class:** infer it (OTC monograph drug, supplement, homeopathic) so claims stay plausible and correctly caveated.
+- **Competitor:** pick the obvious category rival if none is named.
+- **Product image:** the rep may supply one for the intro slide. If not, leave a labelled placeholder.
 
-- **Active ingredient(s):** if not stated, identify them (Tylenol → acetaminophen, Advil → ibuprofen, Flonase → fluticasone; for a described product, infer from category + a quick search). If several are plausible, pick the most likely 1–2 and note the assumption.
-- **Regulatory class:** infer it (OTC monograph drug / supplement / homeopathic / etc.) — enough to keep claims plausible and correctly caveated.
-- **Territories / angles:** choose 2–3 promising directions to organize around (competitive vs. a rival, an underserved population, a high-value symptom), based on the science you find.
-- **Competitor:** pick the obvious category rival to frame against if none is given.
+## Phase 1 — Research
 
-Only ask a question if you truly can't proceed. Otherwise state your working assumptions in one line (a small scope note in the deck and back to the rep) and build.
+Use the connected Elicit tools: **`search_papers`** (run both `elicit` and `pubmed`; prioritize Meta-Analysis, Systematic Review, and RCT; favour recent and landmark work) and **`search_trials`**. Do **not** run `create_systematic_review`. That depth belongs to the paid engagement.
 
-## Phase 1 — Light research (organized by territory)
-Use the connected Elicit tools — **`search_papers`** (run both `elicit` and `pubmed`, prioritize `typeTags` Meta-Analysis / Systematic Review / RCT, recent years) and **`search_trials`**. Do **NOT** run `create_systematic_review` — that depth belongs to the paid engagement.
+Pull enough to fill a credible one-page table, about **8 to 10 studies**, all genuinely relevant to the product and its actives. Every study must be real and tool-sourced. Never invent a study, a statistic, or a PMID.
 
-Pull a strong set organized by your 2–3 territories — ~6–10 studies total worth spotlighting. For each: year, first author, PMID/DOI, one-line key finding, design, and evidence direction (Pivotal / Positive / Mixed / Note). Favor clear, ownable, recent, or landmark findings. Every study must be real and tool-sourced — never invent a study, statistic, or PMID.
+## Phase 2 — Pick the hero insight
 
-## Phase 2 — Claim development (the centerpiece — do this properly)
-Read `references/claim-development.md` and do **real claim development**, not a token list. Derive **4–6 sample claims** across the territories. For each claim: a tier (DTC-ready / DTC + HCP / HCP hero), a short name, the claim in quotes, an **"Ownable:"** rationale naming the specific study/authority, a whitespace/differentiation read, and a regulatory-risk sense scoped to the product class. Mix science-forward claims ("this ingredient does X") with positioning-forward ones (science advancing a market angle). Where evidence is early (e.g., preclinical), say so inline. Keep everything clearly **illustrative and directional — subject to MLR and legal review**.
+From everything you found, choose **one** finding to build the rest of the deck on. You pick it, guided by the rep's angle.
 
-## Phase 3 — Assemble the preview deck (unbranded draft)
-Read `references/preview-structure.md` for the arc: cover → why it matters → territories → spotlight studies → how science becomes claims → **the claims (centerpiece)** → what the full engagement adds → the ask. Write every slide's copy and note its layout intent (e.g., "study table", "claim cards", "PMIDs should link to PubMed"). Use current website language. **Do not brand, style, or export** — hand the draft to Claude Design, which applies the brand system and produces the final file. `references/brand-system.md` is there only as intent for Design.
+What makes a good hero insight:
 
-## Non-negotiable framing
-- Every science/claims slide: footer **"Preview · no brand input · findings not validated."** Claims: **"Illustrative & directional — subject to MLR and legal review."**
-- Make explicit what the preview did NOT do (no brand input, no systematic review, no MLR, no consumer testing) and that those live in the full engagement — the value gap that motivates the sale.
-- Impress and open a door; don't hand over the full paid product for free.
+- It is **specific and quantified**. A number a rep can say out loud.
+- It **serves the angle** the rep gave you (differentiation, an underserved population, a high-value symptom).
+- It is **ownable**, not a category truism every competitor could claim.
+- It is **recent or landmark**, from a design that holds up.
+- A marketer can grasp it in one sentence without a biology lesson.
+
+Then, in your handback notes to the rep (not in the deck), list the **two or three runner-up insights** you considered and why you chose this one. The rep may prefer a different angle and needs to be able to swap it quickly.
+
+## Phase 3 — Claims
+
+Read `references/claim-development.md`. Derive **one to three claims**, all built on the hero insight. Not four to six, and not spread across territories. Fewer, tighter, and connected is the point.
+
+For each claim: consumer-facing language in quotes, the tier (DTC-ready / DTC + HCP / HCP hero), and a one-line note on why it is ownable. **Blur or omit the underlying evidence** in the deck. The claim language is the shop window; the substantiation is what they are buying.
+
+Keep a short **category whitespace** read. It signals strategic thinking and prospects respond to it.
+
+## Phase 4 — Deck structure
+
+Read `references/preview-structure.md` for slide detail. The arc:
+
+1. **Cover** — Let There Be. Product name.
+2. **The Science Marketing Engine** — the three-phase frame the whole deck lives inside.
+3. **Preview intro** — product name, product image, and the disclaimer plainly stated: no brand input, no brief, no guidance, no inputs from the client.
+4. **Engine, Science Intelligence highlighted** — where we are now.
+5. **The Lit Review** — one page, 8 to 10 studies, relevant to their product. **Sources delinked and blurred.** Lit Review mark on the slide. This slide exists to look like the real thing, not to be read.
+6. **The finding** — the single hero insight, stated plainly with its number. Sources blurred. This is the slide the rep actually talks to.
+7. **Claim Dev intro** — one slide: Claim Dev reads the literature and extracts what is substantiated, regulatory-friendly, and strategically useful.
+8. **The claims** — one to three, built on the hero insight, consumer-facing language only. Evidence blurred. Include the whitespace read.
+9. **Engine, Science Story highlighted.**
+10. **Example Science Story** — a single slide: creative hook, short narrative, the relevant claims, and a line that we build several of these and test them with consumers on purchase intent, uniqueness, and believability, including highlight heat maps. One slide covers both the story and the testing.
+11. **Engine, Science Studio highlighted.**
+12. **Science Studio work** — boilerplate. Example stills from published LTB work. The rep should not have to supply screenshots.
+13. **Closing** — unlock your science potential, plus contact details.
+
+Slides 2, 4, 9, and 11 are the same engine graphic with a different phase highlighted. Design owns that treatment.
+
+**Do not include** a general "your product and category context" slide. It was text-heavy and never got used.
+
+## Non-negotiables
+
+- **Blur or delink every source.** The rep is showing capability, not handing over the research.
+- Every science or claims slide carries: **Preview · no brand input · findings not validated.**
+- Claims carry: **Illustrative and directional. Subject to MLR and legal review.**
+- Name what the preview did not do (no brand input, no systematic review, no MLR, no consumer testing) and that those live in the full engagement. That gap is the reason to buy.
+- Do not quote a testing price. Say testing is available and what it measures; the rep quotes numbers live.
 
 ## Guardrails
-- Real, tool-sourced studies only — no fabricated papers, PMIDs, or numbers. A few strong verified studies beat many shaky ones.
-- Claims are directional, caveated, and scoped to the plausible product class.
-- State working assumptions briefly so the rep can correct them, but don't block — deliver a finished preview.
-- On-brand, website language, no "gems" — claims (and, in the full engine, claim clusters) only.
+
+- Real, tool-sourced studies only. No fabricated papers, PMIDs, or numbers.
+- One hero insight. One to three claims. Resist adding more.
+- State working assumptions in one line so the rep can correct them, but do not block on questions.
+- Website language throughout. No "gems"; the unit is a claim.
 - End on a clear, specific next step.

@@ -15,6 +15,10 @@ All copy in this deliverable follows one standard: plain, straightforward, and t
 - **No salesmanship or showmanship.** Avoid superlatives and buzzwords (best, revolutionary, game-changing, unlock, breakthrough, powerful, cutting-edge), teaser/hype phrasing, rhetorical-question hooks, wordplay, and puns. Never write to dazzle or to "sell."
 - **Earned confidence, stated plainly.** Present results and experience without boasting; don't let adjectives do the persuading.
 - **Headlines state the point; they don't perform.** No taglines written for effect.
+- **Em dashes: use sparingly.** At most one per slide or section, and only when a comma or a period genuinely will not do. Default to a period and a new sentence. Never stack them for dramatic pauses or nested asides.
+- **Write for marketers, not scientists.** The reader is a brand, marketing, or creative professional. Assume they are smart and busy, not that they know biology. Replace or define a technical term the first time it appears.
+- **Keep the science simple and accurate.** Use plain words for mechanisms. Keep the precise term only when it carries real meaning: an ingredient name, a study design, a regulatory class, a measured result. Simplifying must never change what a finding actually says.
+- **Say it once.** No restating the same point in a second clause. Cut throat-clearing openers and filler qualifiers.
 
 
 > **OUTPUT: an unbranded, content-first presentation.** Produce the full SOW deck as slide-by-slide copy + layout intent — **no LTB branding, no styling, no export.** We take this into **Claude Design**, which applies all branding and exports the final file. Spend compute on correct scope, deliverables, and structure — not on making it look nice. The brand/logo/mitosis sections below are **intent notes for Claude Design**, not things to render here.

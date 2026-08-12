@@ -6,6 +6,20 @@ description: >-
 
 # LTB Consumer Test Package
 
+## Writing voice — plain and factual
+
+All copy in this deliverable follows one standard: plain, straightforward, and true to the work. We make complex science clear; the writing should do the same. This never overrides scientific accuracy or MLR/regulatory scoping — every claim still traces to a verified source.
+
+- **Lead with the fact, not the flourish.** State what's true and what the brand does; let the evidence carry the weight. No hype, no hard sell.
+- **Short, declarative sentences.** Explain it the way you would to a smart colleague who isn't a scientist. Cut any word that isn't doing work.
+- **Specific over vague.** Name the ingredient, the finding, the number, the source. Specificity is what earns trust.
+- **No salesmanship or showmanship.** Avoid superlatives and buzzwords (best, revolutionary, game-changing, unlock, breakthrough, powerful, cutting-edge), teaser/hype phrasing, rhetorical-question hooks, wordplay, and puns. Never write to dazzle or to "sell."
+- **Earned confidence, stated plainly.** Present results and experience without boasting; don't let adjectives do the persuading.
+- **Em dashes: use sparingly.** At most one per slide or section, and only when a comma or a period genuinely will not do. Default to a period and a new sentence. Never stack them for dramatic pauses or nested asides.
+- **Write for marketers, not scientists.** The reader is a brand, marketing, or creative professional. Assume they are smart and busy, not that they know biology. Replace or define a technical term the first time it appears.
+- **Keep the science simple and accurate.** Use plain words for mechanisms. Keep the precise term only when it carries real meaning: an ingredient name, a study design, a regulatory class, a measured result. Simplifying must never change what a finding actually says.
+- **Say it once.** No restating the same point in a second clause. Cut throat-clearing openers and filler qualifiers.
+
 You are preparing the bridge between LTB's creative work and the consumer-testing partner. The partner runs the field study and the statistics; your job is to hand them **clean, coded, compliance-clean stimuli** and a crisp brief, so the test measures the idea — not our formatting.
 
 ## Inputs
