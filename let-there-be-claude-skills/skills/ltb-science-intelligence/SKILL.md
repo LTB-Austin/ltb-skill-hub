@@ -66,13 +66,37 @@ Work **one active ingredient at a time**, and keep the scope tight to the produc
 
 ## Phase 3 — Extract into the workbook spine
 
-Default path: **you extract.** For each shortlisted study from Phase 2, pull the fields in `references/workbook-schema.md` directly from the abstract/record the search returned (design, n, comparator, key result, finding direction, mechanism, relevance, safety, PMID/DOI). The searches already return real papers with quantified results and resolving IDs, so Claude reading and structuring them is fast, faithful, and costs nothing extra. Keep scope tight and favor human studies at or near the product's dose and form. Deliberately retain any NULL/MIXED studies — surfacing contradicting evidence is what keeps the resulting claims defensible.
+Default path: **you extract.** For each shortlisted study from Phase 2, pull the fields in `references/workbook-schema.md` from the record the search returned (design, n, comparator, key result, finding direction, mechanism, relevance, safety, PMID/DOI). The searches already return real papers with quantified results and resolving IDs, so Claude reading and structuring them is fast, faithful, and costs nothing extra. Keep scope tight and favor human studies at or near the product's dose and form. Deliberately retain any NULL/MIXED studies — surfacing contradicting evidence is what keeps the resulting claims defensible.
+
+**Record what you actually read.** Every study row carries an **Evidence Basis**: `Abstract`, `OA full text`, or `Full text`. Default to `Abstract` and only mark full text when you have genuinely read it. This field is what lets us state our method honestly instead of implying we read everything.
 
 Opt-in path: **Elicit systematic review.** When the user explicitly wants Elicit's own screened-and-extracted table (deeper, auditable, but async and consumes their Elicit plan quota and creates a saved review in their account), offer `create_systematic_review`. Do NOT run it automatically — always ask first. If they say yes, set `researchQuestion`, `searches` (per-ingredient queries across elicit/pubmed/clinical_trials), `abstractScreening.criteria` (human study; relevant indication; product-relevant dose/form; peer-reviewed), and `extraction.questions` matching the schema columns; optionally `generateReport: true`. Then poll `get_systematic_review` (with `includeReportBody: true`) until `completed` and fold the table into the workbook. `create_report` is the lighter async alternative for a single research question.
 
+## Phase 3b — Full text on load-bearing studies
+
+Abstracts are appropriate for screening, landscape, and prioritisation. They are not sufficient for the few studies a claim actually stands on. Abstracts routinely lead with a secondary or subgroup result when the primary endpoint missed, omit confidence intervals and multiplicity adjustment, and are loose on dose, form, duration, and population.
+
+**The rule.** A study must be read in full text before a claim can rest on it when either is true:
+
+- it is coded **POSITIVE PIVOTAL**, or
+- it is the **sole support** for a claim.
+
+Everything else may stay abstract-based. In practice this is about 3 to 10 studies per project, not the whole set.
+
+To retrieve full text, in this order:
+
+1. Set `hasPdf: true` on `search_papers` when hunting candidates for pivotal status.
+2. Check open access: PubMed Central, Europe PMC, and the publisher's own OA copy.
+3. If the client has institutional or purchased access, ask them to supply the PDF.
+4. If it is paywalled and unavailable, do not quietly fall back to the abstract. Mark the claim `ABSTRACT-ONLY - FULL TEXT REQUIRED BEFORE MLR` and raise it in the handback so someone can decide whether to buy the article.
+
+When you do read full text, check the four things abstracts get wrong most often: whether the quoted result was the **primary** endpoint, the **actual effect size with confidence interval**, the **dose and form** against the product, and the **population**. If any of these contradicts the abstract, correct the row and log it in Citation QA.
+
+Never state or imply that a study was read in full when it was not.
+
 ## Phase 4 — Verify (light but non-negotiable)
 
-Tool-sourced studies come with real identifiers, which removes most hallucination risk — but still: confirm every study has a resolving PMID or DOI, and spot-check that any specific statistic you carry into a claim actually appears in the abstract/full text. A claim can be no stronger than the study under it. Keep a Citation QA tab (schema file) noting Verified / Corrected / Excluded. Retain NULL/negative studies — never suppress them; they are guardrails.
+Tool-sourced studies come with real identifiers, which removes most hallucination risk — but still: confirm every study has a resolving PMID or DOI, and check that any specific statistic you carry into a claim actually appears in the source recorded in Evidence Basis. For a pivotal or sole-support study, that source must be the full text. A claim can be no stronger than the study under it. Keep a Citation QA tab (schema file) noting Verified / Corrected / Excluded. Retain NULL/negative studies — never suppress them; they are guardrails.
 
 ## Phase 5 — Build the evidence workbook (.xlsx)
 
