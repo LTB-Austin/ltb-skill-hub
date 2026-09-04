@@ -2,6 +2,8 @@
 
 Complete this before any search. The product class sets what you can and cannot claim; it is the difference between MLR-ready claims and unusable ones.
 
+*Last reviewed: September 2026.* Regulation moves. Where a framework may have changed since then (US cosmetics under MoCRA, UK divergence from EU rules, any new FDA or FTC guidance), say so and flag for legal rather than assert. Classification here sets what kind of claim is permitted; the **evidence standard** each market applies is in substantiation-map.md, Step 4.
+
 ## The 5-question classifier
 
 1. **Market?** US · EU · Canada · UK · Australia · APAC · Multi-market
@@ -20,7 +22,8 @@ Complete this before any search. The product class sets what you can and cannot 
 | Oral/topical; drug outside a monograph | Disease treat/prevent/diagnose, US | Rx Drug (NDA/sNDA) | FDA CDER |
 | Oral; vitamin/mineral/herb/botanical | Wellness/nutrient content, EU/UK | Food Supplement | EFSA / FSA |
 | Oral; herb/vitamin/traditional/homeopathic | Health maintenance/traditional, Canada | Natural Health Product | Health Canada (NHPD) |
-| Topical; cream/gel/serum, no drug claim | Cosmetic aesthetics, US | Cosmetic (21 CFR 700) | FDA (post-market) |
+| Topical; cream/gel/serum, no drug claim | Cosmetic aesthetics, US | Cosmetic (FD&C Act as amended by MoCRA 2022) | FDA (registration, listing, safety substantiation; still post-market for claims) |
+| Oral; vitamin/mineral/herb | Low-risk health maintenance, Australia | Listed Medicine (AUST L) | TGA, permissible indications list |
 | Topical; anti-itch/SPF/antifungal/acne active | Disease/condition treatment, US | OTC Drug (Topical Monograph) | FDA OTC Monograph |
 | Physical device | Diagnose/monitor/treat, US | Medical Device | FDA CDRH (510k/PMA/De Novo) |
 | Food/beverage + functional ingredient | Authorized disease-risk reduction, US | Functional Food + Health Claim | FDA (21 CFR 101.14) |
@@ -37,6 +40,7 @@ Complete this before any search. The product class sets what you can and cannot 
 | Canada NHP | Licensed claim language verbatim; NPN on label; "Does not replace a healthy diet and lifestyle" where licensed. |
 | US Qualified Health Claim | Although there is scientific evidence supporting this claim, the evidence is not conclusive. |
 | US Medical Device | Cleared intended use from 510(k)/PMA. No drug-like efficacy claims. "Rx only" if applicable. |
+| Australia Listed Medicine | Permissible indication wording verbatim; "Always read the label and follow the directions for use." |
 
 ## Guardrails by product type
 

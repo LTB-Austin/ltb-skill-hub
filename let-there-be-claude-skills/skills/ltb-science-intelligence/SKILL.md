@@ -8,6 +8,8 @@ description: >-
 
 ## Writing voice — plain and factual
 
+<!-- This voice block is duplicated verbatim in ltb-science-story/SKILL.md. Edit both. -->
+
 All copy in this deliverable follows one standard: plain, straightforward, and true to the work. We make complex science clear; the writing should do the same. This never overrides scientific accuracy or MLR/regulatory scoping — every claim still traces to a verified source.
 
 - **Lead with the fact, not the flourish.** State what's true and what the brand does; let the evidence carry the weight. No hype, no hard sell.
@@ -20,11 +22,27 @@ All copy in this deliverable follows one standard: plain, straightforward, and t
 - **Keep the science simple and accurate.** Use plain words for mechanisms. Keep the precise term only when it carries real meaning: an ingredient name, a study design, a regulatory class, a measured result. Simplifying must never change what a finding actually says.
 - **Say it once.** No restating the same point in a second clause. Cut throat-clearing openers and filler qualifiers.
 
+This block is the floor for every register. `references/copy-craft.md` defines exactly how far consumer-facing lines may move off it (a reader's moment, a fragment and a turn, a triad) and where they may not (wordplay, rhetorical hooks, adjectives doing the persuading).
+
 You are running the first stage of the Science Marketing Engine: **Prove.** The job is to find the strong science behind a product, organize it into a structured evidence workbook, and turn it into **claims** that are true, defensible, scoped to the product's regulatory category, and ready for MLR. Those claims become the raw material for the Science Story stage (claim clusters → narratives → consumer testing).
 
 Everything runs inside Claude using the connected **Elicit** research tools — no Perplexity relay. The evidence is real (tool-sourced papers with resolving IDs), so your value-add is scoping, structuring, regulatory calibration, and honest synthesis.
 
+## Reference files (read as you reach each phase)
+
+| File | Read it when |
+|---|---|
+| `references/regulatory-frameworks.md` | Phase 1. Classifier, routing, disclaimers, guardrails by product type. |
+| `references/workbook-schema.md` | Phase 3 and 5. Tabs, columns, tiering for many actives, Search Log, color codes. |
+| `references/full-text-review.md` | Phase 3b. Which studies to read in full and the record each read produces. |
+| `references/substantiation-map.md` | Phase 6, first. Claim elements, study roles, product bridge, market evidence standards, safety carry-through. |
+| `references/claim-development.md` | Phase 6, second. Expression levels, scoring, risk, wording rules, derived claims. |
+| `references/copy-craft.md` | Phase 6, before writing any expression. How consumer, HCP, and MLR lines are actually written, with worked examples from LTB decks. |
+| `references/claim-set-contract.md` | Phase 6 and 7. The exact fields Science Story expects. Identical copy lives in the Story skill. |
+
 ## The tools you'll use
+
+**Load them first.** The Elicit tools are usually deferred. Run `tool_search` for "Elicit" (or "search papers", "systematic review") and use the exact parameter names the returned schema gives you. The names and filters listed below describe what the tools do and are current as of this writing; the loaded schema wins if they differ. Do not guess parameter names.
 
 - `search_papers` — Elicit corpus (default) or PubMed. Supports `filters.typeTags` (RCT, Meta-Analysis, Systematic Review, Review, Longitudinal), `minYear`/`maxYear`, `includeKeywords`/`excludeKeywords`, `maxQuartile`. Use for fast, targeted pulls per ingredient.
 - `search_trials` — ClinicalTrials.gov, with `trialFilters` (phase, recruitment status, hasResults).
@@ -34,6 +52,18 @@ Everything runs inside Claude using the connected **Elicit** research tools — 
 
 Prefer `create_systematic_review` when you need the disciplined screen-and-extract table that feeds an ingredient tab. Use `search_papers`/`search_trials` for quick scoping, spotlight-study hunting, and gap-filling.
 
+### When the tools don't cooperate
+
+| Situation | What to do | What to tell the user |
+|---|---|---|
+| Elicit not connected or `tool_search` finds nothing | Stop before Phase 2. Do not substitute memory for search. | "Elicit isn't connected in this chat. I can set up the regulatory frame and workbook structure now, but the literature search needs the Elicit connector turned on." |
+| Search returns zero or only off-scope results | Broaden once (drop year filter, swap corpus, use synonyms and Latin/INN names), log both searches, then move on | Name the ingredient and say the evidence base looks thin; propose coding it Tier 2/3 or NOTE. |
+| Quota exceeded / `get_usage` shows limits hit | Fall back to `search_papers` and manual extraction; do not start a systematic review | State the limit plainly and what it changes. |
+| Systematic review stays `running` past a reasonable wait | Poll a few times, then proceed with manual extraction for that ingredient and note the review ID so it can be folded in later | Give them the review ID. |
+| A result lacks a resolving PMID/DOI | Try to resolve via a second search on the title; if still none, exclude and log in Citation QA | Nothing unless it was a candidate pivotal study. |
+
+Never fill a gap left by a tool failure with recalled studies. A recalled citation looks identical to a real one and is the fastest way to put an invented PMID in front of MLR.
+
 ## Phase 0 — Inputs
 
 Confirm you have (ask only for what's missing; you can derive the rest):
@@ -42,10 +72,13 @@ Confirm you have (ask only for what's missing; you can derive the rest):
 - Active ingredient(s) — INCI / INN / common / Latin name
 - Product format (tablet, capsule, gummy, lozenge, liquid, topical, patch, device)
 - Intended use / indication
-- Target market (US, EU, Canada, APAC)
+- Target market (US, EU, Canada, UK, Australia, APAC)
 - Regulatory classification, if known
+- Any client-supplied studies, supplier dossiers, or the brand's existing claims (ask once; they change the scope of the search)
 
 Minimum viable start: a brand name and one active ingredient. Then run classification.
+
+If the formula has more than about six actives, propose an ingredient tiering (hero / supporting / rest; see `references/workbook-schema.md`) and confirm it before searching. The tiering sets the scope of the project.
 
 ## Phase 1 — Classify & set the regulatory frame
 
@@ -63,6 +96,9 @@ Work **one active ingredient at a time**, and keep the scope tight to the produc
 - Run `search_papers` on the **elicit** corpus and again on **pubmed**, prioritizing `typeTags: ["Meta-Analysis","Systematic Review","RCT"]` and `minYear` ~ last 10–15 years (allow older for seminal work). Use `includeKeywords` for the indication and `excludeKeywords` to drop off-scope noise (e.g., animal-only) when needed.
 - Run `search_trials` for registered/`hasResults` trials on the ingredient + indication.
 - Skim titles/abstracts and shortlist the studies worth extracting. Favor human studies at or near the product's dose and form.
+- **Log every search** on the Search Log tab (date, corpus, query, filters, hits, shortlisted). Reproducibility is part of the deliverable.
+
+**When to stop.** For a Tier 1 active, aim for 8–20 shortlisted human studies, including every meta-analysis or systematic review on the indication from the last ~10 years and every NULL trial you can find. Stop when two consecutive searches with varied terms add nothing new to the shortlist. For Tier 2 actives, 3–8 is enough. Record the stopping reason in the Search Log. A thin evidence base is a finding; report it rather than padding it.
 
 ## Phase 3 — Extract into the workbook spine
 
@@ -74,41 +110,54 @@ Opt-in path: **Elicit systematic review.** When the user explicitly wants Elicit
 
 ## Phase 3b — Full text on load-bearing studies
 
-Abstracts are appropriate for screening, landscape, and prioritisation. They are not sufficient for the few studies a claim actually stands on. Abstracts routinely lead with a secondary or subgroup result when the primary endpoint missed, omit confidence intervals and multiplicity adjustment, and are loose on dose, form, duration, and population.
+Abstracts are for screening, landscape, and prioritisation. They are not sufficient for the few studies a claim actually stands on: they lead with a secondary or subgroup result when the primary missed, drop confidence intervals and multiplicity adjustment, and are loose on dose, form, duration, and population.
 
-**The rule.** A study must be read in full text before a claim can rest on it when either is true:
+Read `references/full-text-review.md` and follow it. In short:
 
-- it is coded **POSITIVE PIVOTAL**, or
-- it is the **sole support** for a claim.
-
-Everything else may stay abstract-based. In practice this is about 3 to 10 studies per project, not the whole set.
-
-To retrieve full text, in this order:
-
-1. Set `hasPdf: true` on `search_papers` when hunting candidates for pivotal status.
-2. Check open access: PubMed Central, Europe PMC, and the publisher's own OA copy.
-3. If the client has institutional or purchased access, ask them to supply the PDF.
-4. If it is paywalled and unavailable, do not quietly fall back to the abstract. Mark the claim `ABSTRACT-ONLY - FULL TEXT REQUIRED BEFORE MLR` and raise it in the handback so someone can decide whether to buy the article.
-
-When you do read full text, check the four things abstracts get wrong most often: whether the quoted result was the **primary** endpoint, the **actual effect size with confidence interval**, the **dose and form** against the product, and the **population**. If any of these contradicts the abstract, correct the row and log it in Citation QA.
-
-Never state or imply that a study was read in full when it was not.
+- A study is read in full when it is coded **POSITIVE PIVOTAL** or is the **sole Primary support** for any claim element. Expect 3 to 10 studies per project. Client-supplied studies that support a claim are always read in full.
+- Each read produces a **Full-Text Review record** on its own tab: registration and endpoint match, analysis set and attrition, effect in consumer units with CI, subgroup dependence, sponsorship and author overlap, retraction check, abstract-vs-full-text discrepancies, and **verbatim quotes with location**. Those quotes are the only ones Science Story may put on a Source Card, so capture them now.
+- If the full text cannot be obtained, the row stays at `Abstract`, Full-text required = `Yes`, and the claim's substantiation depth becomes `Abstract-only — full text required before MLR`. Raise it in the handback. Never imply a study was read in full when it was not.
 
 ## Phase 4 — Verify (light but non-negotiable)
 
-Tool-sourced studies come with real identifiers, which removes most hallucination risk — but still: confirm every study has a resolving PMID or DOI, and check that any specific statistic you carry into a claim actually appears in the source recorded in Evidence Basis. For a pivotal or sole-support study, that source must be the full text. A claim can be no stronger than the study under it. Keep a Citation QA tab (schema file) noting Verified / Corrected / Excluded. Retain NULL/negative studies — never suppress them; they are guardrails.
+Tool-sourced studies come with real identifiers, which removes most hallucination risk — but still: confirm every study has a resolving PMID or DOI, and check that any specific statistic you carry into a claim actually appears in the source recorded in Evidence Basis. For a Primary study, that source must be the full text. A claim can be no stronger than the study under it. Keep a Citation QA tab (schema file) noting Verified / Corrected / Excluded; every abstract-vs-full-text discrepancy from Phase 3b is a `Corrected` entry. Retain NULL/negative studies — never suppress them; they are the counter-evidence every claim must account for.
 
 ## Phase 5 — Build the evidence workbook (.xlsx)
 
-Use the `xlsx` skill. Read `references/workbook-schema.md` and build the workbook: Overview · one tab per active ingredient · Claim Development · Competitive Intel · All Studies DB · Citation QA Log · References. Color-code finding direction. This spreadsheet is the internal source of truth and the data appendix for the client handover.
+Use the `xlsx` skill. Read `references/workbook-schema.md` and build the workbook: Overview · Search Log · ingredient tabs (tiered) · All Studies DB · Full-Text Review · Claim Development · Claim Substantiation Map · Citation QA Log · Competitive Intel (optional; only with user-supplied competitor material) · References. Color-code finding direction. This spreadsheet is the internal source of truth and the data appendix for the client handover.
 
-## Phase 6 — Develop the claims (MLR-ready)
+## Phase 6 — Map substantiation, then develop the claims (MLR-ready)
 
-Read `references/claim-development.md`. For each SKU, develop claims at three **expression levels** — Consumer (DTC, ≤12 words, disclaimer), HCP (mechanism + evidentiary anchor + differentiator), and MLR/internal (full evidence + limitations + guardrails). Every claim: traces to a verified study, carries an evidence-strength rating, a regulatory-risk rating, and a guardrail note. Use only the permitted claim types for the product class. Present both the client's historical claims (where known) and the new science-backed, regulatory-safe options.
+Read `references/substantiation-map.md` first, then `references/claim-development.md`. The order matters: the map is what makes the claim defensible; the wording follows from it.
+
+For each candidate claim: assign a Claim ID; decompose it into elements (ingredient, endpoint, magnitude, population, timing, qualifier, comparative); map studies to each element with a role (Primary / Corroborating / Mechanistic / Contradicting); record counter-evidence and how the wording accounts for it; score the product bridge (dose, form, duration, population); apply the market's evidence standard; carry safety signals into the guardrail; then score strength and risk, capped by the weakest element.
+
+Only then write the three **expression levels** — Consumer (DTC, ≤12 words, disclaimer), HCP (mechanism + evidentiary anchor + differentiator), and MLR/internal (full evidence + limitations + guardrails). Read `references/copy-craft.md` before writing them; the writing is what the client and MLR actually see. In particular: the measurement stays in the substantiation file and the consumer hears the comparison; the evidence sentence and the guardrail on each claim card are copy too, written for a reader; every lead claim gets a sharper version with a one-line "what changed."
+
+If the client has an existing claims list, check every candidate against it first. A claim they already own is not an opportunity. Say how many were withdrawn on regulatory grounds and offer to walk through them. Use only the permitted claim types for the product class. Present both the client's historical claims (where known) and the new science-backed, regulatory-safe options. Fill every field in `references/claim-set-contract.md`; that contract is what Science Story reads.
 
 ## Phase 7 — Hand off
 
-Deliver: the evidence workbook (.xlsx) + the claim development set. Then note the next step for the user: these verified claims feed the **Science Story** stage, where they're organized into **claim clusters**, tied to narratives, and consumer-tested. If they want the client-facing branded lit-review/claim-dev deck, that's the downstream deck skill.
+Deliver two files: `[Brand]_Evidence_Workbook.xlsx` and `[Brand]_Claim_Set.md` (the markdown mirror of the Claim Development tab, one block per claim, generated from the tab). Then note the next step for the user: these verified claims feed the **Science Story** stage, where they're organized into **claim clusters**, tied to narratives, and consumer-tested. If they want the client-facing branded lit-review/claim-dev deck, that's the downstream deck skill.
+
+### Definition of done
+
+Run this before calling the stage complete, and report the result to the user in a few plain lines:
+
+- Regulatory Identity Block and Formula Map are on the Overview tab.
+- Ingredient tiering was confirmed by the user (if >6 actives).
+- Search Log covers every search run, with stopping reasons.
+- Every study has a resolving PMID/DOI and a Citation QA status of Verified, Corrected, or Excluded.
+- Every POSITIVE PIVOTAL study and every sole Primary study has a Full-Text Review record, or is explicitly listed as blocking.
+- Count of blocking rows (`Abstract-only — full text required before MLR`) stated. Zero is not required; hiding them is not allowed.
+- Every claim has a Claim ID, decomposed elements with Study IDs, a Counter-evidence entry (never blank), a product bridge score, disclaimer text, at least one verbatim quote per Primary study, a safety carry-through, and an evidence date.
+- Every consumer line passes the self-edit list in `references/copy-craft.md` §12: no raw percentages or units, one idea per line, qualifier matches the design, hedges kept, comparator by molecule, prevalence separated from the brand line.
+- Every guardrail names specific words to keep or avoid; none says only "use with caution."
+- Every lead claim has a sharper version and a "what changed" line.
+- NULL and MIXED studies are retained and referenced as counter-evidence where relevant.
+- Method note written.
+- Competitive Intel populated or marked "Not in scope."
+- Re-check reminder noted: before launch and after 12 months.
 
 ## Guardrails
 
@@ -116,3 +165,6 @@ Deliver: the evidence workbook (.xlsx) + the claim development set. Then note th
 - Never invent studies, statistics, PMIDs, or DOIs. Prefer fewer verified studies over more uncertain ones.
 - A claim is only as compliant as the product class allows. When unsure, flag for legal rather than guess.
 - No "Gems." The unit is a **claim**; the package is a **claim cluster** (built in the Science Story stage).
+- A claim is a set of elements, each of which needs evidence. If one element is unsupported, the claim is unsupported.
+- Counter-evidence is recorded for every claim. "None found" is a valid entry; a blank is not.
+- Client-supplied and supplier studies are welcome and are labeled as such. They never stand alone as Primary when an independent study on the same element exists.
