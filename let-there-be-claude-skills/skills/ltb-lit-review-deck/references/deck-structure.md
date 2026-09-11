@@ -40,13 +40,23 @@ Use **current site language** for section names and taglines (Science Intelligen
 17. **Guardrails — claims to keep off the table** — the non-negotiable lines with ✕ and the reason each is off-limits (e.g., null evidence, regulatory class). This is a trust-builder; do not skip it.
 18. **The opportunity field** — hero count of opportunities identified.
 
-*Optional, when clinical numbers need consumer translation:* **Translating the numbers** — a three-column table `The clinical finding → What we could say → Claim ID`, derivation footnoted, never bending what the number means.
-19. **Opportunities — repeat per SKU / active grouping:** table with columns `Opportunity | Working language — not yet approved | Science basis | What's needed`. Put the working language in a soft grey rounded chip. "What's needed" states the substantiation/regulatory step (e.g., "confirm per-symptom results meet substantiation — no new studies needed"). Standard disclaimer as a footnote with the asterisk that appears in the working language.
+*Optional, when clinical numbers need consumer translation:* **Translating the numbers** — a three-column table `What was measured → What the consumer hears → Claim ID`, converted per copy-craft.md §3, derivation footnoted, never bending what the number means.
+19. **Priority directions** — the four to six directions the deck will spend time on, each named in a few words, with a status key: `READY NOW` (evidence in hand) · `CLASS-LEVEL` (published for the ingredient class, not this product) · `NEEDS DETAIL` (awaiting client data). Say how many opportunities were removed because the client already owns them and how many were withdrawn on regulatory grounds.
+20. **Claim direction — one slide per priority direction.** The anatomy your Claim Dev slides use, in this order:
+    - Eyebrow: `CLAIM DIRECTION 0N · [TERRITORY]`; slide headline states the direction in one plain sentence.
+    - Badge: `WORKING LANGUAGE · PENDING MLR`.
+    - **Lead claim** in quotes with its Claim ID.
+    - **Element table** — `Part of the claim | What substantiates it | Source | Status`. One row per phrase of the lead claim ("Same SPF" · "Not the same coverage" · "That's what CoverGuard™ is for"), each with its evidence in one or two plain sentences, its Study IDs, and READY NOW / CLASS-LEVEL / NEEDS DETAIL. This is the substantiation map (SI) made visible; the client sees that every word is held up.
+    - **Sharper version** — the pack / display / end-frame compression, labeled with where it would run, plus **What changed** in one sentence (copy-craft.md §8).
+    - Speaker note: why this direction, what it does not say, and the one thing that would strengthen it.
+21. **Claim library — the full set, one or two slides.** Columns: `ID | Claim, as [Brand] would say it | Evidence | Level (CLASS / CATEGORY / PRODUCT) | Risk`. Grouped by territory with a count per territory. Speaker note says these are for building the shortlist, not for reading aloud.
+22. **Supporting evidence — `EVIDENCE, NOT CLAIM LANGUAGE`.** Columns: `ID (SE-nn) | Finding, as the evidence states it | Source | What it substantiates`. Findings and category facts that hold up the claims above without being claims themselves. Speaker note: they state a finding and stop; keeping them separate is what stops a category finding being read as a brand claim.
+    Standard disclaimer as a footnote on every claim slide, with the asterisk that appears in the working language.
 
 **Close**
-20. **The roadmap** — the four-stage engine; where the brand stands today and how validated claims flow into Science Story™ (clusters → narratives → consumer testing) and Science Studio™.
-21. **Closing** — "SCIENCE LEADS. CREATIVITY AMPLIFIES." + "Prepared by Let There Be for [Client] · [Month Year]".
-22. **Appendix** *(when the record set is large)* — the full study list, numbered A1, A2, … with resolving links.
+23. **The roadmap** — the four-stage engine; where the brand stands today and how validated claims flow into Science Story™ (clusters → narratives → consumer testing) and Science Studio™.
+24. **Closing** — "SCIENCE LEADS. CREATIVITY AMPLIFIES." + "Prepared by Let There Be for [Client] · [Month Year]".
+25. **Appendix** *(when the record set is large)* — the full study list, numbered A1, A2, … with resolving links.
 
 ## Finding-direction coding (matches the evidence workbook)
 POSITIVE PIVOTAL (dark green/teal dot, bold) · POSITIVE (teal dot) · MIXED (purple dot) · NULL (red dot — kept as a guardrail, never hidden) · NOTE (grey). Gradient bars for "studies by active" use the mitosis gradient.
@@ -54,5 +64,6 @@ POSITIVE PIVOTAL (dark green/teal dot, bold) · POSITIVE (teal dot) · MIXED (pu
 ## Rules
 - Every study row and claim traces to a real citation from the evidence workbook. Never invent a study or statistic.
 - Show NULL/negative evidence and guardrails openly — it is what makes the claim set defensible and is a selling point of the LTB method.
-- Claims are scoped to the product's regulatory class and carry the required disclaimer. Working (unapproved) language is always visibly labeled — use a `WORKING LANGUAGE · PENDING MLR` badge. Give each claim a territory-prefixed ID (PC1, DA1, HA1) and keep IDs stable across revisions.
+- Claims are scoped to the product's regulatory class and carry the required disclaimer. Working (unapproved) language is always visibly labeled — use a `WORKING LANGUAGE · PENDING MLR` badge. Display each claim's ID exactly as the Claim Set assigns it; this deck never assigns or changes IDs.
+- Claim lines, evidence sentences, guardrails, and consumer translations follow copy-craft.md. The evidence sentence on a card is written for a reader, not pasted from an abstract.
 - Spotlight studies give the strongest evidence room to stand on its own — pick the clearest, most ownable finding per active.

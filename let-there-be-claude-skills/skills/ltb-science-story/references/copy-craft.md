@@ -1,6 +1,6 @@
 # Copy Craft — how LTB claims and Science Stories are written
 
-<!-- Identical copies live in ltb-science-intelligence/references and ltb-science-story/references. Edit both. -->
+<!-- Identical copies live in ltb-science-intelligence, ltb-lit-review-deck, ltb-science-story, and ltb-lit-review-claim-dev-sales-preview (each under references/). Edit all four. -->
 
 The writing is the product. A claim goes in front of MLR and then in front of a consumer; a Science Story goes into a test where three hundred people read it and score it against two others. Nobody in either room sees the workbook. They see the sentence. A first draft that needs the strategist to rewrite every line has failed even if every citation is right.
 

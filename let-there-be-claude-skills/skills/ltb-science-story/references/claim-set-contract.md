@@ -1,6 +1,6 @@
 # Claim Set Contract — the handoff between Science Intelligence and Science Story
 
-<!-- Identical copies live in ltb-science-intelligence/references and ltb-science-story/references. Edit both. -->
+<!-- Identical copies live in ltb-science-intelligence, ltb-lit-review-deck, and ltb-science-story (each under references/). Edit all three. -->
 
 Science Intelligence produces the Claim Set. Science Story consumes it. Every downstream skill (lit-review deck, consumer-test package, handover) reads the same object. Nothing about a claim is re-derived downstream; if a field is missing here, it is missing everywhere.
 
@@ -15,7 +15,7 @@ The markdown mirror is generated from the tab, never edited independently.
 
 ## Identifiers
 
-- **Claim ID**: `CLM-01`, `CLM-02`… assigned once in Science Intelligence and never reused or renumbered. A derived claim created downstream gets the next free number with a `D` suffix (`CLM-14D`).
+- **Claim ID**: assigned once in Science Intelligence and never reused or renumbered. Default scheme is `CLM-01`, `CLM-02`…. A project may instead use territory-prefixed IDs (`PC1`, `DA4`, `LC-02`) when the claims group naturally by territory and the client will reference them that way; the scheme is chosen in Science Intelligence and every downstream deck uses it unchanged. No skill other than Science Intelligence assigns an ID. A derived claim created downstream gets the next free number with a `D` suffix (`CLM-14D`, `PC7D`).
 - **Study ID**: `S-001`, `S-002`… from the All Studies DB. Claims reference studies by Study ID, never by "Smith 2019" alone.
 - **Stimulus code** (Science Story, for testing): `H1…`, `N1…`, `C1…`. Each stimulus carries the Claim ID(s) it renders.
 
