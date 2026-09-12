@@ -320,6 +320,8 @@ Guardrails are project-specific, but the same pairs recur across every LTB proje
 
 Words that are simply out, in every register: proven, revolutionary, breakthrough, cutting-edge, powerful, superior (unless head-to-head data), miracle, magic, gem.
 
+**The project avoid list.** Every project adds a third column from the competitive scan: the category voice. Words, sentence shapes, and taglines that competitors already use are closed for us in consumer and positioning registers, not because they are wrong but because they are theirs. A line that could sit on a competitor's pack unchanged has failed the register even if every word is safe. The list lives in the Claim Set's Category language map; read it before writing.
+
 ---
 
 ## 12. Self-edit: the tells that a line needs another pass

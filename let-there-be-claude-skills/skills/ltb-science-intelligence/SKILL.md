@@ -33,10 +33,11 @@ Everything runs inside Claude using the connected **Elicit** research tools — 
 | File | Read it when |
 |---|---|
 | `references/regulatory-frameworks.md` | Phase 1. Classifier, routing, disclaimers, guardrails by product type. |
+| `references/competitive-scan.md` | Phase 1b. Competitor set, what to capture verbatim, the Category Language Map, and what it feeds. |
 | `references/workbook-schema.md` | Phase 3 and 5. Tabs, columns, tiering for many actives, Search Log, color codes. |
 | `references/full-text-review.md` | Phase 3b. Which studies to read in full and the record each read produces. |
 | `references/substantiation-map.md` | Phase 6, first. Claim elements, study roles, product bridge, market evidence standards, safety carry-through. |
-| `references/claim-development.md` | Phase 6, second. Expression levels, scoring, risk, wording rules, derived claims. |
+| `references/claim-development.md` | Phase 6, second; Phase 6b for the Board. Expression levels, scoring, risk, wording rules, ranking, derived claims. |
 | `references/copy-craft.md` | Phase 6, before writing any expression. How consumer, HCP, and MLR lines are actually written, with worked examples from LTB decks. |
 | `references/claim-set-contract.md` | Phase 6 and 7. The exact fields Science Story expects. Identical copy lives in the Story skill. |
 
@@ -75,6 +76,7 @@ Confirm you have (ask only for what's missing; you can derive the rest):
 - Target market (US, EU, Canada, UK, Australia, APAC)
 - Regulatory classification, if known
 - Any client-supplied studies, supplier dossiers, or the brand's existing claims (ask once; they change the scope of the search)
+- The competitors the client cares about, and any competitor material they have (a category audit, label copy). If none, the scan proposes a set.
 
 Minimum viable start: a brand name and one active ingredient. Then run classification.
 
@@ -89,7 +91,15 @@ Read `references/regulatory-frameworks.md`. Answer the 5-question classifier, ro
 
 This calibration is the difference between claims that sail through MLR and claims that get rejected. Every product class is different — a monograph OTC drug, a DSHEA supplement, an OTC homeopathic, a switch product, and a device each permit and forbid different language. Do not skip this.
 
+## Phase 1b — Scan the competitive market
+
+Read `references/competitive-scan.md` and run it. The market matters in every phase: we do not build claims other brands already make, write in a voice another brand owns, or hand the client a direction a competitor could run. Fix the competitor set with the user, capture their claims **verbatim with URL and capture date** using web search (and Chrome when connected), log category rulings, and write the Category Language Map: the commons, the white space, the category voice. Client-supplied competitor material goes in alongside.
+
+If web search is not enabled in the chat, stop and ask for it. If it cannot be enabled, proceed with Market position `Not scanned` everywhere, say so in the handback, and never fill the gap from what you think the category usually says.
+
 ## Phase 2 — Search the literature (scope tight)
+
+Read the Category Language Map before searching. Endpoints in the white space where the product has plausible science get searched with the same rigour as the labeled indication; the scan tells you where an ownable claim could live, the literature tells you whether it does.
 
 Work **one active ingredient at a time**, and keep the scope tight to the product's indication/category (e.g., a zinc cold product → zinc + cold/URI, not zinc broadly). For each ingredient:
 
@@ -124,7 +134,7 @@ Tool-sourced studies come with real identifiers, which removes most hallucinatio
 
 ## Phase 5 — Build the evidence workbook (.xlsx)
 
-Use the `xlsx` skill. Read `references/workbook-schema.md` and build the workbook: Overview · Search Log · ingredient tabs (tiered) · All Studies DB · Full-Text Review · Claim Development · Claim Substantiation Map · Citation QA Log · Competitive Intel (optional; only with user-supplied competitor material) · References. Color-code finding direction. This spreadsheet is the internal source of truth and the data appendix for the client handover.
+Use the `xlsx` skill. Read `references/workbook-schema.md` and build the workbook: Overview · Search Log · ingredient tabs (tiered) · All Studies DB · Full-Text Review · Claim Development · Claim Substantiation Map · Citation QA Log · Competitive Intel (required; the Phase 1b scan) · References. Color-code finding direction. This spreadsheet is the internal source of truth and the data appendix for the client handover.
 
 ## Phase 6 — Map substantiation, then develop the claims (MLR-ready)
 
@@ -136,9 +146,17 @@ Only then write the three **expression levels** — Consumer (DTC, ≤12 words, 
 
 If the client has an existing claims list, check every candidate against it first. A claim they already own is not an opportunity. Say how many were withdrawn on regulatory grounds and offer to walk through them. Use only the permitted claim types for the product class. Present both the client's historical claims (where known) and the new science-backed, regulatory-safe options. Fill every field in `references/claim-set-contract.md`; that contract is what Science Story reads.
 
+## Phase 6b — Rank the Board
+
+Read the "Ranking the Board" section of `references/claim-development.md` and apply it as written. Eligibility first (verified, full text or mixed depth, Strong or Moderate, no dose or population gap, not already owned), then the fixed sort: strength → depth → bridge → risk → ownability. Science sets the order; ownability breaks ties. Choose four to six, run the diversity check, derive Deck status per claim, and write the headline finding from rank 1.
+
+Then write the Board as the header of the Claim Set (shape in `references/claim-set-contract.md`) and on the Overview tab: headline finding, priority board, field counts (library size, removed as already owned, withdrawn on regulatory grounds, flagged for legal), and an empty `Client picks` block. The downstream deck is built from this header and does not re-rank it. If the strongest science is not the most marketable science, the Board says so plainly in the ownability line; it does not reorder to flatter.
+
 ## Phase 7 — Hand off
 
-Deliver two files: `[Brand]_Evidence_Workbook.xlsx` and `[Brand]_Claim_Set.md` (the markdown mirror of the Claim Development tab, one block per claim, generated from the tab). Then note the next step for the user: these verified claims feed the **Science Story** stage, where they're organized into **claim clusters**, tied to narratives, and consumer-tested. If they want the client-facing branded lit-review/claim-dev deck, that's the downstream deck skill.
+Deliver two files: `[Brand]_Evidence_Workbook.xlsx` and `[Brand]_Claim_Set.md` (the Board header, then the markdown mirror of the Claim Development tab, one block per claim, generated from the tab). In the chat, give the user the Board itself in a few lines: the headline finding, the ranked directions with deck status, and the field counts. That is the summary they will skim before moving on.
+
+Then name the next step: run **ltb-lit-review-deck** in this thread to build the Science Intelligence deck from the Board; after the client meeting, their picks go into `Client picks` and feed **ltb-science-story**.
 
 ### Definition of done
 
@@ -154,9 +172,13 @@ Run this before calling the stage complete, and report the result to the user in
 - Every consumer line passes the self-edit list in `references/copy-craft.md` §12: no raw percentages or units, one idea per line, qualifier matches the design, hedges kept, comparator by molecule, prevalence separated from the brand line.
 - Every guardrail names specific words to keep or avoid; none says only "use with caution."
 - Every lead claim has a sharper version and a "what changed" line.
+- Every claim has a pivotal study (Primary, full-text reviewed), a consumer translation with derivation, an honest line, and an ownability value.
+- The Board is written: headline finding, four to six ranked directions with derived Deck status, field counts, empty Client picks. No ranked claim is abstract-only. Rank order follows the fixed sort in claim-development.md.
 - NULL and MIXED studies are retained and referenced as counter-evidence where relevant.
 - Method note written.
-- Competitive Intel populated or marked "Not in scope."
+- Competitive Intel populated from live sources with URLs and capture dates, or the tab states why the scan could not run and every Market position reads `Not scanned`.
+- Category Language Map written (commons, white space, category voice) and mirrored in the Claim Set header.
+- Every Board claim has Market position `Open` or `Contested` (or `Commons` with the differentiating element noted) and Voice collision `None`.
 - Re-check reminder noted: before launch and after 12 months.
 
 ## Guardrails
@@ -167,4 +189,5 @@ Run this before calling the stage complete, and report the result to the user in
 - No "Gems." The unit is a **claim**; the package is a **claim cluster** (built in the Science Story stage).
 - A claim is a set of elements, each of which needs evidence. If one element is unsupported, the claim is unsupported.
 - Counter-evidence is recorded for every claim. "None found" is a valid entry; a blank is not.
+- Competitor claims are captured verbatim from live sources or not at all. Claude's sense of what a category "usually says" is never entered as scan data.
 - Client-supplied and supplier studies are welcome and are labeled as such. They never stand alone as Primary when an independent study on the same element exists.

@@ -70,6 +70,30 @@ The craft of the line itself (sentence shape, how a measurement becomes a compar
 - **Counter-evidence shapes the sentence.** If a NULL trial exists at a different dose, the wording either specifies the dose context or is softened. The MLR expression names the NULL study.
 - **Safety context is not optional.** Guardrail notes carry any AE or contraindication from the supporting set.
 
+## Ranking the Board — science first, then ownability
+
+After every claim is scored, choose the four to six that become deck chapters and rank them. The rule is fixed so two people running the same workbook get the same Board.
+
+**Step 1 — Eligibility.** A claim is eligible for the Board only if: Status `Verified`; Substantiation depth `Full text verified` or `Mixed`; Evidence strength `Strong` or `Moderate`; no `Gap` on dose or population in the product bridge; not already on the client's approved list; Market position not `Commons` unless the line carries a qualifier, number, or mechanism no scanned competitor uses (note which); Voice collision `None`, or the line reworded until it is. Everything else stays in the library.
+
+**Step 2 — Sort, in this order.** Evidence strength (Strong before Moderate) → Substantiation depth (`Full text verified` before `Mixed`) → Product bridge (all `Match` before any `Near`) → Regulatory risk (Low before Medium) → Market position (`Open` before `Contested` before `Commons`; `Not scanned` sorts as `Contested` and is displayed) → Evidence level (`Product-level` before `Class-level`). Science decides the order; the market breaks ties and never promotes a weaker claim over a stronger one.
+
+**Step 3 — Diversity check.** If two eligible claims rest on the same pivotal study and the same endpoint, keep the higher-ranked one on the Board and mark the other as its supporting claim. The Board should show the client four to six different things the science lets them say, not one thing six ways.
+
+**Step 4 — The negative chapter.** If the workbook contains a clear NULL on a benefit the category widely assumes, it may take a Board row labeled `WHAT NOT TO SAY, AND WHY`, ranked last. It carries the Study IDs and no Claim ID.
+
+**Deck status** is derived, not chosen:
+
+| Condition | Deck status |
+|---|---|
+| Evidence level `Product-level`, Substantiation depth `Full text verified`, bridge all `Match` | `READY NOW` |
+| Evidence level `Class-level`, or bridge has a `Near` on form or duration | `CLASS-LEVEL` |
+| Any element waits on client data (a product-specific dose, an internal study, a SKU detail) | `NEEDS DETAIL` |
+
+Market position never changes Deck status; a `READY NOW` claim that is `Contested` is still ready, and the Board's ownability line says who else is in the space.
+
+**The headline finding** is the pivotal study result behind rank 1, stated as a finding (not a claim) with Study ID and design, followed by the claim it becomes. Do not spend it twice: the headline and chapter 1 are the same claim.
+
 ## Derived claims
 
 Downstream stages (Science Story) may propose new claims that build on verified ones. Those arrive as `CLM-nnD`, status `Derived / unscored`. Run them through this file in full: decompose, map, bridge, score. Only then do they become `Verified`. A derived claim that needs a study not already in the workbook is a research request, not a claim.

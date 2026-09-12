@@ -47,9 +47,50 @@ The markdown mirror is generated from the tab, never edited independently.
 | Candidate direction | loose grouping to speed clustering |
 | Evidence date | date the supporting search was run |
 | Sharper version | for lead claims: the pack / end-frame compression plus a one-line "what changed" (copy-craft.md §8) |
+| Pivotal study | the one Study ID the claim leads with when it is presented. Must be a `Primary` study with a Full-Text Review record. |
+| Consumer translation | the measured result converted to what the consumer hears (copy-craft.md §3), one line, with the derivation ("2.1 days vs 3.9 days, S-014" → "about two days shorter"). The number stays here; the comparison goes on the slide. |
+| Honest line | one presentable sentence naming what this evidence does not show, or where the counter-evidence sits and how the wording accommodates it. Written for a slide, derived from Counter-evidence. Never blank. |
+| Evidence level | `Product-level` (evidence at this product's dose/form) · `Class-level` (published for the ingredient class) · `Category-standard` (true of the whole category). From the workbook. |
+| Market position | `Open` (no scanned competitor claims the endpoint) · `Contested` (one or two do; name them and cite the Competitive Intel rows) · `Commons` (category-standard claim) · `Not scanned`. From the competitive scan only, never from recall. |
+| Voice collision | words or phrasing in the claim line that echo a scanned competitor's copy or tagline, with the competitor named; `None` if clean. |
+| Client already says it | Y / N, from the client's approved claims list; `Unknown` if not supplied. |
+| Deck status | `READY NOW` · `CLASS-LEVEL` · `NEEDS DETAIL`, derived by the rule in claim-development.md, never set by hand. |
+| Priority rank | `1`–`6` for claims chosen as deck chapters; blank for the rest. Ranked science first (strength, depth, bridge, risk), then market position. Set once in Science Intelligence. |
 | Alternates held | other wordings written or supplied by the client, kept for MLR |
 | Client status tag | IN-MARKET · SHORTLIST · NEW · APPROVED · PENDING, where the client uses these |
 | MLR status | blank until MLR returns |
+
+## The Board — the header of the Claim Set
+
+`[Brand]_Claim_Set.md` opens with a short header block before the per-claim blocks. The Claim Development tab carries the same content in its first rows (or on the Overview tab). The deck skill reads the Board directly and does not re-derive it; the Story skill reads the client's picks against it.
+
+```
+## Headline finding
+Finding: [one plain sentence, with Study ID and design]
+Becomes: "[lead claim]" · CLM-nn
+Why ownable: [one line naming the scanned competitors that do not claim it, the evidence level, and that the client does not already say it. Market position `Not scanned` → this line says so.]
+
+## Priority board
+| Rank | Direction (2–4 words) | Lead claim | Claim ID | Pivotal study | Held up by (n studies) | Deck status |
+|---|---|---|---|---|---|---|
+| 1 | … | … | CLM-nn | S-nnn | 5 | READY NOW |
+…
+
+## Field counts
+Claims in library: [n] · Removed, client already owns: [n] · Removed or reworded, category commons: [n] · Withdrawn on regulatory grounds: [n] · Flagged for legal: [n]
+
+## Category language map
+Scanned: [competitor list, capture date range] — or `Not scanned`
+Commons: [endpoints / phrases two or more competitors claim]
+White space: [endpoints our evidence supports that no competitor claims]
+Category voice to avoid: [words, shapes, taglines]
+
+## Client picks   ← blank until the Science Intelligence deck has been presented
+Direction [rank] · CLM-nn · client note
+…
+```
+
+The headline is the lead claim of rank 1. The Board has four to six rows. `Client picks` is the only part of the Claim Set that is written downstream: it is filled in after the deck meeting, by direction rank and Claim ID, and is what the Story skill clusters around.
 
 ## Rules that follow from the contract
 
@@ -58,3 +99,5 @@ The markdown mirror is generated from the tab, never edited independently.
 - A derived claim (`CLM-nnD`) is legitimate only if it rests entirely on studies already in the workbook. It is labeled `Derived / unscored` until it has been run back through claim-development.md scoring, and it is never presented as MLR-ready before that.
 - Disclaimer text travels with the claim, so it is identical in the workbook, the deck, and the test stimuli.
 - Retired claims stay in the set with status `Retired` and a reason. IDs are never deleted.
+- Priority rank and Deck status are set in Science Intelligence from the substantiation record. The deck skill displays them; it does not reorder the Board or promote a claim. If the deck needs a different order, the change is made in the Claim Set and both files regenerate.
+- A claim cannot hold Priority rank while its Substantiation depth is `Abstract-only — full text required before MLR`. Resolve the full text or rank a different claim.

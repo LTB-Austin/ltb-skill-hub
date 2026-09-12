@@ -14,15 +14,15 @@ Confirm the tiering with the user before searching; it sets the scope of the who
 
 | Tab | Sheet | Purpose |
 |---|---|---|
-| 1 | Overview | Classification · Regulatory Identity Block · formula map · SKU index · ingredient tiering · evidence legend · method note · hyperlinks to tabs |
+| 1 | Overview | Classification · Regulatory Identity Block · formula map · SKU index · ingredient tiering · evidence legend · method note · **the Board** (headline finding, priority board, field counts, category language map, client picks) · hyperlinks to tabs |
 | 2 | Search Log | Every search run, so the evidence base is reproducible (columns below) |
 | 3–N | [Ingredient] | Mechanism · bioactives · studies table · synthesis · claim directions · guardrails |
 | N+1 | All Studies DB | Flat, filterable, color-coded by finding direction. Assigns Study IDs `S-001`… |
 | N+2 | Full-Text Review | One record per study read in full (fields in full-text-review.md) |
-| N+3 | Claim Development | One row per claim with Claim ID `CLM-nn`; all fields in claim-set-contract.md |
+| N+3 | Claim Development | One row per claim with Claim ID `CLM-nn`; all fields in claim-set-contract.md, including Pivotal study · Consumer translation · Honest line · Evidence level · Market position · Voice collision · Client already says it · Deck status · Priority rank. Sorted by Priority rank, then territory. |
 | N+4 | Claim Substantiation Map | Claim ↔ study links with roles; claim elements; product bridge; counter-evidence (substantiation-map.md) |
 | N+5 | Citation QA Log | Verification audit trail |
-| N+6 | Competitive Intel | *Optional.* Only when the user supplies competitor label copy or asks for it explicitly; Elicit does not return competitor label claims. Mark "Not in scope" on the Overview if omitted. |
+| N+6 | Competitive Intel | **Required.** Output of the Phase 1b competitive scan (competitive-scan.md): one row per competitor claim, verbatim, with URL and capture date; rulings; and the Category Language Map. If the scan could not run, the tab states why and every Market position reads `Not scanned`. |
 | N+7 | References | Numbered bibliography, live PubMed/DOI links |
 
 ## Search Log columns
@@ -75,7 +75,9 @@ Completion gate: every study Verified, Corrected, or Excluded before the workboo
 
 ## Competitive Intel fields
 
-Competitor/Parent · Product Type · Target indication · Key actives (+doses) · Regulatory class & claim type · Labeled claims (verbatim) · Evidence quality (Strong RCT / Moderate review / Weak mechanistic / None) · Gap — brand advantage · Gap — competitor advantage · Differentiation opportunity.
+Per competitor claim row: Competitor/Parent · Product, SKU, format · Regulatory class · Key actives (+doses) · Claim, verbatim (`FOP` flag) · Claimed endpoint · Qualifier used · Substantiation cited (+URL) · Disclaimer present · Voice notes · Source URL · Capture date · Source (`Search` / `Chrome` / `Client-supplied` / `Ruling`).
+
+Below the rows: the **Category Language Map** (Commons · White space · Category voice), each entry with the competitor names and row references behind it. Full field notes in competitive-scan.md.
 
 ---
 
@@ -90,6 +92,10 @@ Every claim carries a **Substantiation Depth** value stating what its supporting
 | `Abstract-only — full text required before MLR` | The claim rests on a study read only at abstract level. **Blocking.** Resolve before the claim leaves Claim Dev. |
 
 A claim cannot be presented as MLR-ready while any blocking row remains.
+
+## The Board (Overview tab)
+
+The Overview tab carries the Board exactly as the Claim Set header defines it (claim-set-contract.md): the headline finding, the priority board of four to six rows, the field counts, and a `Client picks` block left blank. The deck skill reads its claim board from these rows; the Story skill fills `Client picks` after the deck meeting. Keep the Board and the Claim Development tab consistent; the markdown mirror regenerates from both.
 
 ## Method note (for the deliverable)
 
