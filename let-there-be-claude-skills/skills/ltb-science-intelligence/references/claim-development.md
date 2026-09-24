@@ -1,17 +1,6 @@
 # Claim Development
 
-A **claim** is a single, substantiated, defensible statement traced to verified studies. Each claim can be expressed at three audience levels. Use only the permitted claim types for the product class (regulatory-frameworks.md), substantiated to the market's evidence standard (substantiation-map.md), and recorded in the shape every downstream skill expects (claim-set-contract.md).
-
-Every claim gets a **Claim ID** (`CLM-01`…) when it is first written. IDs are stable for the life of the project.
-
-## Order of work
-
-1. Decompose the candidate claim into elements (substantiation-map.md, Step 1).
-2. Map studies to elements with roles; record counter-evidence.
-3. Score the product bridge.
-4. Score evidence strength and regulatory risk (tables below), capped by the bridge.
-5. Write the three expressions so each says no more than the map supports.
-6. Fill every field in claim-set-contract.md. A claim with a blank required field is not finished.
+A **claim** is a single, substantiated, defensible statement traced to a verified study. Each claim can be expressed at three audience levels. Use only the permitted claim types for the product class (see regulatory-frameworks.md).
 
 ## Three expression levels
 
@@ -41,63 +30,22 @@ Present both. Show the client's historical claims (where known) alongside the ne
 
 | Criterion | Strong | Moderate | Weak |
 |---|---|---|---|
-| Study design | Pivotal RCT at product dose/form, primary endpoint | Systematic review / consistent meta, or RCT on a secondary endpoint | Mechanistic, in vitro, or post hoc only |
+| Study design | Pivotal RCT at product dose/form | Systematic review / consistent meta | Mechanistic or in vitro only |
 | Evidence direction | POSITIVE PIVOTAL (≥2 RCTs) | POSITIVE (1 RCT/consistent reviews) | MIXED or NOTE only |
-| Counter-evidence | None, or explained by dose/population and reflected in wording | Some, partly accommodated | Unaddressed NULL on the same endpoint |
-| Product bridge | All four elements `Match` | One `Near`, no `Gap` | Any `Gap` |
-| Replication | 3+ independent groups (no author overlap) | 2 groups | Single lab/study |
-| Sponsorship | Independent Primary study exists | Industry-funded Primary with independent Corroborating | Brand-funded only |
-
-Rate the claim at the level of its weakest row. A `Gap` on dose or population caps strength at Moderate; two `Gap`s cap it at Weak.
+| Population match | Matches labeled indication | Broad adult | Different population |
+| Dose match | Exactly labeled dose | Similar range | Different form/dose |
+| Replication | 3+ independent groups | 2 groups | Single lab/study |
 
 | Risk | Definition | Action |
 |---|---|---|
-| LOW | ≥2 RCTs at dose; permitted language; disclaimer present; no unaddressed counter-evidence | Standard MLR |
-| MEDIUM | 1 RCT/review; mechanism claim; boundary language; quantified efficacy ("by a third"); "clinically shown" | MLR + legal check |
-| HIGH | No RCT; disease-adjacent; unsupported %; comparative or "#1"; result was secondary/post hoc but stated as shown | Do not use without MLR + legal clearance |
+| LOW | ≥2 RCTs at dose; permitted language; disclaimer present | Standard MLR |
+| MEDIUM | 1 RCT/review; mechanism claim; boundary language | MLR + legal check |
+| HIGH | No RCT; disease-adjacent; unsupported %; comparative | Do not use without MLR + legal clearance |
 
 ## Required fields per claim
 
-Defined once in **claim-set-contract.md**. Do not maintain a second list here. The fields that most often get skipped, and must not be: Claim ID · Claim elements with Study IDs · Counter-evidence · Product bridge · Required disclaimer text · Verbatim quotes with location · Safety carry-through · Evidence date.
-
-## Wording rules that follow from substantiation
-
-The craft of the line itself (sentence shape, how a measurement becomes a comparison, product naming, the claim card, the sharper version) is in copy-craft.md. Read it before writing any expression. The rules below are the substantiation constraints the craft operates inside.
-
-- **Qualifiers match the evidence.** "Clinically shown/demonstrated" requires a human RCT on that endpoint as `Primary`. "Clinically studied" requires a human study. "Helps support/maintain" requires mechanism plus human data. Never use "proven."
-- **Numbers carry their denominator.** A relative change ("33% shorter") is stated with, or convertible to, the absolute change from the Full-Text Review record. Do not quote a percentage that only exists in a subgroup.
-- **Timing and condition travel with the claim.** If the effect depended on when or how the product was taken, the consumer expression says so or the claim is not made.
-- **Counter-evidence shapes the sentence.** If a NULL trial exists at a different dose, the wording either specifies the dose context or is softened. The MLR expression names the NULL study.
-- **Safety context is not optional.** Guardrail notes carry any AE or contraindication from the supporting set.
-
-## Ranking the Board — science first, then ownability
-
-After every claim is scored, choose the four to six that become deck chapters and rank them. The rule is fixed so two people running the same workbook get the same Board.
-
-**Step 1 — Eligibility.** A claim is eligible for the Board only if: Status `Verified`; Substantiation depth `Full text verified` or `Mixed`; Evidence strength `Strong` or `Moderate`; no `Gap` on dose or population in the product bridge; not already on the client's approved list; Market position not `Commons` unless the line carries a qualifier, number, or mechanism no scanned competitor uses (note which); Voice collision `None`, or the line reworded until it is. Everything else stays in the library.
-
-**Step 2 — Sort, in this order.** Evidence strength (Strong before Moderate) → Substantiation depth (`Full text verified` before `Mixed`) → Product bridge (all `Match` before any `Near`) → Regulatory risk (Low before Medium) → Market position (`Open` before `Contested` before `Commons`; `Not scanned` sorts as `Contested` and is displayed) → Evidence level (`Product-level` before `Class-level`). Science decides the order; the market breaks ties and never promotes a weaker claim over a stronger one.
-
-**Step 3 — Diversity check.** If two eligible claims rest on the same pivotal study and the same endpoint, keep the higher-ranked one on the Board and mark the other as its supporting claim. The Board should show the client four to six different things the science lets them say, not one thing six ways.
-
-**Step 4 — The negative chapter.** If the workbook contains a clear NULL on a benefit the category widely assumes, it may take a Board row labeled `WHAT NOT TO SAY, AND WHY`, ranked last. It carries the Study IDs and no Claim ID.
-
-**Deck status** is derived, not chosen:
-
-| Condition | Deck status |
-|---|---|
-| Evidence level `Product-level`, Substantiation depth `Full text verified`, bridge all `Match` | `READY NOW` |
-| Evidence level `Class-level`, or bridge has a `Near` on form or duration | `CLASS-LEVEL` |
-| Any element waits on client data (a product-specific dose, an internal study, a SKU detail) | `NEEDS DETAIL` |
-
-Market position never changes Deck status; a `READY NOW` claim that is `Contested` is still ready, and the Board's ownability line says who else is in the space.
-
-**The headline finding** is the pivotal study result behind rank 1, stated as a finding (not a claim) with Study ID and design, followed by the claim it becomes. Do not spend it twice: the headline and chapter 1 are the same claim.
-
-## Derived claims
-
-Downstream stages (Science Story) may propose new claims that build on verified ones. Those arrive as `CLM-nnD`, status `Derived / unscored`. Run them through this file in full: decompose, map, bridge, score. Only then do they become `Verified`. A derived claim that needs a study not already in the workbook is a research request, not a claim.
+SKU · Ingredient(s) · Expression level · Claim type (hero/supporting/differentiator/anchor/disclaimer) · Claim text (verbatim) · Permitted claim type · Supporting study (author, year, PMID) · Evidence strength · Regulatory risk · Guardrail note (what must NOT be said) · MLR status (blank initially).
 
 ## Bridge to Science Story
 
-Verified claims do not go to the client as a loose list. In the Science Story stage they are grouped into 2–4 strategic directions, assembled into **claim clusters** (2–4 mutually reinforcing claims each), tied to a **narrative**, and consumer-tested. Deliver claims already loosely grouped by candidate direction so clustering starts fast, and deliver them in the two forms the contract requires: the Claim Development tab and `[Brand]_Claim_Set.md`.
+Verified claims do not go to the client as a loose list. In the Science Story stage they are grouped into 2–4 strategic directions, assembled into **claim clusters** (2–4 mutually reinforcing claims each), tied to a **narrative**, and consumer-tested. Deliver claims already loosely grouped by candidate direction so clustering starts fast.

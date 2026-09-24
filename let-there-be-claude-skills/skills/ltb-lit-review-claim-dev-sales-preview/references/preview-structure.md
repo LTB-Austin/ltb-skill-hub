@@ -64,8 +64,6 @@ Then a **Why it matters** block: what the category currently says, and what the 
 
 This is the slide the rep talks to. It must stand on its own without the table.
 
-Craft (copy-craft.md §2–3): the two-part statement is a fact and a turn, no adjectives, mechanism in plain words. Point 02's number is a comparison or a fraction a marketer can repeat; the exact measurement and n go in the speaker note.
-
 ## 07 Two more territories — VARIABLE
 Heading: "Two more territories the same pass opened."
 
@@ -87,8 +85,6 @@ Exactly **three** claims. Each block:
 
 Claim language is consumer-facing. No tiers, no risk matrix, no ID codes on this slide.
 
-Craft (copy-craft.md §2, §3, §7, §11): one or two short sentences each, ≤12 words; measurement in "Behind it," comparison in the claim; qualifier matched to the study design; product named in at least one, never beside a prevalence figure; comparator by molecule. The three play different roles: mechanism, measured result, occasion or advantage. The guardrail names the words to avoid. The "Behind it" sentence is written for a reader and must make sense with the citation blurred.
-
 ## 09 Science Story — VARIABLE
 Heading: **Worked example**, with the flag **Illustrative — not [Brand] data.**
 
@@ -100,8 +96,6 @@ Heading: **Worked example**, with the flag **Illustrative — not [Brand] data.*
 - **"And which words did the work"** — the headline and narrative repeated with phrases highlighted, plus a legend: Strongly liked · Liked · Disliked.
 
 Leave the scores empty. Never invent test results. No price.
-
-Craft (copy-craft.md §9): the direction name is a two-to-five-word point of view, not a benefit or tagline. The headline is the line the story hangs on. The narrative, three to five sentences (about 60–100 words), still walks the five beats: the reader's moment, the reframe, the product by name doing one specific thing, the consequence, a callback close. Numbers appear only in consumer form. The claim cluster is the three claims from slide 08; the `C-` codes are the template's fixed placeholders and stand in for the eventual Claim IDs the full engagement assigns.
 
 ## 10 Science Studio — BOILERPLATE
 Heading: **What the science becomes.** Subhead: "From claims to campaigns."

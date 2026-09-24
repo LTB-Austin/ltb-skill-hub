@@ -2,7 +2,7 @@
 
 **Preview context:** in the sales preview you develop claims with the SAME rigor described below, but the output is explicitly **illustrative and directional** — a small, sharp sample, clearly caveated as subject to MLR and legal review. Do not present preview claims as finalized or exhaustive. The point is to show the prospect that real, ownable, defensible claims fall out of their science — enough to make them want the full run.
 
-A **claim** is a single, substantiated, defensible statement traced to a verified study. Each claim can be expressed at three audience levels; the preview shows only the consumer level, with the evidence in the "Behind it" line. Use only the permitted claim types for the product class. How the line is written (sentence shape, measurement-to-comparison, product naming, the guardrail as a wording rule) is in copy-craft.md; read it before drafting.
+A **claim** is a single, substantiated, defensible statement traced to a verified study. Each claim can be expressed at three audience levels. Use only the permitted claim types for the product class (see regulatory-frameworks.md).
 
 ## Three expression levels
 
@@ -44,9 +44,9 @@ Present both. Show the client's historical claims (where known) alongside the ne
 | MEDIUM | 1 RCT/review; mechanism claim; boundary language | MLR + legal check |
 | HIGH | No RCT; disease-adjacent; unsupported %; comparative | Do not use without MLR + legal clearance |
 
-## What each preview claim needs (internally, for the handback note)
+## Required fields per claim
 
-Claim text (verbatim) · the study behind it (author, year, identifier) · evidence strength · regulatory risk · guardrail (specific words) · which of the three roles it plays (mechanism / measured result / occasion or advantage). None of this appears on slide 08 except the claim, the "Behind it" sentence, and the guardrail line; it goes in the rep's handback so they can answer questions.
+SKU · Ingredient(s) · Expression level · Claim type (hero/supporting/differentiator/anchor/disclaimer) · Claim text (verbatim) · Permitted claim type · Supporting study (author, year, PMID) · Evidence strength · Regulatory risk · Guardrail note (what must NOT be said) · MLR status (blank initially).
 
 ## In the preview vs. the full run
-In the preview you show **exactly three** claims on one hero finding (slide 08), plus the two territories on slide 07 that hint at range. Preview claims carry no Claim IDs and are never entered into a Claim Set. In the paid engagement Science Intelligence re-derives the claims with full substantiation mapping and stable IDs at all three expression levels; they are then grouped into **claim clusters** and narratives in the Science Story stage and consumer-tested. Say this on slide 04 and in the speaker notes: the preview is the appetizer, the engine is the meal.
+In the preview you show 4–6 sample claims across 2–3 territories. In the paid engagement these become a complete, MLR-ready claim set at all three expression levels, then get grouped into **claim clusters** and narratives in the Science Story stage and consumer-tested. Say this explicitly — the preview is the appetizer, the engine is the meal.
