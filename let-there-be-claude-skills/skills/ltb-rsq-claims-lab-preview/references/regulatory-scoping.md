@@ -1,16 +1,16 @@
 # Regulatory scoping for the Claims Lab
 
-Claims in this deck are illustrative, but the room will read them as if they were going to review. Scope them the way a reviewer would. This file gives the working frame; it is not legal advice, and every claim on the deck carries "Subject to MLR and legal review."
+Claims in this deck are illustrative, but the room will read them as if they were going to review. Scope them the way a reviewer would. In the current template the claims slide shows only the line and one support sentence; everything in this file feeds the claim record on the presenter sheet. This file gives the working frame; it is not legal advice, and every claim on the deck carries "Subject to MLR and legal review."
 
 ## Claim types by class
 
-Identify the class in the Inputs step. The class decides which claim types are open, and the middle card on the claims-method slide names the framework.
+Identify the class in the Inputs step. The class decides which claim types are open. The framework line under each class is for the presenter sheet and the speaker notes, where the presenter names the framework the claims were written to.
 
 **US dietary supplement**
 - Open: structure/function ("supports," "helps maintain"), with the FDA disclaimer on pack. Nutrient-content and general well-being claims.
 - Closed without a specific basis: any claim to diagnose, treat, cure, mitigate or prevent disease. "Reduces the risk of [disease]" is a health claim; it needs an authorized or qualified health claim, or an established basis the brand already holds. Name the basis or rate it HIGH.
 - Substantiation standard: FTC, competent and reliable scientific evidence, generally RCT-quality human evidence for health benefits, matched to the product's dose and form.
-- Framework line for the claims-method slide: "Written as how the body works, not what the product does to a disease. Structure/function, substantiated to FTC standard."
+- Framework line: "Written as how the body works, not what the product does to a disease. Structure/function, substantiated to FTC standard."
 
 **US OTC drug (monograph)**
 - Open: the indications the monograph permits, in or close to Drug Facts wording. Onset, duration, and comparative lines where data support them.
@@ -48,18 +48,18 @@ Never "proven," "clinically proven," or "guaranteed." Comparators by molecule, n
 
 ## Product fit
 
-The column reviewers will look at first. For each claim, check the evidence against the product on four points:
+The first thing a reviewer will ask about. For each claim, check the evidence against the product on four points:
 
 - **Dose** — labeled dose vs studied dose.
 - **Form** — salt, delivery, formulation (e.g. nicotinamide vs niacin; solubilized vs tablet).
 - **Regimen** — on-demand vs daily; single dose vs chronic.
 - **Population** — the studied population vs the buyer (age, condition, sex).
 
-`Matches` — all four align. `Partial` — one differs in a way a reviewer could accept with the right attribution. `Gap` — the claim leans on a study the product doesn't match; the line must be attributed to the active, narrowed, or moved to the line-sits slide.
+`Matches` — all four align. `Partial` — one differs in a way a reviewer could accept with the right attribution. `Gap` — the claim leans on a study the product doesn't match; the line must be attributed to the active, narrowed, or used as the "Too far" example in Where the line sits on the presenter sheet.
 
 ## Risk rating
 
-| Risk | When | On the slide |
+| Risk | When | What it means |
 |---|---|---|
 | LOW | ≥2 human RCTs at or near the product's dose; claim type open for the class; qualifier matches design | Standard MLR |
 | MEDIUM | One RCT or consistent reviews; or a `Partial` fit; or a comparative line on open-label data | MLR plus legal check |

@@ -1,5 +1,13 @@
 # LTB Brand System (current — 2026 rebrand)
 
+> For the Claims Lab, the Claude Design template already carries all of this. Read this file only if Design asks for intent. The brief's job is to fill the template's slots, not to restyle it.
+
+## How the Claims Lab template uses emphasis
+- One gradient-tinted card per screen on 06 (the open lane), 07 (the new territory), 11 (the new-territory finding) and 13 (the scores panel). The timing card on 03 and the rule on 15 are fixed.
+- Spotlight tables: mint highlight on the phrase that supports the territory; purple on a phrase that adds context.
+- Heatmap on 13: deep mint for strongly liked, light mint for liked, soft red for disliked.
+- The product's short name in the 06 subhead is the one emphasized word on that slide.
+
 Use this for every client-facing LTB deck. It supersedes the older palette (the retired teal `#008575` and its siblings). If you see those old hexes in an input, do not reuse them.
 
 ## Surfaces & type
