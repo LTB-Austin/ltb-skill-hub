@@ -1,6 +1,6 @@
-# Regulatory scoping for the Claims Lab
+# Regulatory scoping for the preview
 
-Claims in this deck are illustrative, but the room will read them as if they were going to review. Scope them the way a reviewer would. In the current template the claims slide shows only the line and one support sentence; everything in this file feeds the claim record on the presenter sheet. This file gives the working frame; it is not legal advice, and every claim on the deck carries "Subject to MLR and legal review."
+Claims in this deck are illustrative, but the prospect's regulatory and medical reviewers will read them as if they were going to review them. Scope them the way a reviewer would. In the current template the claims slide shows only the line and one support sentence; everything in this file feeds the claim record on the presenter sheet. This file gives the working frame; it is not legal advice, and every claim on the deck carries "Subject to MLR and legal review."
 
 ## Claim types by class
 

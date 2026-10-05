@@ -1,6 +1,6 @@
 # Copy Craft — how LTB claims and Science Stories are written
 
-<!-- Identical copies live in ltb-science-intelligence, ltb-lit-review-deck, ltb-science-story, and ltb-lit-review-claim-dev-sales-preview (each under references/). Edit all four. -->
+<!-- Identical copies live in ltb-science-intelligence, ltb-lit-review-deck, ltb-science-story, and ltb-sales-preview (each under references/). Edit all four. -->
 
 The writing is the product. A claim goes in front of MLR and then in front of a consumer; a Science Story goes into a test where three hundred people read it and score it against two others. Nobody in either room sees the workbook. They see the sentence. A first draft that needs the strategist to rewrite every line has failed even if every citation is right.
 
@@ -319,6 +319,8 @@ Guardrails are project-specific, but the same pairs recur across every LTB proje
 | covers up vs gets rid of | eliminates all, 100% |
 
 Words that are simply out, in every register: proven, revolutionary, breakthrough, cutting-edge, powerful, superior (unless head-to-head data), miracle, magic, gem.
+
+**The project avoid list.** Every project adds a third column from the competitive scan: the category voice. Words, sentence shapes, and taglines that competitors already use are closed for us in consumer and positioning registers, not because they are wrong but because they are theirs. A line that could sit on a competitor's pack unchanged has failed the register even if every word is safe. The list lives in the Claim Set's Category language map; read it before writing.
 
 ---
 
