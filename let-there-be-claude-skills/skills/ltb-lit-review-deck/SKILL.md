@@ -1,16 +1,6 @@
 ---
 name: ltb-lit-review-deck
-description: >-
-  Build the client-facing Science Intelligence™ deck for Let There Be — the presentation that turns an
-  evidence workbook into slides, covering both Lit Review™ (the evidence) and Claim Dev™ (the claims). Use
-  whenever the user wants to build, refine, or restyle a Science Intelligence deck, a lit review deck, a claim
-  development presentation, an evidence deck, a spotlight studies deck, or the client presentation for any
-  brand — even if they just say make the science intelligence deck for a client, turn this workbook into
-  slides, or build the claim dev presentation. Takes the evidence workbook and claim set from the Science
-  Intelligence stage and produces the deck content — evidence at a glance, per-active or per-pillar study
-  tables, spotlights, guardrails and claim territories — unbranded, for Claude Design to style and export. Do
-  NOT use for the raw literature research (that is ltb-science-intelligence) or for Science Story claim
-  clusters and narratives.
+description: Build the client-facing Science Intelligence™ deck for Let There Be — the presentation that turns an evidence workbook into slides, covering both Lit Review™ (the evidence) and Claim Dev™ (the claims). Use whenever the user wants to build, refine, or restyle a Science Intelligence deck, a lit review deck, a claim development presentation, an evidence deck, a spotlight studies deck, or the client presentation for any brand — even if they just say make the science intelligence deck for a client, turn this workbook into slides, or build the claim dev presentation. Takes the evidence workbook and claim set from the Science Intelligence stage and produces the deck content — evidence at a glance, per-active or per-pillar study tables, spotlights, guardrails and claim territories — unbranded, for Claude Design to style and export. Do NOT use for the raw literature research (that is ltb-science-intelligence) or for Science Story claim clusters and narratives.
 ---
 
 # LTB Science Intelligence™ Deck Builder

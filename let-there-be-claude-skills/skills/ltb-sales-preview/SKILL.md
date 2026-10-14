@@ -1,15 +1,6 @@
 ---
 name: ltb-sales-preview
-description: >-
-  Build a Science Intelligence preview deck for Let There Be - point it at a prospect's product and it runs a
-  real Elicit pass, opens three evidence territories with four spotlight studies each, distills three key
-  findings, writes three or four claims, and closes with an illustrative Science Story worked example, all
-  inside the 15-screen LTB Sales Preview template. Use whenever someone wants a pitch preview, prospect
-  teaser, claims preview, what-could-they-claim deck, pre-engagement sales asset, conference walkthrough or
-  leave-behind (including the Claims Lab), even if they just say make a preview for a brand. Sources stay
-  blurred. Output is one markdown file that drops field by field into the Claude Design template, plus a
-  presenter sheet with full citations, product fit, risk and guardrails. Do NOT use for a signed engagement
-  (ltb-science-intelligence, ltb-lit-review-deck) or for real Science Story clusters and narratives.
+description: Build a Science Intelligence preview deck for Let There Be - point it at a prospect's product and it runs a real Elicit pass, opens three evidence territories with four spotlight studies each, distills three key findings, writes three or four claims, and closes with an illustrative Science Story worked example, all inside the 15-screen LTB Sales Preview template. Use whenever someone wants a pitch preview, prospect teaser, claims preview, what-could-they-claim deck, pre-engagement sales asset, conference walkthrough or leave-behind (including the Claims Lab), even if they just say make a preview for a brand. Sources stay blurred. Output is one markdown file that drops field by field into the Claude Design template, plus a presenter sheet with full citations, product fit, risk and guardrails. Do NOT use for a signed engagement (ltb-science-intelligence, ltb-lit-review-deck) or for real Science Story clusters and narratives.
 ---
 
 # LTB Sales Preview

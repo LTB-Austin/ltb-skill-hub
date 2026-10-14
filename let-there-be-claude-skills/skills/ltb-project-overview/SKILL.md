@@ -1,17 +1,6 @@
 ---
 name: ltb-project-overview
-description: >-
-  Assemble the client Project Overview content brief for Let There Be — a single structured markdown
-  document holding every piece of content a project overview needs, which Claude Design then expands
-  into the branded presentation using its Project Overview template. Use whenever the user wants to
-  build, refine, or update a project overview for any LTB client — even if they just say make the
-  overview for a client or start the kickoff doc. Reads the brief, brand book, science, partner
-  details, and prior decks from the project space and organises them into labelled sections: project
-  details, deliverables, timeline, brand deep dive, audiences, the challenge, the three-phase engine,
-  and next steps. Output is markdown only — never a PPTX, HTML, or styled deck. Unknowns are marked as
-  open rather than filled in. Do NOT use for the Science Intelligence deck, the Science Story, the
-  SOW, or the internal Science 101 briefing.
-
+description: 'Assemble the client Project Overview content brief for Let There Be — a single structured markdown document holding every piece of content a project overview needs, which Claude Design then expands into the branded presentation using its Project Overview template. Use whenever the user wants to build, refine, or update a project overview for any LTB client — even if they just say make the overview for a client or start the kickoff doc. Reads the brief, brand book, science, partner details, and prior decks from the project space and organises them into labelled sections: project details, deliverables, timeline, brand deep dive, audiences, the challenge, the three-phase engine, and next steps. Output is markdown only — never a PPTX, HTML, or styled deck. Unknowns are marked as open rather than filled in. Do NOT use for the Science Intelligence deck, the Science Story, the SOW, or the internal Science 101 briefing.'
 ---
 
 # Skill: LTB Project Overview — Content Brief Builder

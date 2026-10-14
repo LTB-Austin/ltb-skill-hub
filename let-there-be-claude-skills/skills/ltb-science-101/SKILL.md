@@ -1,17 +1,6 @@
 ---
 name: ltb-science-101
-description: >-
-  Build the Science 101 presentation for Let There Be - the internal team briefing after a Science
-  Story is approved, bringing the creative team up to speed before production. Use whenever the user
-  wants a Science 101, a science briefing for the creative team, a project and science rundown, or an
-  animator-facing MOA walkthrough - even if they just say make the science 101 for a client, brief the
-  team on this project, or walk the animators through the science. Covers project details and
-  deliverables, a plain-language MOA walkthrough written so animators can visualize it, what Science
-  Intelligence uncovered, the client claim-cluster priorities, the Science Story options presented,
-  and the one they approved. Output is an unbranded presentation for Claude Design. Do NOT use for
-  client-facing decks - ltb-project-overview, ltb-lit-review-deck, and ltb-science-story are separate
-  skills.
-
+description: Build the Science 101 presentation for Let There Be - the internal team briefing after a Science Story is approved, bringing the creative team up to speed before production. Use whenever the user wants a Science 101, a science briefing for the creative team, a project and science rundown, or an animator-facing MOA walkthrough - even if they just say make the science 101 for a client, brief the team on this project, or walk the animators through the science. Covers project details and deliverables, a plain-language MOA walkthrough written so animators can visualize it, what Science Intelligence uncovered, the client claim-cluster priorities, the Science Story options presented, and the one they approved. Output is an unbranded presentation for Claude Design. Do NOT use for client-facing decks - ltb-project-overview, ltb-lit-review-deck, and ltb-science-story are separate skills.
 ---
 
 # Skill: LTB Science 101 — Internal Team Briefing

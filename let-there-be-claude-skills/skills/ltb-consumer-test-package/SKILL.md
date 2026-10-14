@@ -1,7 +1,6 @@
 ---
 name: ltb-consumer-test-package
-description: >-
-  Package Science Story stimuli into a clean, coded hand-off for Let There Be's consumer-testing partner. Use whenever the user wants to prep claims/narratives/headlines for consumer testing, build a test stimulus set, make a "testing brief" or "test package," or hand the testing partner what they need — even if they just say "get these ready for testing," "package the narratives for the test," or "make the stimulus sheet." Produces a structured stimulus workbook (coded, compliance-clean) plus a one-page test brief. Output is an .xlsx stimulus sheet + a short brief. Do NOT use to design the study's statistics (that methodology lives in the Science Story Master Guide) or to build the client-facing Science Story deck (ltb-science-story).
+description: Package Science Story stimuli into a clean, coded hand-off for Let There Be's consumer-testing partner. Use whenever the user wants to prep claims/narratives/headlines for consumer testing, build a test stimulus set, make a "testing brief" or "test package," or hand the testing partner what they need — even if they just say "get these ready for testing," "package the narratives for the test," or "make the stimulus sheet." Produces a structured stimulus workbook (coded, compliance-clean) plus a one-page test brief. Output is an .xlsx stimulus sheet + a short brief. Do NOT use to design the study's statistics (that methodology lives in the Science Story Master Guide) or to build the client-facing Science Story deck (ltb-science-story).
 ---
 
 # LTB Consumer Test Package
