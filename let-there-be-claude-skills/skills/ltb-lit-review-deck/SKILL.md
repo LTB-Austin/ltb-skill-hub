@@ -1,15 +1,15 @@
 ---
 name: ltb-lit-review-deck
-description: Build the client-facing Science Intelligence™ deck for Let There Be — the presentation that turns an evidence workbook into slides, covering both Lit Review™ (the evidence) and Claim Dev™ (the claims). Use whenever the user wants to build, refine, or restyle a Science Intelligence deck, a lit review deck, a claim development presentation, an evidence deck, a spotlight studies deck, or the client presentation for any brand — even if they just say make the science intelligence deck for a client, turn this workbook into slides, or build the claim dev presentation. Takes the evidence workbook and claim set from the Science Intelligence stage and produces the deck content — evidence at a glance, per-active or per-pillar study tables, spotlights, guardrails and claim territories — unbranded, for Claude Design to style and export. Do NOT use for the raw literature research (that is ltb-science-intelligence) or for Science Story claim clusters and narratives.
+description: Build the client-facing Science Intelligence™ deck for Let There Be — the presentation that turns an evidence workbook into slides, covering both Lit Review™ (the evidence) and Claim Dev™ (the claims). Use whenever the user wants to build, refine, or restyle a Science Intelligence deck, a lit review deck, a claim development presentation, an evidence deck, a spotlight studies deck, or the client presentation for any brand — even if they just say make the science intelligence deck for a client, turn this workbook into slides, or build the claim dev presentation. Takes the evidence workbook and claim set and produces a territory-first deck as one markdown content brief plus CSV chart data, where each claim territory runs The Claim → The Evidence → Compliance Logic, unbranded, for Claude Design to style and export. Do NOT use for the raw literature research (that is ltb-science-intelligence) or for Science Story claim clusters and narratives.
 ---
 
 # LTB Science Intelligence™ Deck Builder
 
 ## What this deliverable is called
 
-The deck is the **Science Intelligence™ presentation** (or "Science Intelligence deck"). **Lit Review™** and **Claim Dev™** are the two parts *inside* it, and they appear as the two full-slide section dividers. Do not title the deck "Lit Review & Claim Dev" — that names the parts, not the product. The cover reads:
+The deck is the **Science Intelligence™ presentation**. **Lit Review™** and **Claim Dev™** are the two parts inside it; in the territory-first format they appear as the `LIT REVIEW™ | CLAIM DEV™` lockup on every territory slide and on the Results divider, not as separate halves of the deck. The cover reads:
 
-> [PRODUCT NAME] · **SCIENCE INTELLIGENCE™** PRESENTATION · PREPARED FOR [client] | [MONTH YEAR]
+> [PRODUCT NAME]® Claims · **SCIENCE INTELLIGENCE™** PRESENTATION · PREPARED FOR [client] | [brand] | PREPARED BY LET THERE BE · [MONTH YEAR]
 
 ## Writing voice — plain and factual
 
@@ -28,9 +28,19 @@ All copy in this deliverable follows one standard: plain, straightforward, and t
 
 The voice rule governs **the deck's own copy** — headlines, body, synthesis lines. Candidate consumer claim language quoted inside a claim card is the *content being presented* and may be punchier; it still carries its guardrail.
 
-You are building the client-facing presentation for the **Science Intelligence™** stage — the deck that walks a client through the science you found and the claims it supports. It comes after the research is done: the evidence workbook exists, the claims are developed. Your job is to present that work as a clear, well-organized story that a brand team can take into MLR.
+You are building the client-facing presentation for the **Science Intelligence™** stage. The evidence workbook exists and the claims are developed. Your job is to present that work so a brand team can pick territories and take them into MLR.
 
-> **Output: an unbranded, content-first presentation.** Produce the full deck as slide-by-slide copy + clear layout intent + speaker notes — **no LTB branding, no styling, no file export.** We take this into **Claude Design**, which applies all branding and exports the final file. Don't spend compute making it look nice; spend it on correct, complete content and structure. Any brand/visual references below are **intent notes for Claude Design**, not things to render here.
+> **Output: one markdown content brief + CSV files for every chart.** Write the deck slide by slide in a single `.md` file, with copy, layout intent and the data each visual needs. Put chart data in CSVs (one per chart or tile set) in a sibling `[brand]_si_deck_data/` folder and name the CSV on the slide that uses it. **No LTB branding, no styling, no file export.** Claude Design builds the deck from the markdown and CSVs. `references/brand-system.md` is intent for Design, not something to render.
+
+## The format: territory-first (default)
+
+Present claims first, then the evidence behind each one, then the case for MLR. Do **not** open with a literature walk-through. Every claim territory runs three slides:
+
+1. **The Claim** (for the brand team): hero claim card, "Why this claim matters to [brand]", and **Other ways to say it**, 3–5 register variants, each tagged (SHORT, NUMBER-FORWARD, LABEL, REGULATOR'S WORDS, DIRECT, MORE POINTED · BRAND'S CALL, HCP).
+2. **The Evidence** (for MLR and the brand): one hero data tile (big number + one-line meaning + study and evidence basis), one visual that shows how we got there, and an "On the label" or regulator-quote line. Add a method slide only when the number needs walking through (e.g., an original analysis).
+3. **Compliance Logic** (for MLR): 4–6 tiles, each a short bold title + 1–2 sentences. Why the sources hold up, why the framing is safe, what the counter-evidence is, what's still open before MLR. End with risk and substantiation depth.
+
+Read `references/deck-structure.md` for the full flow, and `references/evidence-visuals.md` to choose each territory's visual and format its CSV.
 
 ## Inputs
 
@@ -45,20 +55,16 @@ If the workbook doesn't exist yet, stop and point the user to the **ltb-science-
 
 ## How to build
 
-1. **Language & intent.** Use current site language (Science Intelligence™, Lit Review™, Claim Dev™, "Science leads, creativity amplifies," Prove/Persuade/Produce). `references/brand-system.md` is an **intent note for Claude Design** — do not render branding yourself.
-2. **Load the structure.** Read `references/deck-structure.md` for the slide flow and the layout archetypes (evidence-at-a-glance, per-active study table with the pivotal row highlighted, spotlight study, opportunity tables). Treat it as the default shape, not a fixed template — adapt to what the project actually has.
-3. **Pull the content from the workbook.** Every study row, stat, and claim must trace to the workbook — never invent a study, a statistic, or a citation. Pick the most relevant, most ownable finding per active/pillar for its spotlight.
-4. **Organise Part I by active, or by mechanism pillar if the product's science demands it.** Default is per-active. When the actives are category-standard and the ownable science is formulation, delivery, or mechanism architecture, organise by pillar instead — and say so on the "how to read this report" slide so the client understands the choice.
-5. **Assemble the unbranded draft.** Slide-by-slide copy + layout intent + a speaker note per slide. No styling or export.
-6. **Keep it honest.** Show NULL/negative evidence and the guardrails openly — that candor is the LTB method's credibility, not a weakness. Where the evidence runs out, say so plainly. Where a client's existing approved claim does not survive the evidence, say that too, and show the trace.
-7. **Scope claims to the regulatory class.** New/unapproved language carries a `WORKING LANGUAGE · PENDING MLR` badge and the required disclaimer for the product type. When a claim's risk is unclear, mark it for legal rather than presenting it as safe.
+1. **Load the structure** (`references/deck-structure.md`) and the visual guide (`references/evidence-visuals.md`).
+2. **Pull everything from the workbook.** Every number, quote and claim traces to a workbook row or an official page read directly. Give every source a deck ID (S-001…) that matches the appendix CSV. Never invent a study, statistic or citation.
+3. **Group claims into 4–6 territories.** A territory is one idea a brand could own. Lead with the strongest, best-substantiated one. A territory that only works for HCPs becomes a single "potential future HCP campaign" slide after the consumer territories.
+4. **Choose each territory's evidence visual on purpose.** Match the visual to the shape of the evidence (comparison, share of a group, range, label-by-label, steps). Write its CSV. Never chart a number you can't trace.
+5. **Show counter-evidence on the evidence slide** in a small outlined "honest line" card when a result runs the other way, and name it again in Compliance Logic. Candor is the method's credibility.
+6. **Add "Your legacy claims, strengthened"** whenever the client's approved claims are known: legacy line → strengthened line → territory. Look for them in project files before asking.
+7. **Close** with an owner-tagged "What happens next", an example Science Story slide (score dials as placeholders unless real data exists), any open calls for the client, and the appendix: source list CSV, label/regulator capture table, regulatory notes and required disclaimers.
+8. **Scope every claim to the regulatory class.** Working language carries `WORKING LANGUAGE · PENDING MLR` (or the client's review body, e.g. PRC). A hero number resting on an abstract-only study is flagged as blocking in Compliance Logic.
 
-## The two parts
-
-- **Part I — Lit Review™:** evidence at a glance → how to read this report → per-active/per-pillar study tables + spotlights → what the science will stand behind (including where it stops). Open on audience and condition burden when the project has that data — it frames the evidence well, but skip it rather than padding it. Any burden or audience data carries a scope note so nobody mistakes it for product substantiation.
-- **Part II — Claim Dev™:** what the brand says today → current market claims → the opportunity field → guardrails → claim territories.
-
-Close on the roadmap (including the testing decision), a Science Story™ preview, and the closing statement. If the record set is large, put it in a numbered appendix (A1, A2, …) with resolving links.
+`references/legacy-deck-structure.md` keeps the older Part I (Lit Review) / Part II (Claim Dev) flow. Use it only if the user asks for that format.
 
 ## Moves worth making when the material supports them
 
@@ -78,5 +84,5 @@ When the user gives feedback, edit surgically — restyle or reorder slides, swa
 
 ## Guardrails
 - Never fabricate studies, statistics, or citations. If it's not in the workbook, it's not in the deck — flag the gap.
-- All claims require MLR and legal approval before consumer use; say so on the cover and on every claim slide.
+- All claims require MLR and legal approval before consumer use; say so on every claim slide and in the appendix disclaimers.
 - No "gems" or "gem sets" language anywhere — the unit is a **claim**; clusters come later, in the Science Story stage.
