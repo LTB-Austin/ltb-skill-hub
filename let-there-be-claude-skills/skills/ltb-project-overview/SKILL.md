@@ -156,3 +156,7 @@ Use the boilerplate in Phase 3 verbatim (milestone model, ownership).
 When the markdown is complete, save it as a `.md` file and summarize for the user: the sections included, the deliverables covered, and a list of every gap marker still open. Then tell them it's ready for **Claude Design's Project Overview template**, which expands the markdown into the branded presentation.
 
 If the user asks you for slides, a PPTX, or an HTML deck, remind them that Design owns formatting now and that this skill's output is the markdown brief — then offer to make sure the content is complete instead.
+
+## Build the deck in the LTB template
+
+The presentation is built in **LTB Template — Project Overview** (https://claude.ai/artifact/RxePUEHUnJNjtzUkSGwafb), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

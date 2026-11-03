@@ -147,3 +147,7 @@ The lead sometimes produces a short video walkthrough of the science alongside t
 - Every slide: eyebrow, title, body copy, layout intent, and any asset it calls for.
 - Include a short **speaker note** under each science slide — the one or two sentences the presenter says out loud. This deck is presented live, so the talk track matters.
 - After each revision round, summarize what changed and on which slides.
+
+## Build the deck in the LTB template
+
+The presentation is built in **LTB Template — Science 101** (https://claude.ai/artifact/TL7CM6pzzY87nXfkL8Rm4b), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

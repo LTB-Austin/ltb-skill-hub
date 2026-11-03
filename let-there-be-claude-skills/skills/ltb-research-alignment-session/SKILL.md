@@ -113,3 +113,7 @@ Report back in a few plain lines:
 - Five to seven decisions, each one that changes the research.
 - Timeline built from real dates, with the date to confirm named.
 - Decisions log complete.
+
+## Build the deck in the LTB template
+
+The presentation is built in **LTB Template — Research Alignment Session** (https://claude.ai/artifact/SqGzTEiEQWDJjRzDjFBHeV), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

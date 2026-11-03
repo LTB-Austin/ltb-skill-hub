@@ -136,3 +136,7 @@ Report back in a few plain lines:
 - Worked example labeled illustrative; its claims match screen 11.
 - If the prospect is a Studio-featured brand or a direct competitor of one (Centrum, Cheers, Qunol, A+D, Nexium, Lotrimin), say so.
 - Assumptions stated in one line; presenter sheet complete.
+
+## Build the deck in the LTB template
+
+The presentation is built in **LTB Template — Sales Preview (Science Marketing Engine)** (https://claude.ai/artifact/VEB4pUCzcLnEPc1EXy6Hjk), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

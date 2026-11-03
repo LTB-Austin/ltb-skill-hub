@@ -63,3 +63,7 @@ If there's no verified claim set yet, stop and point the user to **ltb-science-i
 
 ## Revision behavior
 Edit surgically on feedback — reorder clusters, swap claims, rewrite a narrative, restyle a slide — without losing traceability to the verified claim set. After each round, summarize what changed and whether it was global or slide-specific.
+
+## Build the deck in the LTB template
+
+The presentation is built in **LTB Template — Science Story & Claim Clusters** (https://claude.ai/artifact/Qm7HgGxbT7os4Lz8jD2cqY), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

@@ -86,3 +86,7 @@ When the user gives feedback, edit surgically — restyle or reorder slides, swa
 - Never fabricate studies, statistics, or citations. If it's not in the workbook, it's not in the deck — flag the gap.
 - All claims require MLR and legal approval before consumer use; say so on every claim slide and in the appendix disclaimers.
 - No "gems" or "gem sets" language anywhere — the unit is a **claim**; clusters come later, in the Science Story stage.
+
+## Build the deck in the LTB template
+
+The presentation is built in **LTB Template — Science Intelligence (Lit Review + Claim Dev)** (https://claude.ai/artifact/3eLTXv8dToy1DrofTGXhxk), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.
