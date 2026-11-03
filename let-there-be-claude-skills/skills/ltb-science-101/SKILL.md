@@ -1,9 +1,21 @@
 ---
 name: ltb-science-101
-description: Build the Science 101 presentation for Let There Be - the internal team briefing after a Science Story is approved, bringing the creative team up to speed before production. Use whenever the user wants a Science 101, a science briefing for the creative team, a project and science rundown, or an animator-facing MOA walkthrough - even if they just say make the science 101 for a client, brief the team on this project, or walk the animators through the science. Covers project details and deliverables, a plain-language MOA walkthrough written so animators can visualize it, what Science Intelligence uncovered, the client claim-cluster priorities, the Science Story options presented, and the one they approved. Output is an unbranded presentation for Claude Design. Do NOT use for client-facing decks - ltb-project-overview, ltb-lit-review-deck, and ltb-science-story are separate skills.
+description: Build the Science 101 presentation for Let There Be - the internal team briefing after a Science Story is approved, bringing the creative team up to speed before production. Use whenever the user wants a Science 101, a science briefing for the creative team, a project and science rundown, or an animator-facing MOA walkthrough - even if they just say make the science 101 for a client, brief the team on this project, or walk the animators through the science. Covers project details and deliverables, a plain-language MOA walkthrough written so animators can visualize it, what Science Intelligence uncovered, the client claim-cluster priorities, the Science Story options presented, and the one they approved. Output is the finished deck, built in the LTB Science 101 template. Do NOT use for client-facing decks - ltb-project-overview, ltb-lit-review-deck, and ltb-science-story are separate skills.
 ---
 
 # Skill: LTB Science 101 — Internal Team Briefing
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Science 101 (https://claude.ai/artifact/TL7CM6pzzY87nXfkL8Rm4b). Don't stop at the markdown.**
+
+1. Do the work below and write the slide-by-slide content draft. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link, and the narration script if one was asked for. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 ## Writing voice — plain and factual
 
@@ -34,9 +46,8 @@ The Science 101 happens **after the Science Story is approved by the client and 
 
 **What success looks like:** an animator can read the MOA section and start sketching. A writer can see which claims are approved and which are off-limits. Everyone understands why *this* story won and what came before it.
 
-> **OUTPUT: an unbranded, content-first presentation.** Produce the full deck as slide-by-slide copy + layout intent — **no LTB branding, no styling, no file export.** It goes to **Claude Design**, which applies branding and exports. Spend compute on correct, complete, well-sequenced content — not on making it look nice. Brand/visual notes below are **intent notes for Claude Design**.
+> **OUTPUT: the finished deck.** First write the full deck as slide-by-slide copy plus layout intent, with no LTB branding or styling. Then build it in the LTB Template — Science 101 in the same run (see the top of this skill). Spend the effort on correct, complete, well-sequenced content. Brand and visual notes below are design intent.
 
-Build as clean 16:9 slides (self-contained HTML, one `<section>` per slide) unless the project space indicates otherwise.
 
 ---
 
@@ -143,11 +154,7 @@ The lead sometimes produces a short video walkthrough of the science alongside t
 
 ## PHASE 5 — Output requirements
 
-- **Format:** unbranded, content-first slide-by-slide draft → Claude Design brands and exports.
+- **Format:** a content-first slide-by-slide draft, then the finished deck built in the LTB template in the same run.
 - Every slide: eyebrow, title, body copy, layout intent, and any asset it calls for.
 - Include a short **speaker note** under each science slide — the one or two sentences the presenter says out loud. This deck is presented live, so the talk track matters.
 - After each revision round, summarize what changed and on which slides.
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Science 101** (https://claude.ai/artifact/TL7CM6pzzY87nXfkL8Rm4b), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

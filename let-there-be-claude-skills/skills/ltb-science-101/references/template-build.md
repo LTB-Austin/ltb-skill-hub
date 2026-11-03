@@ -29,9 +29,13 @@ The content file stays the source of truth: the deck carries its words exactly a
 5. **Nothing from a past client carries over.** Some templates hold a real past build instead of brackets (the Supplement Science Score template is the Centrum deck). Treat every word, number, chart value, product name and image of client content on those slides as a placeholder, and replace or remove it.
 6. **Leave image slots alone unless you have the image.** An image slot with no `src` stays empty for manual insertion. If the user gave you the image file, upload it to the new deck and set its `src`.
 
+## If the template won't open
+
+Each template is a private artifact. The person running the skill can only copy it if the template has been shared with them. If reading the template fails, stop and tell them exactly that: "The [template name] template isn't shared with you. Ask Austin to share it, then run this again." Don't quietly fall back to a markdown file or to a deck you design yourself. Keep the content file in the outputs so the build can resume once access is granted.
+
 ## Steps
 
-**1. Create the deck.** Publish with the Slides type (`type_url`: https://claude.ai/artifact/8jTsAFQMFDb2oA8MsPJ2eL), `title` "[Brand] — [Deck name]" (for example "iVIZIA Wipes — Statement of Work"), and `auto_open: "after_first_write"`, with no files. Use the reply's `url` for every call after this. That deck's type instructions come back with the reply, and they cover the file format and publishing. Follow them along with these steps.
+**1. Create the deck.** Start right away, without asking first. Publish with the Slides type (`type_url`: https://claude.ai/artifact/8jTsAFQMFDb2oA8MsPJ2eL), `title` "[Brand] — [Deck name]" (for example "iVIZIA Wipes — Statement of Work"), and `auto_open: "after_first_write"`, with no files. Use the reply's `url` for every call after this. That deck's type instructions come back with the reply, and they cover the file format and publishing. Follow them along with these steps.
 
 **2. Read the template.** In one call, read the template's `project/deck.json` and every `project/slides/*.html` its `order` lists (the `read` action, the template link and `paths`). Then list the template's assets (`list`, `scope: "assets"`).
 

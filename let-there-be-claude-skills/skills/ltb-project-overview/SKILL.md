@@ -1,19 +1,31 @@
 ---
 name: ltb-project-overview
-description: 'Assemble the client Project Overview content brief for Let There Be — a single structured markdown document holding every piece of content a project overview needs, which Claude Design then expands into the branded presentation using its Project Overview template. Use whenever the user wants to build, refine, or update a project overview for any LTB client — even if they just say make the overview for a client or start the kickoff doc. Reads the brief, brand book, science, partner details, and prior decks from the project space and organises them into labelled sections: project details, deliverables, timeline, brand deep dive, audiences, the challenge, the three-phase engine, and next steps. Output is markdown only — never a PPTX, HTML, or styled deck. Unknowns are marked as open rather than filled in. Do NOT use for the Science Intelligence deck, the Science Story, the SOW, or the internal Science 101 briefing.'
+description: 'Build the client Project Overview deck for Let There Be. It assembles every piece of content a project overview needs into a structured content brief, then builds the presentation in the LTB Template — Project Overview in the same run. Use whenever the user wants to build, refine, or update a project overview for any LTB client — even if they just say make the overview for a client or start the kickoff doc. Reads the brief, brand book, science, partner details, and prior decks from the project space and organises them into labelled sections: project details, deliverables, timeline, brand deep dive, audiences, the challenge, the three-phase engine, and next steps. The finished deck is built in the template, never as a PPTX or HTML file. Unknowns are marked as open rather than filled in. Do NOT use for the Science Intelligence deck, the Science Story, the SOW, or the internal Science 101 briefing.'
 ---
 
 # Skill: LTB Project Overview — Content Brief Builder
 
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Project Overview (https://claude.ai/artifact/RxePUEHUnJNjtzUkSGwafb). Don't stop at the markdown.**
+
+1. Do the work below and write the markdown content brief. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
+
 ## What you produce
 
-**One markdown file. Nothing else.**
+**A content brief, then the deck built from it in the LTB template (see above).**
 
-You are not building a presentation. You are assembling the **content** for a project overview — every fact, figure, table, and paragraph — into a clearly structured markdown document. **Claude Design** takes that markdown and expands it into the branded presentation using its Project Overview template.
+First you assemble the **content** for a project overview into a clearly structured markdown document: every fact, figure, table and paragraph. Then you build the presentation from that markdown in the LTB Template — Project Overview.
 
-This split exists for a reason: when this skill produced slides, Design had to reformat the whole deck anyway. So don't produce slides, layout intent, HTML, PPTX, or styling. No colors, no fonts, no blob placement, no "eyebrow / title / divider" instructions. Just correct, complete, well-labelled content.
+The template already carries the design, so the brief holds no layout intent, HTML, PPTX or styling: no colors, no fonts, no blob placement, no "eyebrow / title / divider" instructions. It holds correct, complete, well-labelled content only.
 
-**The contract with Claude Design:** the markdown is the single source of truth. Design expands and formats what's there — it does not invent, embellish, or fill gaps. That only works if you are explicit about what is known and what isn't, so mark every gap (see "Marking gaps" below) rather than writing around it.
+**The contract with the template:** the markdown is the single source of truth. The deck places and formats what's there. It does not invent, embellish or fill gaps. That only works if you are explicit about what is known and what isn't, so mark every gap (see "Marking gaps" below) rather than writing around it.
 
 ## Writing voice — plain and factual
 
@@ -153,10 +165,6 @@ Use the boilerplate in Phase 3 verbatim (milestone model, ownership).
 
 ## PHASE 6 — Handoff
 
-When the markdown is complete, save it as a `.md` file and summarize for the user: the sections included, the deliverables covered, and a list of every gap marker still open. Then tell them it's ready for **Claude Design's Project Overview template**, which expands the markdown into the branded presentation.
+When the markdown is complete, save it as a `.md` file and summarize for the user: the sections included, the deliverables covered, and a list of every gap marker still open. Then build the deck in the LTB Template — Project Overview straight away (see the top of this skill) and give them the link.
 
-If the user asks you for slides, a PPTX, or an HTML deck, remind them that Design owns formatting now and that this skill's output is the markdown brief — then offer to make sure the content is complete instead.
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Project Overview** (https://claude.ai/artifact/RxePUEHUnJNjtzUkSGwafb), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.
+If the user asks for a PPTX or HTML file, explain that the deck is built in the LTB template and can be downloaded from there.

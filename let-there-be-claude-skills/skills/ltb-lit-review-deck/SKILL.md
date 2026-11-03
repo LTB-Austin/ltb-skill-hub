@@ -1,9 +1,21 @@
 ---
 name: ltb-lit-review-deck
-description: Build the client-facing Science Intelligence™ deck for Let There Be — the presentation that turns an evidence workbook into slides, covering both Lit Review™ (the evidence) and Claim Dev™ (the claims). Use whenever the user wants to build, refine, or restyle a Science Intelligence deck, a lit review deck, a claim development presentation, an evidence deck, a spotlight studies deck, or the client presentation for any brand — even if they just say make the science intelligence deck for a client, turn this workbook into slides, or build the claim dev presentation. Takes the evidence workbook and claim set and produces a territory-first deck as one markdown content brief plus CSV chart data, where each claim territory runs The Claim → The Evidence → Compliance Logic, unbranded, for Claude Design to style and export. Do NOT use for the raw literature research (that is ltb-science-intelligence) or for Science Story claim clusters and narratives.
+description: Build the client-facing Science Intelligence™ deck for Let There Be — the presentation that turns an evidence workbook into slides, covering both Lit Review™ (the evidence) and Claim Dev™ (the claims). Use whenever the user wants to build, refine, or restyle a Science Intelligence deck, a lit review deck, a claim development presentation, an evidence deck, a spotlight studies deck, or the client presentation for any brand — even if they just say make the science intelligence deck for a client, turn this workbook into slides, or build the claim dev presentation. Takes the evidence workbook and claim set and builds a territory-first deck, where each claim territory runs The Claim → The Evidence → Compliance Logic, writing a markdown brief and CSV chart data first and then building the finished presentation in the LTB Science Intelligence template in the same run. Do NOT use for the raw literature research (that is ltb-science-intelligence) or for Science Story claim clusters and narratives.
 ---
 
 # LTB Science Intelligence™ Deck Builder
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Science Intelligence (Lit Review + Claim Dev) (https://claude.ai/artifact/3eLTXv8dToy1DrofTGXhxk). Don't stop at the markdown.**
+
+1. Do the work below and write the markdown content brief and its chart CSVs. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 ## What this deliverable is called
 
@@ -30,7 +42,7 @@ The voice rule governs **the deck's own copy** — headlines, body, synthesis li
 
 You are building the client-facing presentation for the **Science Intelligence™** stage. The evidence workbook exists and the claims are developed. Your job is to present that work so a brand team can pick territories and take them into MLR.
 
-> **Output: one markdown content brief + CSV files for every chart.** Write the deck slide by slide in a single `.md` file, with copy, layout intent and the data each visual needs. Put chart data in CSVs (one per chart or tile set) in a sibling `[brand]_si_deck_data/` folder and name the CSV on the slide that uses it. **No LTB branding, no styling, no file export.** Claude Design builds the deck from the markdown and CSVs. `references/brand-system.md` is intent for Design, not something to render.
+> **Output: one markdown content brief + CSV files for every chart.** Write the deck slide by slide in a single `.md` file, with copy, layout intent and the data each visual needs. Put chart data in CSVs (one per chart or tile set) in a sibling `[brand]_si_deck_data/` folder and name the CSV on the slide that uses it. **No LTB branding or styling in the brief.** The deck is then built from the markdown and CSVs in the LTB template, in the same run (see the top of this skill). `references/brand-system.md` is design intent, not something to render.
 
 ## The format: territory-first (default)
 
@@ -86,7 +98,3 @@ When the user gives feedback, edit surgically — restyle or reorder slides, swa
 - Never fabricate studies, statistics, or citations. If it's not in the workbook, it's not in the deck — flag the gap.
 - All claims require MLR and legal approval before consumer use; say so on every claim slide and in the appendix disclaimers.
 - No "gems" or "gem sets" language anywhere — the unit is a **claim**; clusters come later, in the Science Story stage.
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Science Intelligence (Lit Review + Claim Dev)** (https://claude.ai/artifact/3eLTXv8dToy1DrofTGXhxk), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

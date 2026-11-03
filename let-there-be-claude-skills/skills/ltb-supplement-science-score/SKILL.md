@@ -1,9 +1,21 @@
 ---
 name: ltb-supplement-science-score
-description: Run the Supplement Science Score for Let There Be. It is a two-pass read of how a supplement category gets judged. The Rubric Pass explains how SuppCo (supp.co) and similar platforms score products and why a client's SKUs score as they do. The LLM Pass is a sampled read of how ChatGPT, Gemini, Rufus, Claude, AI Overviews and Perplexity recommend the category. A convergence test joins the two. Use when the user wants a Supplement Science Score, Discovery Report, SuppCo or TrustScore read, what's dragging a score, AI-visibility or share-of-model, a prompt set, the rubric pass or the LLM pass. This includes short asks like "look at Centrum on SuppCo," "how are we positioned in ChatGPT," or a pasted supp.co link. Either pass can run alone. Do NOT use for literature review or claim development (ltb-science-intelligence).
+description: Run the Supplement Science Score for Let There Be. It is a two-pass read of how a supplement category gets judged. The Rubric Pass explains how SuppCo (supp.co) and similar platforms score products and why a client's SKUs score as they do. The LLM Pass is a sampled read of how ChatGPT, Gemini, Rufus, Claude, AI Overviews and Perplexity recommend the category. A convergence test joins the two. Use when the user wants a Supplement Science Score, Discovery Report, SuppCo or TrustScore read, what's dragging a score, AI-visibility or share-of-model, a prompt set, the rubric pass or the LLM pass. This includes short asks like "look at Centrum on SuppCo," "how are we positioned in ChatGPT," or a pasted supp.co link. Either pass can run alone. It finishes by building the presentation in the LTB Supplement Science Score template. Do NOT use for literature review or claim development (ltb-science-intelligence).
 ---
 
 # LTB Supplement Science Score — the rubric read and the LLM read
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Supplement Science Score (https://claude.ai/artifact/3UTxLhVcehMyFmSNbrKB64). Don't stop at the markdown.**
+
+1. Do the work below and write the findings (the integrated report for a full score, or the single pass's findings). That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link, and the workbooks and findings files listed under Outputs. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 The Supplement Science Score is a two-pass read of how a supplement category gets judged. The first audience is the scoring platforms. The second is the consumer AI assistants that people now ask "which multivitamin should I take."
 
@@ -217,10 +229,7 @@ For a full Supplement Science Score, write the integrated report to `references/
 **Full score**
 
 7. `<Client>_Supplement_Science_Score.md`, the integrated report.
-8. A **method for re-run** covering both passes: protocols, prompt set, N, scripts and inputs, written so a stranger can repeat the work in twelve months.
+8. **The deck**, built in the LTB Template — Supplement Science Score (see the top of this skill).
+9. A **method for re-run** covering both passes: protocols, prompt set, N, scripts and inputs, written so a stranger can repeat the work in twelve months.
 
 Every deliverable states that it doesn't replace the client's own legal and regulatory review. This skill does no literature review and develops no claims. For those, use ltb-science-intelligence.
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Supplement Science Score** (https://claude.ai/artifact/3UTxLhVcehMyFmSNbrKB64), once the findings are written (the integrated report for a full score, or the single pass's findings). Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

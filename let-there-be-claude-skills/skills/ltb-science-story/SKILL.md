@@ -1,9 +1,21 @@
 ---
 name: ltb-science-story
-description: Build the Science Story deliverable for Let There Be - assemble verified claims into Claim Clusters, write the creative narratives, and produce the client-facing presentation, built so narratives, headlines, and claims can be consumer-tested. Use whenever the user wants to build or refine a Science Story, assemble claim clusters, write story or claim narratives, create a claim- opportunities or science-story deck, or prep stimuli for consumer testing - even if they just say make the science story for a client or cluster these claims. Handles Stage 1 (Claim Cluster selection) and Stage 2 (Science Story with narratives, claim bodies, source cards, and a test plan). Output is an unbranded content-first presentation for Claude Design. Do NOT use for raw research (ltb-science-intelligence) or the evidence deck (ltb-lit-review-deck).
+description: Build the Science Story deliverable for Let There Be - assemble verified claims into Claim Clusters, write the creative narratives, and produce the client-facing presentation, built so narratives, headlines, and claims can be consumer-tested. Use whenever the user wants to build or refine a Science Story, assemble claim clusters, write story or claim narratives, create a claim- opportunities or science-story deck, or prep stimuli for consumer testing - even if they just say make the science story for a client or cluster these claims. Handles Stage 1 (Claim Cluster selection) and Stage 2 (Science Story with narratives, claim bodies, source cards, and a test plan). Output is the finished deck, built in the LTB Science Story & Claim Clusters template. Do NOT use for raw research (ltb-science-intelligence) or the evidence deck (ltb-lit-review-deck).
 ---
 
 # LTB Science Story™ — Claim Clusters, Narratives & Testing
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Science Story & Claim Clusters (https://claude.ai/artifact/Qm7HgGxbT7os4Lz8jD2cqY). Don't stop at the markdown.**
+
+1. Do the work below and write the slide-by-slide content draft. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 ## Writing voice — plain and factual
 
@@ -23,9 +35,9 @@ All copy in this deliverable follows one standard: plain, straightforward, and t
 
 You are building the **Persuade** stage of the Science Marketing Engine. Verified claims come in from Science Intelligence; the client has reacted to the lit-review/claim-dev deck and given seed ideas and preferences. Your job is to turn that into **Claim Clusters** (strategic directions), write **narratives** that make the science clear, and package it so the strongest directions can be **tested with consumers** before one goes to production.
 
-**Output: an unbranded, content-first presentation.** This skill replaces the retired "Gem Sets" and "Polished Gems" skills — the unit is a **claim**, the package is a **claim cluster**. Never use "gem" language.
+**Output: the finished deck in the LTB template, built from a content-first draft.** This skill replaces the retired "Gem Sets" and "Polished Gems" skills — the unit is a **claim**, the package is a **claim cluster**. Never use "gem" language.
 
-> **Output: an unbranded, content-first presentation.** Produce the full deck as slide-by-slide copy + clear layout intent — **no LTB branding, no styling, no file export.** We take this into **Claude Design**, which applies all branding and exports the final file. Don't spend compute making it look nice; spend it on correct, complete content and structure. Any brand/visual references below are **intent notes for Claude Design**, not things to render here.
+> **Output: the finished deck.** First write the full deck as slide-by-slide copy plus clear layout intent, with no LTB branding or styling. Then build it in the LTB template in the same run (see the top of this skill). The template carries the design, so spend the effort on correct, complete content and structure. Brand and visual references below are design intent, not things to render by hand.
 
 ## Two stages — figure out which one you're in
 
@@ -51,7 +63,7 @@ If there's no verified claim set yet, stop and point the user to **ltb-science-i
 3. **Cluster around what the client liked.** Build clusters from the claims/directions the client reacted well to, plus the strongest verified claims. You may write new claims that *build on* liked ones — but only if the science supports them; every claim still traces to a verified source. Deliberately mix **science-forward** and **positioning-forward** claims and label the register.
 4. **Write clear narratives.** The narrative is where the science becomes a story a consumer can follow. Plain, specific, product named naturally; never clinical, never hype.
 5. **Build it test-ready** — `references/testing-readiness.md`. Structure headlines, narratives, and claims as discrete, comparable, neutrally-coded, compliance-clean stimuli, and include a Test Plan slide. The testing partner runs the field study; we hand them clean stimuli.
-6. **Assemble the unbranded draft** — slide-by-slide copy + layout intent (cluster-claims cards, process, source cards). No styling or export; Claude Design brands and produces the final file.
+6. **Assemble the draft and build the deck.** Write the slide-by-slide copy and layout intent (cluster-claims cards, process, source cards), then build the deck in the LTB template straight away.
 
 ## Rules
 - Never invent a claim or a source. If it's not in the verified claim set / workbook, it doesn't exist — flag the gap.
@@ -63,7 +75,3 @@ If there's no verified claim set yet, stop and point the user to **ltb-science-i
 
 ## Revision behavior
 Edit surgically on feedback — reorder clusters, swap claims, rewrite a narrative, restyle a slide — without losing traceability to the verified claim set. After each round, summarize what changed and whether it was global or slide-specific.
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Science Story & Claim Clusters** (https://claude.ai/artifact/Qm7HgGxbT7os4Lz8jD2cqY), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

@@ -1,15 +1,27 @@
 ---
 name: ltb-sales-preview
-description: Build a Science Intelligence preview deck for Let There Be - point it at a prospect's product and it runs a real Elicit pass, opens three evidence territories with four spotlight studies each, distills three key findings, writes three or four claims, and closes with an illustrative Science Story worked example, all inside the 15-screen LTB Sales Preview template. Use whenever someone wants a pitch preview, prospect teaser, claims preview, what-could-they-claim deck, pre-engagement sales asset, conference walkthrough or leave-behind (including the Claims Lab), even if they just say make a preview for a brand. Sources stay blurred. Output is one markdown file that drops field by field into the Claude Design template, plus a presenter sheet with full citations, product fit, risk and guardrails. Do NOT use for a signed engagement (ltb-science-intelligence, ltb-lit-review-deck) or for real Science Story clusters and narratives.
+description: Build a Science Intelligence preview deck for Let There Be - point it at a prospect's product and it runs a real Elicit pass, opens three evidence territories with four spotlight studies each, distills three key findings, writes three or four claims, and closes with an illustrative Science Story worked example, all inside the 15-screen LTB Sales Preview template. Use whenever someone wants a pitch preview, prospect teaser, claims preview, what-could-they-claim deck, pre-engagement sales asset, conference walkthrough or leave-behind (including the Claims Lab), even if they just say make a preview for a brand. Sources stay blurred. It writes every field of the 15-screen template, builds the finished deck in the LTB Sales Preview template in the same run, and adds a presenter sheet with full citations, product fit, risk and guardrails. Do NOT use for a signed engagement (ltb-science-intelligence, ltb-lit-review-deck) or for real Science Story clusters and narratives.
 ---
 
 # LTB Sales Preview
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Sales Preview (Science Marketing Engine) (https://claude.ai/artifact/VEB4pUCzcLnEPc1EXy6Hjk). Don't stop at the markdown.**
+
+1. Do the work below and write `[brand]-sales-preview.md`. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link, and the presenter sheet. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 ## What this is
 
 A **Science Intelligence preview** for a prospect. One product, a real pass through the public science, and a short deck that shows what the full engagement would find and what the brand could claim. It is presented live to a brand team, at a pitch meeting or a conference, and left behind as a PDF.
 
-The deck is built in Claude Design from the fixed **15-screen LTB Sales Preview template** (the Banana Boat Mineral build is the reference). This skill does the research and writes every variable slot in that template, in the template's order, at the template's lengths, using the template's field names. The markdown it produces should go into Design without anyone rearranging, cutting or rewriting it.
+The deck is built in the fixed **15-screen LTB Template — Sales Preview (Science Marketing Engine)** (the Banana Boat Mineral build is the reference). This skill does the research and writes every variable slot in that template, in the template's order, at the template's lengths, using the template's field names. The markdown it produces goes into the template without anyone rearranging, cutting or rewriting it, and the skill builds the deck itself.
 
 The substantiation depth (fit to product, risk, guardrails, where the line sits) lives on the **presenter sheet**, so whoever presents can answer anything the room asks.
 
@@ -46,7 +58,7 @@ Plain, straightforward, true to the work. Never overrides scientific accuracy or
 | `references/copy-craft.md` | Before writing claims and the worked example. Shared with ltb-science-intelligence, ltb-lit-review-deck and ltb-science-story; edit all four together. |
 | `references/brand-system.md` | Only if Design asks for intent. The template already carries the look. |
 
-> **Output:** one markdown file, `[brand]-sales-preview.md`, in `/mnt/user-data/outputs/`, following `output-template.md` exactly. Part 1 is the deck, with the fixed "For Claude Design" note at the top. Part 2 is the presenter sheet. No styling, no HTML, no export: the Design template carries the look, and decks ship as PDF. Present the file when done.
+> **Output:** one markdown file, `[brand]-sales-preview.md`, in `/mnt/user-data/outputs/`, following `output-template.md` exactly. Part 1 is the deck, with the fixed "For Claude Design" note at the top. Part 2 is the presenter sheet. No styling or HTML in the file: the template carries the look. Once the file is done, build the deck in the template straight away (see the top of this skill). Decks ship as PDF from the finished deck.
 
 ## Inputs
 
@@ -136,7 +148,3 @@ Report back in a few plain lines:
 - Worked example labeled illustrative; its claims match screen 11.
 - If the prospect is a Studio-featured brand or a direct competitor of one (Centrum, Cheers, Qunol, A+D, Nexium, Lotrimin), say so.
 - Assumptions stated in one line; presenter sheet complete.
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Sales Preview (Science Marketing Engine)** (https://claude.ai/artifact/VEB4pUCzcLnEPc1EXy6Hjk), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

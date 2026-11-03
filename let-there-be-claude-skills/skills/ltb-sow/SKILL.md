@@ -1,15 +1,27 @@
 ---
 name: ltb-sow
-description: Build the Statement of Work (SOW) deck for Let There Be. Use when creating or refining a SOW, proposal deck, scope or investment deck for any LTB client, even if the user just says "write the SOW for [client]" or "turn this pricing into a SOW." Reads the CRM or relationship notes and the pricing and services file. It picks the deck shape: a full Science Marketing Engine program (Science Intelligence™ → Science Story™ → Science Studio™), a Science Studio™ content program, or a single-phase scope. It writes every screen with speaker notes, using only the deliverables and prices in the pricing input and LTB's standard terms verbatim. The output is one markdown content brief for the Claude Design SOW template. Do NOT use for the Project Overview (ltb-project-overview), a sales preview (ltb-sales-preview) or a Success Story (ltb-success-story).
+description: Build the Statement of Work (SOW) deck for Let There Be. Use when creating or refining a SOW, proposal deck, scope or investment deck for any LTB client, even if the user just says "write the SOW for [client]" or "turn this pricing into a SOW." Reads the CRM or relationship notes and the pricing and services file. It picks the deck shape: a full Science Marketing Engine program (Science Intelligence™ → Science Story™ → Science Studio™), a Science Studio™ content program, or a single-phase scope. It writes every screen with speaker notes, using only the deliverables and prices in the pricing input and LTB's standard terms verbatim. It writes the content first, then builds the finished deck in the LTB Statement of Work template in the same run. Do NOT use for the Project Overview (ltb-project-overview), a sales preview (ltb-sales-preview) or a Success Story (ltb-success-story).
 ---
 
 # LTB Statement of Work (SOW)
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Statement of Work (https://claude.ai/artifact/BU1JncBj1WwhzcCeNQumJr). Don't stop at the markdown.**
+
+1. Do the work below and write `[brand]-sow.md`. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 The SOW is the deck a client signs against. It covers what the brand's problem is, what we will make, how we work, what it costs, and what happens next. The current reference builds are **iVIZIA® Micellar Eyelid Cleansing Wipes** (Théa, full engine program, September 2026) and the **Thorne Gut Health Education Series** (Science Studio™ program, September 2026). Match their tone, depth and screen order.
 
 ## Output
 
-> One markdown file, `[brand]-sow.md`, in `/mnt/user-data/outputs/`, filled into `references/output-template.md`. It holds every screen in order, each with an eyebrow, headline, body fields and **speaker notes**. Mark manual assets as placeholders. Don't add styling, HTML or an export. The LTB Template — Statement of Work carries the look (Lexend, `#F0F0F0`, cell imagery, sub-brand marks, LTB wordmark). The markdown carries the words.
+> The finished deck, built in the LTB Template — Statement of Work (see the top of this skill). First write `[brand]-sow.md` in `/mnt/user-data/outputs/`, filled into `references/output-template.md`. It holds every screen in order, each with an eyebrow, headline, body fields and **speaker notes**. Mark manual assets as placeholders. Don't add styling, HTML or an export. The LTB Template — Statement of Work carries the look (Lexend, `#F0F0F0`, cell imagery, sub-brand marks, LTB wordmark). The markdown carries the words.
 
 ## Writing voice
 
@@ -81,7 +93,3 @@ Update every affected screen after each change, not only the one named. After ea
 | `references/deliverable-library.md` | Writing deliverable screens. Standard description language and specs for every LTB deliverable. |
 | `references/boilerplate.md` | Writing the terms, Working Together, Next Steps and Closing screens. Verbatim text. |
 | `references/output-template.md` | Writing the file. The skeleton, including the note to Claude Design. |
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Statement of Work** (https://claude.ai/artifact/BU1JncBj1WwhzcCeNQumJr), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

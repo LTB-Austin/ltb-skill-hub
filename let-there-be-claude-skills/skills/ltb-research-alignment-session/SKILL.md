@@ -1,9 +1,21 @@
 ---
 name: ltb-research-alignment-session
-description: 'Build the Research Alignment Session deck for Let There Be - the meeting that kicks off Science Intelligence and Science Story on a signed project. Reads the client''s assets (brief, proposal, consumer research, sizing data, approved claims, labeling, brand book, clinical files) and writes a screen-by-screen content brief for Claude Design: the challenge, what we absorbed, how the engine runs, where we search and where we do not, three directions to pressure-test, the decisions we need, guardrails and the timeline. Also produces a decisions log for the room, which becomes the brief for Science Intelligence. Use whenever someone mentions a research alignment session, research kickoff, alignment deck or RAS, or says the client''s materials are in and it is time to build the session. Do NOT use for the Project Overview (ltb-project-overview), the SOW, a sales preview, or the lit review itself (ltb-science-intelligence).'
+description: 'Build the Research Alignment Session deck for Let There Be - the meeting that kicks off Science Intelligence and Science Story on a signed project. Reads the client''s assets (brief, proposal, consumer research, sizing data, approved claims, labeling, brand book, clinical files) and builds the deck screen by screen in the LTB Research Alignment Session template: the challenge, what we absorbed, how the engine runs, where we search and where we do not, three directions to pressure-test, the decisions we need, guardrails and the timeline. Also produces a decisions log for the room, which becomes the brief for Science Intelligence. Use whenever someone mentions a research alignment session, research kickoff, alignment deck or RAS, or says the client''s materials are in and it is time to build the session. Do NOT use for the Project Overview (ltb-project-overview), the SOW, a sales preview, or the lit review itself (ltb-science-intelligence).'
 ---
 
 # LTB Research Alignment Session
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Research Alignment Session (https://claude.ai/artifact/SqGzTEiEQWDJjRzDjFBHeV). Don't stop at the markdown.**
+
+1. Do the work below and write `[brand]-research-alignment-session.md`. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link, and the decisions log. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 ## What this is
 
@@ -27,7 +39,7 @@ Reference builds: Tylenol (Kenvue, Adult Pain, Aug 2026), Habitrol (Dr. Reddy's,
 | `references/writing-patterns.md` | Before writing the variable screens. How the challenge, priorities, exclusions, directions and questions are written, with examples from the reference builds. |
 | `references/output-template.md` | When writing. The skeleton the brief and the decisions log are filled into. |
 
-> **Output:** one markdown file, `[brand]-research-alignment-session.md`, in the outputs folder. Part 1 is the deck, screen by screen. Part 2 is the decisions log, a blank-ready capture sheet for the session. Content only: no styling, no layout instructions. Claude Design builds the deck from it.
+> **Output:** one markdown file, `[brand]-research-alignment-session.md`, in the outputs folder. Part 1 is the deck, screen by screen. Part 2 is the decisions log, a blank-ready capture sheet for the session. Content only: no styling, no layout instructions. Then build the deck from Part 1 in the LTB template in the same run (see the top of this skill), and deliver the decisions log alongside it.
 
 ## Writing voice
 
@@ -113,7 +125,3 @@ Report back in a few plain lines:
 - Five to seven decisions, each one that changes the research.
 - Timeline built from real dates, with the date to confirm named.
 - Decisions log complete.
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Research Alignment Session** (https://claude.ai/artifact/SqGzTEiEQWDJjRzDjFBHeV), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

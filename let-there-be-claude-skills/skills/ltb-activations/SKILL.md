@@ -1,9 +1,21 @@
 ---
 name: ltb-activations
-description: Build the Activation Examples deliverable for Let There Be - the final engine stage, showing an approved Science Story working in the brand's real channels. Use whenever the user wants activations, activation examples, a video ad script, a 15s/30s/60s script, eComm or DTC or PDP or Amazon product page copy, Brand Store or A+ recommendations, an MOA description, an influencer brief, or FAQ/myth-busting copy - even if they just say "make the activations for [client]", "write the PDP copy", or "show them how the story shows up on Amazon." Captures the brand's live pages with Claude in Chrome, annotates them current-vs-proposed, and ties every efficacy line to an approved claim ID. Runs once per activation and once per SKU. Output is an unbranded content-first presentation for Claude Design. Do NOT use for research (ltb-science-intelligence), the evidence deck (ltb-lit-review-deck), or writing the Science Story itself (ltb-science-story).
+description: Build the Activation Examples deliverable for Let There Be - the final engine stage, showing an approved Science Story working in the brand's real channels. Use whenever the user wants activations, activation examples, a video ad script, a 15s/30s/60s script, eComm or DTC or PDP or Amazon product page copy, Brand Store or A+ recommendations, an MOA description, an influencer brief, or FAQ/myth-busting copy - even if they just say "make the activations for [client]", "write the PDP copy", or "show them how the story shows up on Amazon." Captures the brand's live pages with Claude in Chrome, annotates them current-vs-proposed, and ties every efficacy line to an approved claim ID. Runs once per activation and once per SKU. Output is the finished deck, built in the LTB Science Story Activations template. Do NOT use for research (ltb-science-intelligence), the evidence deck (ltb-lit-review-deck), or writing the Science Story itself (ltb-science-story).
 ---
 
 # LTB Activations — Science Story in Channel
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Science Story Activations (https://claude.ai/artifact/9Ek9qbNGoTFun1g5cjK2W4). Don't stop at the markdown.**
+
+1. Do the work below and write the screen-by-screen content draft. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 ## What this stage is
 
@@ -38,7 +50,7 @@ If there is no approved claim set, stop and point the user to **ltb-science-inte
 4. **Write each activation** to its own spec. → `references/activation-types.md`
 5. **Annotate the live pages** module by module, top to bottom: KEEP / CHANGE COPY / CHANGE HEADLINE / REPLACE / ADD. Never a blanket rewrite — the client needs to see exactly what moves and what doesn't, with the claim ID on each change.
 6. **Assemble the deck** in the proven order. → `references/deck-structure.md`
-7. **Hand off unbranded.** Slide-by-slide copy plus layout intent. No styling, no export — Claude Design brands it.
+7. **Build the deck.** Write the slide-by-slide copy plus layout intent, then build it in the LTB template straight away (see the top of this skill).
 
 ## Repeating across SKUs
 
@@ -51,7 +63,7 @@ The brand story is shared; the product stories differ. For each activation:
 
 ## Output
 
-An unbranded, content-first presentation: screen-by-screen copy plus layout intent, built for Claude Design. Scripts go in two-column VISUAL / VO tables with a word count against target. Page copy goes in CURRENT vs PROPOSED pairs with a one-line **Why**. Every screen carries its claim IDs.
+The finished deck, built in the LTB Template — Science Story Activations from a screen-by-screen draft of copy plus layout intent. Scripts go in two-column VISUAL / VO tables with a word count against target. Page copy goes in CURRENT vs PROPOSED pairs with a one-line **Why**. Every screen carries its claim IDs.
 
 Close on a next-step screen: the client confirms and approves the direction, the claims cluster and the activations.
 
@@ -62,7 +74,3 @@ Close on a next-step screen: the client confirms and approves the direction, the
 - Carry mandatory footnotes and disclaimers on every screen that carries a claim — DSHEA asterisk for supplements, dose disclosure where the claim rests on a multi-unit dose, drug-facts qualifiers for OTC.
 - Keep in-market claims as they are, with their current footnotes. Don't improve copy the client has already cleared unless there's a reason, and say the reason.
 - Flag anything you could not verify rather than smoothing it over.
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Science Story Activations** (https://claude.ai/artifact/9Ek9qbNGoTFun1g5cjK2W4), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.

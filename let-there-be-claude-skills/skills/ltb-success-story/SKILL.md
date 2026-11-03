@@ -1,9 +1,21 @@
 ---
 name: ltb-success-story
-description: Build the client Success Story deck for Let There Be. It is a seven-screen case study of a finished engagement covering the challenge, what Science Intelligence™ found, the Science Story™, what Science Studio™ made, and the impact, with client quotes. Use whenever someone wants a success story, case study, client win, project recap or results deck for a completed LTB project, even if they just say "make the success story for [client]" or "write up the Lamisil project." It pulls the approved claims, story and deliverables from the project files, and gets the client-side facts from the account manager through a short intake: the brief, dates, what's live, quotes, feedback ratings and photos. It never invents results or quotes. The output is one markdown file for the Claude Design Client Success Story template. Do NOT use for a SOW (ltb-sow), a sales preview (ltb-sales-preview) or a Project Overview (ltb-project-overview).
+description: Build the client Success Story deck for Let There Be. It is a seven-screen case study of a finished engagement covering the challenge, what Science Intelligence™ found, the Science Story™, what Science Studio™ made, and the impact, with client quotes. Use whenever someone wants a success story, case study, client win, project recap or results deck for a completed LTB project, even if they just say "make the success story for [client]" or "write up the Lamisil project." It pulls the approved claims, story and deliverables from the project files, and gets the client-side facts from the account manager through a short intake: the brief, dates, what's live, quotes, feedback ratings and photos. It never invents results or quotes. It writes the content first, then builds the finished deck in the LTB Client Success Story template in the same run. Do NOT use for a SOW (ltb-sow), a sales preview (ltb-sales-preview) or a Project Overview (ltb-project-overview).
 ---
 
 # LTB Success Story
+
+## How this skill finishes: the deck, in one run
+
+**Every run of this skill ends with a finished presentation built in the LTB Template — Client Success Story (https://claude.ai/artifact/Ax4uiPqesE1nUgsvo1P7pf). Don't stop at the markdown.**
+
+1. Do the work below and write `[brand]-success-story.md`. That's the working draft the deck is built from. It isn't the deliverable on its own.
+2. As soon as it's complete, build the deck in the template by following `references/template-build.md`. Do this in the same run. Don't ask whether to continue, and don't wait for the user to ask for slides.
+3. Finish by giving the user the deck link, and the open items for the account manager. Never tell them to take the file into Claude Design, and never suggest they ask for a slide deck.
+
+Wherever this skill mentions Claude Design, a design template, an "unbranded" or "content-first" output, or a markdown brief, it means the content draft that feeds this build step. Every rule about content still applies in full: what goes on each screen, exact wording, and gap markers.
+
+Pause before building the deck only in three cases: the skill below requires an approval first, an input the deck needs is missing, or the user asks for content only.
 
 A Success Story shows a finished engagement end to end, in seven screens, as proof that the Science Marketing Engine™ works. The reference build is **Lamisil (Karo Healthcare), October 2026**, LTB's first Success Story.
 
@@ -11,7 +23,7 @@ The reader is a prospective client's brand or marketing lead, so it has to read 
 
 ## Output
 
-> One markdown file, `[brand]-success-story.md`, in `/mnt/user-data/outputs/`, filled into `references/output-template.md`. It holds seven screens in fixed order, each with its fields and **speaker notes**, followed by a source log and an open-items list. Don't add styling or HTML. The **LTB Template — Client Success Story** carries the look. Photos, packshots and logos are placeholders that get filled by hand.
+> The finished deck, built in the LTB Template — Client Success Story (see the top of this skill). First write `[brand]-success-story.md` in `/mnt/user-data/outputs/`, filled into `references/output-template.md`. It holds seven screens in fixed order, each with its fields and **speaker notes**, followed by a source log and an open-items list. Don't add styling or HTML. The **LTB Template — Client Success Story** carries the look. Photos, packshots and logos are placeholders that get filled by hand.
 
 ## Writing voice
 
@@ -74,7 +86,3 @@ If the AM hasn't answered yet, build the deck with `[NEEDED FROM AM: …]` marke
 | `references/deck-structure.md` | First. The seven screens, their fields, lengths and fallbacks. |
 | `references/am-intake.md` | Before asking the account manager anything. The message to send. |
 | `references/output-template.md` | Writing the file. The skeleton, the note to Claude Design and the source log. |
-
-## Build the deck in the LTB template
-
-The presentation is built in **LTB Template — Client Success Story** (https://claude.ai/artifact/Ax4uiPqesE1nUgsvo1P7pf), once the content file is complete. Don't build it from scratch, and don't stop at the markdown. Create a new deck as a copy of that template and fill in the copy, following `references/template-build.md`. Never edit the template itself. Everything above this section still governs what goes on each screen. This step only places that content into the template's design.
