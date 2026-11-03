@@ -19,19 +19,23 @@ A systematic search and full-text screening of the published literature. It esta
 
 > Systematic search and full-text screening across [literature areas, e.g. eyelid hygiene, dry eye, cosmetics and preservative literature]. [Client]'s studies also evaluated.
 
-- If a preview was shared, say that the Lit Review is the systematic version of that pass and starts from the territories the preview surfaced.
+- If a preview was shared, say that the Lit Review is the systematic version of that pass and starts from the direction the preview showed and its runner-ups.
 - Note any formula-match work, such as matching the US formula against the product used in the studies.
-- Optional: sample territory explorations (3–4 tiles, each a title plus one preview data point) with the preview disclaimer.
+- Optional: the directions we'll start from (2–4 tiles, each a direction name plus one preview data point) with the preview disclaimer.
 
 ### Claim Dev™
 Turns the evidence into a documented, approvable claims library, then supports it through the client's MLR.
 
-Bullets (use the ones that apply):
+Bullets. The first is always included, the rest are used as they apply:
 
+- Every direction delivered in four parts: hero claim, supporting claims, the evidence and the compliance logic.
 - Claims documented to [regulatory standard: cosmetic / DSHEA structure-function / OTC monograph] standards, positioned as [category].
 - Separate HCP claims where the evidence supports more.
 - Substantiation per claim, prepared for [Client]'s MLR review.
 - Approved claims list for the marketing content to build on.
+
+### One format, preview to SOW to delivery
+The Sales Preview, the SOW and the Science Intelligence™ deck all present claims the same way: **hero claim → supporting claims → evidence → compliance logic**, with each claim tiered Core, Push or Stretch. The preview shows one direction in full, with sources blurred. The SOW shows the format (screen 06b) so the client knows what's coming. The Science Intelligence deck delivers every direction in full. Keep the SOW's wording consistent with that format, and never promise a number of directions or claims the pricing input doesn't name.
 
 ---
 

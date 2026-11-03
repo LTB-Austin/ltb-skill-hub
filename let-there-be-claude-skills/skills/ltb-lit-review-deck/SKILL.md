@@ -1,6 +1,6 @@
 ---
 name: ltb-lit-review-deck
-description: Build the client-facing Science Intelligence™ deck for Let There Be — the presentation that turns an evidence workbook into slides, covering both Lit Review™ (the evidence) and Claim Dev™ (the claims). Use whenever the user wants to build, refine, or restyle a Science Intelligence deck, a lit review deck, a claim development presentation, an evidence deck, a spotlight studies deck, or the client presentation for any brand — even if they just say make the science intelligence deck for a client, turn this workbook into slides, or build the claim dev presentation. Takes the evidence workbook and claim set and builds a territory-first deck, where each claim territory runs The Claim → The Evidence → Compliance Logic, writing a markdown brief and CSV chart data first and then building the finished presentation in the LTB Science Intelligence template in the same run. Do NOT use for the raw literature research (that is ltb-science-intelligence) or for Science Story claim clusters and narratives.
+description: Build the client-facing Science Intelligence™ deck for Let There Be, the presentation that turns an evidence workbook into slides covering Lit Review™ (the evidence) and Claim Dev™ (the claims). Use whenever the user wants to build, refine or restyle a Science Intelligence deck, lit review deck, claim development presentation or evidence deck for any brand, even if they just say "make the science intelligence deck for [client]," "turn this workbook into slides" or "build the claim dev presentation." Every claim direction runs Hero Claim → Supporting Claims → The Evidence → Compliance Logic, the same format the Sales Preview and SOW show. It writes a markdown brief and CSV chart data first, then builds the finished deck in the LTB Science Intelligence template in the same run. Do NOT use for the raw literature research (ltb-science-intelligence) or for Science Story claim clusters and narratives.
 ---
 
 # LTB Science Intelligence™ Deck Builder
@@ -19,7 +19,7 @@ Pause before building the deck only in three cases: the skill below requires an 
 
 ## What this deliverable is called
 
-The deck is the **Science Intelligence™ presentation**. **Lit Review™** and **Claim Dev™** are the two parts inside it; in the territory-first format they appear as the `LIT REVIEW™ | CLAIM DEV™` lockup on every territory slide and on the Results divider, not as separate halves of the deck. The cover reads:
+The deck is the **Science Intelligence™ presentation**. **Lit Review™** and **Claim Dev™** are the two parts inside it; in the direction-first format they appear as the `LIT REVIEW™ | CLAIM DEV™` lockup on the Highlights (Results) slide, not as separate halves of the deck. The cover reads:
 
 > [PRODUCT NAME]® Claims · **SCIENCE INTELLIGENCE™** PRESENTATION · PREPARED FOR [client] | [brand] | PREPARED BY LET THERE BE · [MONTH YEAR]
 
@@ -40,19 +40,29 @@ All copy in this deliverable follows one standard: plain, straightforward, and t
 
 The voice rule governs **the deck's own copy** — headlines, body, synthesis lines. Candidate consumer claim language quoted inside a claim card is the *content being presented* and may be punchier; it still carries its guardrail.
 
-You are building the client-facing presentation for the **Science Intelligence™** stage. The evidence workbook exists and the claims are developed. Your job is to present that work so a brand team can pick territories and take them into MLR.
+You are building the client-facing presentation for the **Science Intelligence™** stage. The evidence workbook exists and the claims are developed. Your job is to present that work so a brand team can pick directions and take them into MLR.
 
 > **Output: one markdown content brief + CSV files for every chart.** Write the deck slide by slide in a single `.md` file, with copy, layout intent and the data each visual needs. Put chart data in CSVs (one per chart or tile set) in a sibling `[brand]_si_deck_data/` folder and name the CSV on the slide that uses it. **No LTB branding or styling in the brief.** The deck is then built from the markdown and CSVs in the LTB template, in the same run (see the top of this skill). `references/brand-system.md` is design intent, not something to render.
 
-## The format: territory-first (default)
+## The format: direction-first (default)
 
-Present claims first, then the evidence behind each one, then the case for MLR. Do **not** open with a literature walk-through. Every claim territory runs three slides:
+Present claims first, then the evidence behind them, then the case for MLR. Do **not** open with a literature walk-through. Every claim direction runs **four parts**, in this order:
 
-1. **The Claim** (for the brand team): hero claim card, "Why this claim matters to [brand]", and **Other ways to say it**, 3–5 register variants, each tagged (SHORT, NUMBER-FORWARD, LABEL, REGULATOR'S WORDS, DIRECT, MORE POINTED · BRAND'S CALL, HCP).
-2. **The Evidence** (for MLR and the brand): one hero data tile (big number + one-line meaning + study and evidence basis), one visual that shows how we got there, and an "On the label" or regulator-quote line. Add a method slide only when the number needs walking through (e.g., an original analysis).
-3. **Compliance Logic** (for MLR): 4–6 tiles, each a short bold title + 1–2 sentences. Why the sources hold up, why the framing is safe, what the counter-evidence is, what's still open before MLR. End with risk and substantiation depth.
+1. **Hero Claim** (for the brand team): the hero claim card, carrying its ID, its tier, who it speaks to, what it carries (Study / Survey / Label / Comparative), and its substantiation tag. Beside it goes "Why this matters to [Brand]" in 2–3 sentences.
+2. **Supporting Claims** (for the brand team): 3–4 other ways to say the hero claim, in a 2×2 grid. Each card has a register tag (Number-forward, Short, [Brand] voice, Label, Regulator's words, HCP, Names a competitor (legal), Bolder voice · brand's call), a tier, an ID, the line, what it carries and its substantiation tag. A summary pill under the grid counts the related lines in the library.
+3. **The Evidence** (for legal and the brand): one hero data tile (eyebrow = source type and date, a big number, a one-line meaning, a source tag) and "The science" cards (a finding, a design line, a source tag). Under them goes "The honest line": the counter-evidence, with its design and an `Abstract only` flag where true. When the number needs more than one slide, add `The Evidence 2`, `The Evidence 3` with short titles of their own (e.g. "30g vs 90g").
+4. **Compliance Logic** (for legal): six tiles, each a bold title plus 1–2 sentences, covering why the sources hold up, the framing, what the claim must not say, the counter-evidence, and what's still open before MLR. It ends with a `Risk` line per claim ID and a `Depth` line.
 
-Read `references/deck-structure.md` for the full flow, and `references/evidence-visuals.md` to choose each territory's visual and format its CSV.
+**Tiers.** Every claim carries one tier, defined on the "How each direction runs" slide:
+- **Core:** accurate and sourced, resting on an ingredient list or a label fact.
+- **Push:** accurate and sourced, comparing the brand to a competitor or naming one.
+- **Stretch:** accurate and sourced, pairing a brand or product with a health finding.
+
+Separately, risk (LOW / MEDIUM / HIGH) goes on the Compliance Logic slide.
+
+**One format, preview to SOW to delivery.** The Sales Preview shows one direction in these four parts, with sources blurred. The SOW shows the format so the client knows what's coming. This deck delivers every direction in full, with real source tags. Keep the part names, the tier names and the order identical, so the client recognizes the format from the first meeting.
+
+Read `references/deck-structure.md` for the full flow, and `references/evidence-visuals.md` to choose each direction's evidence visual and format its CSV.
 
 ## Inputs
 
@@ -69,11 +79,11 @@ If the workbook doesn't exist yet, stop and point the user to the **ltb-science-
 
 1. **Load the structure** (`references/deck-structure.md`) and the visual guide (`references/evidence-visuals.md`).
 2. **Pull everything from the workbook.** Every number, quote and claim traces to a workbook row or an official page read directly. Give every source a deck ID (S-001…) that matches the appendix CSV. Never invent a study, statistic or citation.
-3. **Group claims into 4–6 territories.** A territory is one idea a brand could own. Lead with the strongest, best-substantiated one. A territory that only works for HCPs becomes a single "potential future HCP campaign" slide after the consumer territories.
-4. **Choose each territory's evidence visual on purpose.** Match the visual to the shape of the evidence (comparison, share of a group, range, label-by-label, steps). Write its CSV. Never chart a number you can't trace.
-5. **Show counter-evidence on the evidence slide** in a small outlined "honest line" card when a result runs the other way, and name it again in Compliance Logic. Candor is the method's credibility.
-6. **Add "Your legacy claims, strengthened"** whenever the client's approved claims are known: legacy line → strengthened line → territory. Look for them in project files before asking.
-7. **Close** with an owner-tagged "What happens next", an example Science Story slide (score dials as placeholders unless real data exists), any open calls for the client, and the appendix: source list CSV, label/regulator capture table, regulatory notes and required disclaimers.
+3. **Group claims into directions.** A direction is one idea a brand could own, with one hero claim and 3–4 supporting claims. Lead with the strongest, best-substantiated one. When the scope covers more than one product, group the directions into parts (Part A, Part B), one per product, with IDs A1, A2… B1, B2…. A direction that only works for HCPs or a future audience becomes a single "potential future audience" slide after the consumer directions.
+4. **Choose each direction's evidence visual on purpose.** Match the visual to the shape of the evidence (comparison, share of a group, range, label-by-label, steps). Write its CSV. Never chart a number you can't trace.
+5. **Show counter-evidence on the evidence slide** in "The honest line" strip whenever a result runs the other way, and name it again in Compliance Logic. Candor is the method's credibility.
+6. **Add "Your legacy claims, strengthened"** whenever the client's approved claims are known: legacy line → strengthened line → direction. Look for them in project files before asking.
+7. **Close** with the part libraries and the full library, any potential future audience, "What happens next" with owner tags, the closing slide, and "Where the evidence stops." Then the appendix: how to check any claim, the source list CSV, label capture, regulatory notes and required disclaimers, the claim index, and the label facts to confirm. See `references/deck-structure.md`.
 8. **Scope every claim to the regulatory class.** Working language carries `WORKING LANGUAGE · PENDING MLR` (or the client's review body, e.g. PRC). A hero number resting on an abstract-only study is flagged as blocking in Compliance Logic.
 
 `references/legacy-deck-structure.md` keeps the older Part I (Lit Review) / Part II (Claim Dev) flow. Use it only if the user asks for that format.
@@ -88,7 +98,7 @@ These land well with clients. Use them when the workbook genuinely supports them
 
 ## Claim ID convention
 
-Give every claim a territory-prefixed ID so the deck, the workbook, and the client's shortlist stay cross-referenceable: `PC1`, `PC2` (period cramps), `DA1` (dual action), `HA1` (headache). Two to three letters for the territory, then a number. Keep IDs stable across revisions — if a claim is cut, retire its ID rather than reusing it.
+Give every claim a direction-prefixed ID so the deck, the workbook, and the client's shortlist stay cross-referenceable: `PC1`, `PC2` (period cramps), `DA1` (dual action), `HA1` (headache). Two to three letters for the direction, then a number. Keep IDs stable across revisions — if a claim is cut, retire its ID rather than reusing it.
 
 ## Revision behavior
 

@@ -63,7 +63,7 @@ Read the pricing input, then choose one shape. `references/deck-structure.md` ha
 3. **Use the standard terms verbatim.** Copyright & Usage, Milestone Approach, Retailer Rejections, Working Together and the Closing line come from `references/boilerplate.md`. Don't paraphrase them. Fill only the slots each block marks, such as the milestone example and the client name.
 4. **Mark timelines as tentative.** Every timeline says final dates are set at kickoff and depend on the client's review and MLR timing.
 5. **Show open items openly.** When the client still has a choice to make (a product, a dimension, a direction), say so on the screen ("Product A: one Thorne product, to be selected by Thorne") and add it to Next Steps.
-6. **Preview findings are labeled as preview.** If you show preview territories, add the line "Preview findings from [n] papers, no brand input. Directional until the full review and MLR."
+6. **Preview findings are labeled as preview.** If you show the preview's directions, add the line "Preview findings from [n] papers, no brand input. Directional until the full review and MLR."
 7. **Apply client-facing restraint.** Don't name internal tools, other clients, internal strategy or anything from the CRM notes that isn't meant for the client. The CRM notes inform the framing. They aren't quoted.
 8. **Placeholders, not assets.** Client logos, packshots, product photography and example visuals are inserted by hand. Leave a labeled slot such as `[Insert client logo]`, `[Insert packshot]` or `[Example carousel frames — insert manually]`.
 
@@ -73,7 +73,7 @@ Read the pricing input, then choose one shape. `references/deck-structure.md` ha
 2. **Write The Challenge from the CRM notes.** Give the brand's real problem in its commercial terms: the gap in consumer understanding, plus what it costs the brand (conversion, ROAS, shelf, retail). End with one plain sentence stating the challenge.
 3. **Add The Bigger Picture (Shape A, optional)** when the program is one lever in a larger client strategy, for example HCP effort plus e-commerce conversion leading to retail distribution. Use three numbered columns and a one-line close.
 4. **Write the engine or program overview.** Shape A gets the three phases (The Proof / The Persuasion / The Production). Shape B gets "One program, [n] uses," with the audiences and uses.
-5. **Write the deliverable screens** from `references/deliverable-library.md`, customized to this brand's mechanism, product and channel. Add specs from the pricing input.
+5. **Write the deliverable screens** from `references/deliverable-library.md`, customized to this brand's mechanism, product and channel. Add specs from the pricing input. Whenever Science Intelligence™ is in scope, add screen 06b, **What each direction looks like**. It shows the same four-part format the client saw in the Sales Preview and will get in the Science Intelligence deck: hero claim, supporting claims, evidence and compliance logic (see "One format, preview to SOW to delivery" in `deliverable-library.md`).
 6. **Explain how the assets work together** (Shape A, Above the Fold) or summarize the deliverables (Shape B: assets × files).
 7. **Write the process screens.** Shape A gets the Timeline. Shape B gets the Visual Approach, MLR Checkpoints and Timeline.
 8. **Add the standard terms** from `references/boilerplate.md`, in the form the shape uses.
@@ -93,3 +93,7 @@ Update every affected screen after each change, not only the one named. After ea
 | `references/deliverable-library.md` | Writing deliverable screens. Standard description language and specs for every LTB deliverable. |
 | `references/boilerplate.md` | Writing the terms, Working Together, Next Steps and Closing screens. Verbatim text. |
 | `references/output-template.md` | Writing the file. The skeleton, including the note to Claude Design. |
+
+## Building from two templates
+
+When screen 06b is in the deck, build it from the **LTB Template — Science Intelligence (Lit Review + Claim Dev)** (https://claude.ai/artifact/3eLTXv8dToy1DrofTGXhxk), slide `s06-how-each-direction-runs`. Read that slide, copy its assets into the new deck (with `from_url` set to that template), and add the SOW template's footer and page number to it. Every other screen comes from the SOW template. Both templates use the same Let There Be design system. If the Science Intelligence template won't open for the person running the skill, say so and stop.

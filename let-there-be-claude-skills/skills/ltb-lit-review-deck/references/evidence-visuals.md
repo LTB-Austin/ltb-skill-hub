@@ -1,6 +1,6 @@
 # Choosing the Evidence Visual (and its CSV)
 
-Each territory's evidence slide gets one hero tile and one visual. Pick by the shape of the evidence. Write one CSV per chart or tile set in `[brand]_si_deck_data/`, named `T[n]_[what].csv`, and reference it on the slide.
+Each direction's evidence slide gets one hero tile and one visual. Pick by the shape of the evidence. Write one CSV per chart or tile set in `[brand]_si_deck_data/`, named `T[n]_[what].csv`, and reference it on the slide.
 
 | Evidence shape | Visual | CSV columns (minimum) | Example |
 |---|---|---|---|

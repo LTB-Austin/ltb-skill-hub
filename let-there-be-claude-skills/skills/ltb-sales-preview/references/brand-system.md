@@ -1,12 +1,12 @@
 # LTB Brand System (current — 2026 rebrand)
 
-> For the sales preview, the Claude Design template already carries all of this. Read this file only if Design asks for intent. The brief's job is to fill the template's slots, not to restyle it.
+> For the sales preview, the two templates already carry all of this. Read this file only if design intent is needed, for example when assembling the merged direction slide (screen 05). The job is to fill the templates' slots, not to restyle them.
 
-## How the preview template uses emphasis
-- One gradient-tinted card on 06 (the new territory), 10 (the new territory's finding) and 12 (the scores panel). No other screen has an emphasized card.
-- Spotlight tables (07–09): mint highlight on the phrase that supports the territory; purple on a phrase that adds context.
-- Heatmap on 12: deep mint for strongly liked, light mint for liked, soft red for disliked.
-- Blur on the Yr and Study cells of every spotlight table.
+## How the preview uses emphasis
+- Gradient-tinted cards appear only on screen 05 (the hero claim card and the evidence hero tile). Screen 06 uses the plain tiles.
+- Tier markers (Core / Push / Stretch) use the SI template's three-square marker.
+- Screen 07: green highlight for strongly liked, orange for liked, red for disliked, as in the template.
+- Blur (`filter:blur(6.75px)`) applies only to identifiers: years, authors, journals, PMIDs, DOIs and NCTs.
 
 Use this for every client-facing LTB deck. It supersedes the older palette (the retired teal `#008575` and its siblings). If you see those old hexes in an input, do not reuse them.
 
