@@ -35,7 +35,7 @@ Bullets. The first is always included, the rest are used as they apply:
 - Approved claims list for the marketing content to build on.
 
 ### One format, preview to SOW to delivery
-The Sales Preview, the SOW and the Science Intelligence™ deck all present claims the same way: **hero claim → supporting claims → evidence → compliance logic**, with each claim tiered Core, Push or Stretch. The preview shows one direction in full, with sources blurred. The SOW shows the format (screen 06b) so the client knows what's coming. The Science Intelligence deck delivers every direction in full. Keep the SOW's wording consistent with that format, and never promise a number of directions or claims the pricing input doesn't name.
+The Sales Preview, the SOW and the Science Intelligence™ deck present claims the same way: **hero claim → supporting claims ("other ways to say it") → evidence**. The Science Intelligence deck adds **compliance logic** as a fourth part, and every claim there carries a Core, Push or Stretch tier. The preview shows one territory in full with sources blurred, and no compliance slide. The SOW shows the four-part Science Intelligence format (screen 06b) so the client knows what's coming. The Science Intelligence deck delivers every direction in full. Keep the SOW's wording consistent with that format, and never promise a number of directions or claims the pricing input doesn't name.
 
 ---
 

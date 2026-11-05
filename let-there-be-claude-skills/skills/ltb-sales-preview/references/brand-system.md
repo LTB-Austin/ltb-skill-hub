@@ -1,12 +1,12 @@
 # LTB Brand System (current — 2026 rebrand)
 
-> For the sales preview, the two templates already carry all of this. Read this file only if design intent is needed, for example when assembling the merged direction slide (screen 05). The job is to fill the templates' slots, not to restyle them.
+> For the sales preview, the template (the One A Day® Teen For Her build) already carries all of this. Read this file only if design intent is needed. The job is to fill the template's slots, not to restyle them.
 
 ## How the preview uses emphasis
-- Gradient-tinted cards appear only on screen 05 (the hero claim card and the evidence hero tile). Screen 06 uses the plain tiles.
-- Tier markers (Core / Push / Stretch) use the SI template's three-square marker.
-- Screen 07: green highlight for strongly liked, orange for liked, red for disliked, as in the template.
-- Blur (`filter:blur(6.75px)`) applies only to identifiers: years, authors, journals, PMIDs, DOIs and NCTs.
+- One gradient element per screen at most: the client column on screen 04, the last funnel number on 05, the hero claim band on 07. Content isn't boxed in tiles; the template uses open grids and thin rules.
+- The honest line on screen 09 is the only red-tinted band in the deck.
+- Screen 10: green for strongly liked, orange for liked, red for disliked, as colored text, as in the template.
+- Blur applies only to identifiers: authors, citation years, journals, PMIDs, DOIs and NCTs.
 
 Use this for every client-facing LTB deck. It supersedes the older palette (the retired teal `#008575` and its siblings). If you see those old hexes in an input, do not reuse them.
 

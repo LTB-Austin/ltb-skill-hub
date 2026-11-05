@@ -11,7 +11,7 @@ The content file stays the source of truth: the deck carries its words exactly a
 | Project Overview | LTB Template — Project Overview | https://claude.ai/artifact/RxePUEHUnJNjtzUkSGwafb |
 | Science Intelligence (Lit Review + Claim Dev) | LTB Template — Science Intelligence (Lit Review + Claim Dev) | https://claude.ai/artifact/3eLTXv8dToy1DrofTGXhxk |
 | Science Story & Claim Clusters | LTB Template — Science Story & Claim Clusters | https://claude.ai/artifact/Qm7HgGxbT7os4Lz8jD2cqY |
-| Sales Preview | LTB Template — Sales Preview (Science Marketing Engine) | https://claude.ai/artifact/VEB4pUCzcLnEPc1EXy6Hjk |
+| Sales Preview | Sales Preview template (One A Day® Teen Multi Gummy For Her build) | https://claude.ai/artifact/AtDJ3XjuJZhkDRPna9utYV |
 | Research Alignment Session | LTB Template — Research Alignment Session | https://claude.ai/artifact/SqGzTEiEQWDJjRzDjFBHeV |
 | Client Success Story | LTB Template — Client Success Story | https://claude.ai/artifact/Ax4uiPqesE1nUgsvo1P7pf |
 | Supplement Science Score | LTB Template — Supplement Science Score | https://claude.ai/artifact/3UTxLhVcehMyFmSNbrKB64 |
