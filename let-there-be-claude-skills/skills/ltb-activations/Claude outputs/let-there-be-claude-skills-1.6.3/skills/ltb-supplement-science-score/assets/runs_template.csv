@@ -1,0 +1,1 @@
+run_id,date,time,model,version,prompt_id,prompt_type,segment,prompt_text,response_text,products_named,client_named,client_position,client_sentiment,client_negative_mention,attributes,sources,citation_present,screenshot,conditions,anomalies
