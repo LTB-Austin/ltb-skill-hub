@@ -11,7 +11,7 @@ The content file stays the source of truth: the deck carries its words exactly a
 | Project Overview | LTB Template — Project Overview | https://claude.ai/artifact/RxePUEHUnJNjtzUkSGwafb |
 | Science Intelligence (Lit Review + Claim Dev) | LTB Template — Science Intelligence (Lit Review + Claim Dev) | https://claude.ai/artifact/3eLTXv8dToy1DrofTGXhxk |
 | Science Story & Claim Clusters | LTB Template — Science Story & Claim Clusters | https://claude.ai/artifact/Qm7HgGxbT7os4Lz8jD2cqY |
-| Sales Preview | Sales Preview template (One A Day® Teen Multi Gummy For Her build) | https://claude.ai/artifact/AtDJ3XjuJZhkDRPna9utYV |
+| Sales Preview | LTB Template — Sales Preview (Science Marketing Engine) | https://claude.ai/artifact/VEB4pUCzcLnEPc1EXy6Hjk |
 | Research Alignment Session | LTB Template — Research Alignment Session | https://claude.ai/artifact/SqGzTEiEQWDJjRzDjFBHeV |
 | Client Success Story | LTB Template — Client Success Story | https://claude.ai/artifact/Ax4uiPqesE1nUgsvo1P7pf |
 | Supplement Science Score | LTB Template — Supplement Science Score | https://claude.ai/artifact/3UTxLhVcehMyFmSNbrKB64 |
@@ -37,9 +37,11 @@ Each template is a private artifact. The person running the skill can only copy 
 
 **1. Create the deck.** Start right away, without asking first. Publish with the Slides type (`type_url`: https://claude.ai/artifact/8jTsAFQMFDb2oA8MsPJ2eL), `title` "[Brand] — [Deck name]" (for example "iVIZIA Wipes — Statement of Work"), and `auto_open: "after_first_write"`, with no files. Use the reply's `url` for every call after this. That deck's type instructions come back with the reply, and they cover the file format and publishing. Follow them along with these steps.
 
-**2. Read the template.** In one call, read the template's `project/deck.json` and every `project/slides/*.html` its `order` lists (the `read` action, the template link and `paths`). Then list the template's assets (`list`, `scope: "assets"`).
+**2. Read the template.** In one call, read the template's `project/deck.json` and every `project/slides/*.html` its `order` lists (the `read` action, the template link and `paths`).
 
-**3. Copy the brand images into the new deck.** Publish with `url` set to the new deck, `asset: true`, `from_url` set to the template link, and `asset_ids` set to the template's asset ids, up to 10 per call. Each reply gives a new url for every asset. In every slide you write, replace each `/_blob/<old id>` with its new url exactly as given.
+**3. Bring the brand images with you.** The template's brand images (mitosis cells, the Let There Be logo, wordmarks, Science Studio™ film stills, certification marks) are design system files. Their `src` is a path such as `project/ds/lettherebedesignsystem_9f5f72/assets/mitosis/static/peanut-h.png`. Keep every such `src` exactly as it is. In the publish that writes the index (step 5), add one `files` entry per path the slides you use contain: `"project/ds/lettherebedesignsystem_9f5f72/assets/<path>": {"artifact": "https://claude.ai/artifact/RbJbqGDigMdJ6x7SmGucEW", "path": "project/assets/<path>"}`. This works for anyone who can open the template; nothing is uploaded and no url is rewritten.
+- **Client images:** any `src` that still starts `/_blob/` is the template's sample client image (packaging, product shots, screenshots, client logos). Don't copy it. Upload the new client's image in its place if the person gave you one (Artifact `publish` with `asset: true`); otherwise leave an empty frame, the same `<img>` with its `alt` and size and no `src`, and name it in the hand-over.
+- **Never** copy images out of a template with `from_url` and `asset_ids`. That only works for the template's owner, so for anyone else the deck loses its images.
 
 **4. Map content to slides.** For each screen in the content file, pick the template slide built for it. The slide ids and the template's `sections` name them (`s02-the-challenge`, `s19-investment`).
 - **Unused slides:** leave out template slides the content doesn't use, such as the Studio slides in a Science Intelligence-only SOW.
@@ -58,7 +60,7 @@ Each template is a private artifact. The person running the skill can only copy 
 
 In the same publish, copy the design tokens from the template: `"project/ds/<folder>/tokens.json": {"artifact": "<template link>", "path": "project/ds/<folder>/tokens.json"}`, where `<folder>` is the record's `namespace`.
 
-**6. Fill the slides.** Write each slide file with the template's markup, the content file's text in place of the bracketed fields, the new asset urls, and the content file's speaker notes in the `<aside>`.
+**6. Fill the slides.** Write each slide file with the template's markup, the content file's text in place of the bracketed fields, the design system image paths unchanged, and the content file's speaker notes in the `<aside>`.
 - Publish the index and the cover slide together first.
 - Then publish three slides per call, in order.
 
