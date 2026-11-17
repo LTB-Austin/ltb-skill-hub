@@ -23,7 +23,7 @@ The reader is a prospective client's brand or marketing lead, so it has to read 
 
 ## Output
 
-> The finished deck, built in the LTB Template — Client Success Story (see the top of this skill). First write `[brand]-success-story.md` in `/mnt/user-data/outputs/`, filled into `references/output-template.md`. It holds seven screens in fixed order, each with its fields and **speaker notes**, followed by a source log and an open-items list. Don't add styling or HTML. The **LTB Template — Client Success Story** carries the look. Photos, packshots and logos are placeholders that get filled by hand.
+> The finished deck, built in the LTB Template — Client Success Story (see the top of this skill). First write `[brand]-success-story.md` in your working folder (not the outputs folder), filled into `references/output-template.md`. It holds seven screens in fixed order, each with its fields and **speaker notes**, followed by a source log and an open-items list. Don't add styling or HTML. The **LTB Template — Client Success Story** carries the look. Photos, packshots and logos are placeholders that get filled by hand.
 
 ## Writing voice
 

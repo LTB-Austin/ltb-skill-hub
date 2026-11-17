@@ -60,7 +60,7 @@ Present claims first, then the evidence behind them, then the case for MLR. Do *
 
 Separately, risk (LOW / MEDIUM / HIGH) goes on the Compliance Logic slide.
 
-**One format, preview to SOW to delivery.** The Sales Preview shows one direction in these four parts, with sources blurred. The SOW shows the format so the client knows what's coming. This deck delivers every direction in full, with real source tags. Keep the part names, the tier names and the order identical, so the client recognizes the format from the first meeting.
+**One format, preview to SOW to delivery.** The Sales Preview shows one territory with its hero claim, other ways to say it, and the evidence with an honest line, sources blurred. It has no compliance slide; that reasoning stays in its speaker notes. The SOW shows this deck's four-part format so the client knows what's coming. This deck delivers every direction in full, compliance logic included, with real source tags. Keep the part names, tier names and order consistent, so the client recognizes the format from the first meeting.
 
 Read `references/deck-structure.md` for the full flow, and `references/evidence-visuals.md` to choose each direction's evidence visual and format its CSV.
 

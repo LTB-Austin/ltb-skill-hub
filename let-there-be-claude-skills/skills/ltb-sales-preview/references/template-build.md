@@ -64,7 +64,7 @@ In the same publish, copy the design tokens from the template: `"project/ds/<fol
 - Publish the index and the cover slide together first.
 - Then publish three slides per call, in order.
 
-**7. Hand it over.** Give the user the deck's link in one line, plus anything that didn't fit or that you placed in a different layout. Keep the content file (`.md`) in the outputs as the source.
+**7. Hand it over.** Give the user the deck's link in one line, plus anything that didn't fit or that you placed in a different layout. Keep the content draft in your working folder as the source for revisions. Don't save it to the outputs folder; the deck is the deliverable.
 
 Don't re-read, render or screenshot the deck to check it unless the user asks.
 

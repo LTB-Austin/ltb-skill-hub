@@ -39,7 +39,7 @@ Reference builds: Tylenol (Kenvue, Adult Pain, Aug 2026), Habitrol (Dr. Reddy's,
 | `references/writing-patterns.md` | Before writing the variable screens. How the challenge, priorities, exclusions, directions and questions are written, with examples from the reference builds. |
 | `references/output-template.md` | When writing. The skeleton the brief and the decisions log are filled into. |
 
-> **Output:** one markdown file, `[brand]-research-alignment-session.md`, in the outputs folder. Part 1 is the deck, screen by screen. Part 2 is the decisions log, a blank-ready capture sheet for the session. Content only: no styling, no layout instructions. Then build the deck from Part 1 in the LTB template in the same run (see the top of this skill), and deliver the decisions log alongside it.
+> **Output:** one markdown file, `[brand]-research-alignment-session.md`, in your working folder (not the outputs folder). The deck and the decisions log are what the user receives. Part 1 is the deck, screen by screen. Part 2 is the decisions log, a blank-ready capture sheet for the session. Content only: no styling, no layout instructions. Then build the deck from Part 1 in the LTB template in the same run (see the top of this skill), and deliver the decisions log alongside it.
 
 ## Writing voice
 

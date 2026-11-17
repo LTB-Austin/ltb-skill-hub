@@ -21,7 +21,7 @@ The SOW is the deck a client signs against. It covers what the brand's problem i
 
 ## Output
 
-> The finished deck, built in the LTB Template — Statement of Work (see the top of this skill). First write `[brand]-sow.md` in `/mnt/user-data/outputs/`, filled into `references/output-template.md`. It holds every screen in order, each with an eyebrow, headline, body fields and **speaker notes**. Mark manual assets as placeholders. Don't add styling, HTML or an export. The LTB Template — Statement of Work carries the look (Lexend, `#F0F0F0`, cell imagery, sub-brand marks, LTB wordmark). The markdown carries the words.
+> The finished deck, built in the LTB Template — Statement of Work (see the top of this skill). First write `[brand]-sow.md` in your working folder (not the outputs folder), filled into `references/output-template.md`. It holds every screen in order, each with an eyebrow, headline, body fields and **speaker notes**. Mark manual assets as placeholders. Don't add styling, HTML or an export. The LTB Template — Statement of Work carries the look (Lexend, `#F0F0F0`, cell imagery, sub-brand marks, LTB wordmark). The markdown carries the words.
 
 ## Writing voice
 
